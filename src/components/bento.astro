@@ -1,0 +1,65 @@
+---
+import BentoItem from "../components/bentoItem.astro";
+---
+
+<section
+  class={`
+    w-full max-w-[1400px]
+    grid lg:grid-cols-10 auto-rows-[22rem] gap-4
+    mx-auto p-6 md:p-12 lg:p-20
+  `}>
+  <BentoItem
+    class="col-span-10 lg:col-span-6"
+    title="Road Bike"
+    href="/road-bike/">
+    <div
+      slot="image"
+      class="background transition-scale absolute bottom-0 left-0 top-0
+        -z-10 h-full w-full bg-blue-350
+        bg-cover bg-center bg-no-repeat opacity-95 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      style="background-image: url('/road-bike.jpg')">
+    </div>
+
+    <p
+      slot="content"
+      class="max-w-xl text-white md:text-lg"
+      set:html="This is a descriotion for Tour Bike"
+    />
+  </BentoItem>
+
+  <BentoItem
+    class="col-span-10 lg:col-span-4"
+    title="Gravel Bike / MTB"
+    href="/">
+    <div
+      slot="image"
+      class="background transition-scale absolute bottom-0 left-0 top-0
+        -z-10 h-full w-full bg-blue-350
+        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      style="background-image: url('/mtb.jpg')">
+    </div>
+    <p
+      slot="content"
+      class="max-w-xl text-white md:text-lg"
+      set:html="This is a description for Gravel Bike / MTB"
+    />
+  </BentoItem>
+
+  <BentoItem
+    class="col-span-10 lg:col-span-10"
+    title="E - Bike"
+    href="/e-bike/">
+    <div
+      slot="image"
+      class="background transition-scale absolute bottom-0 left-0 top-0
+        -z-10 h-full w-full bg-blue-350
+        bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
+      style="background-image: url('/e-bike.jpg')">
+    </div>
+    <p
+      slot="content"
+      class="max-w-xl text-white md:text-lg"
+      set:html="This is a description for E-Bike"
+    />
+  </BentoItem>
+</section>

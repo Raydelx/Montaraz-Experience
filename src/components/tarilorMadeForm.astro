@@ -1,0 +1,409 @@
+---
+import Button from "./ui/button.astro";
+---
+
+<!-- To make this contact form work, create your free access key from https://web3forms.com/
+     Then you will get all form submissions in your email inbox. -->
+<form
+  action="https://api.web3forms.com/submit"
+  method="POST"
+  id="form"
+  class="needs-validation"
+  novalidate>
+  <input
+    type="hidden"
+    name="access_key"
+    value="e1368d60-eed2-4455-a494-1dd150659cf8"
+  />
+  <!-- Create your free access key from https://web3forms.com/ -->
+  <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
+  <h2 class="text-3xl mb-4 ml-1 font-semibold">Personal Information</h2>
+  <div class="grid md:grid-cols-2 md:gap-4">
+    <div class="mb-5">
+      <input
+        type="text"
+        placeholder="Full Name"
+        required
+        class="w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+        name="name"
+      />
+      <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+        Please provide your full name.
+      </div>
+    </div>
+    <div class="mb-5">
+      <input
+        type="tel"
+        minlength="9"
+        maxlength="14"
+        size="20"
+        placeholder="Phone number: +34 000 000 000"
+        required
+        class="w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+        name="Phone Number"
+      />
+      <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+        Please provide a valid phone number
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <label for="email_address" class="sr-only">Email Address</label><input
+      id="email_address"
+      type="email"
+      placeholder="Email Address"
+      name="email"
+      required
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-4n00 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+    />
+    <div class="empty-feedback text-red-400 text-sm mt-1">
+      Please provide your email address.
+    </div>
+    <div class="invalid-feedback text-red-400 text-sm mt-1">
+      Please provide a valid email address.
+    </div>
+  </div>
+  <div class="mb-3">
+    <textarea
+      name="message"
+      required
+      placeholder="How did you hear about us?"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+    ></textarea>
+    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+      How did you hear about us?
+    </div>
+  </div>
+  <!-- Travel Information -->
+  <h2 class="text-3xl mb-4 ml-1 font-bold">Travel information</h2>
+  <!-- Arrival Airport -->
+  <div class="grid md:grid-cols-2 md:gap-4">
+    <div class="mb-5">
+      <label for="Arrival Airport" class="ml-1">Arrival Airport Name</label>
+      <input
+        type="text"
+        placeholder="Arrival Airport"
+        required
+        class="w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+        name="Arrival Airport"
+      />
+      <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+        Please provide your arrival airport.
+      </div>
+    </div>
+    <div class="mb-5">
+      <label for="Arrival Airport" class="ml-1">Arrival Date</label>
+      <input
+        type="date"
+        placeholder="date of arrival"
+        required
+        class="w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+        name="date of arrival"
+      />
+      <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+        Please provide date of arrival.
+      </div>
+    </div>
+  </div>
+  <!-- Length of your trip in days -->
+  <div class="grid md:grid-cols-2 md:gap-2">
+    <div class="mb-5">
+      <label for="Arrival Airport" class="ml-1"
+        >Length of your trip in days</label
+      >
+      <input
+        id="Arrival Airport"
+        type="number"
+        placeholder="Days"
+        required
+        class="w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+        name="Length of travels in days"
+      />
+      <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+        Length of travels in days
+      </div>
+    </div>
+    <div class="mb-5">
+      <label for="Experience" class="ml-1"
+        >Which experience are you looking for?</label
+      >
+      <input
+        id="Experience"
+        list="Experiences"
+        name="Which experience are you looking for?"
+        placeholder="Select an option"
+        class="w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+      />
+      <datalist id="Experiences">
+        <option value="Cycling Holiday"></option>
+        <option value="Hiking & Treakking"></option>
+        <option value="Cultural Travel Tours"></option>
+        <option value="Multi-Adventure Tours"></option>
+        <option value="Other"></option>
+      </datalist>
+    </div>
+  </div>
+  <!-- How many travelers and age? -->
+  <div class="mb-3">
+    <label for="Travelers and Ages" class="ml-1"
+      >How many travelers and age?
+    </label>
+    <label for="Travelers and Ages" class="ml-1"></label>
+    <textarea
+      id="Travelers and Ages"
+      name="Travelers and Ages"
+      required
+      placeholder="Jhon Doe 36
+Raquel Doret 24"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+    ></textarea>
+    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+      Introduce travelers please.
+    </div>
+  </div>
+  <!-- Which places would you like to explore? -->
+  <div class="mb-3">
+    <label for="destinations" class="ml-1"
+      >Which places would you like to explore?
+    </label>
+    <label for="Travelers and Ages" class="ml-1"></label>
+    <textarea
+      id="destinations"
+      name="Destinations"
+      placeholder="Islas Canarias"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+    ></textarea>
+    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+      How did you hear about us?
+    </div>
+  </div>
+  <!-- Special interests? -->
+  <div class="mb-3">
+    <label for="special" class="ml-1">Special interests? </label>
+
+    <textarea
+      id="special"
+      name="Travelers and Ages"
+      required
+      placeholder="Sunset at Islas canarias north."
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+    ></textarea>
+    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+      Do you have any special interests?
+    </div>
+  </div>
+  <!-- What is the most important thing you look in a vacation? -->
+  <div class="mb-3">
+    <label for="important" class="ml-1"
+      >What is the most important thing you look in a vacation?
+    </label>
+    <label for="Travelers and Ages" class="ml-1"></label>
+    <textarea
+      id="important"
+      name="What is the most important thing you look in a vacation?"
+      required
+      placeholder="Good vives and chills moments"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+    ></textarea>
+    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+      What is the most important thing you look in a vacation?
+    </div>
+  </div>
+  <!-- Specials request or comments -->
+  <div class="mb-3">
+    <label for="Travelers and Ages" class="ml-1"
+      >Do you have any comments or specials request?
+    </label>
+    <label for="Travelers and Ages" class="ml-1"></label>
+    <textarea
+      id="comments_requests"
+      name="Do you have any comments or specials request?"
+      placeholder="I need 3 beds in in one room"
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+    ></textarea>
+    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+      Do you have any comments or specials request?
+    </div>
+  </div>
+  <!-- Booking Steps -->
+  <div class="grip">
+    <h2 class="text-2xl font-bold mb-2">Booking Steps</h2>
+    <div>
+      <div class="flex flex-row items-center gap-1">
+        <spam class="text-sm">🔵</spam>
+        <h3 class="font-semibold text-lg">Step 1 Request</h3>
+      </div>
+      <p class="mb-3">
+        We will answer you within 3 weekdays by email to confirm availability.
+      </p>
+    </div>
+    <div>
+      <div class="flex flex-row items-center gap-1">
+        <spam class="text-sm">🔵</spam>
+        <h3 class="font-semibold text-lg">Step 2 Travel & Tour Proposal</h3>
+      </div>
+      <p class="mb-3">
+        We will send you a Travel & Tour Proposal outlining your Private Tour
+        with the price per person and information like travel itineraries,
+        accommodation details, range of activities, necessary documents, and
+        more. Any Travel & Tour Proposal can be modified to meet all your
+        interests and to create your personalized holiday
+      </p>
+    </div>
+    <div>
+      <div class="flex flex-row items-center gap-1">
+        <spam class="text-sm">🔵</spam>
+        <h3 class="font-semibold text-lg">Step 3 Hold your date</h3>
+      </div>
+      <p class="mb-3">
+        After creating your private tour we hold the Travel & Tour Proposal for
+        15 days with no obligation.
+      </p>
+    </div>
+    <div>
+      <div class="flex flex-row items-center gap-1">
+        <spam class="text-sm">🔵</spam>
+        <h3 class="font-semibold text-lg">Step 4 Release of liability form</h3>
+      </div>
+      <p class="mb-3">
+        The clients are required to complete and sign our release of liability
+        form and understand the full terms and conditions of the provided tours.
+        Signatures are required before pre-reservation. We're unable to allow
+        travelers to participate in any aspect of a Montaraz Experience tours
+        without a signed release form.
+      </p>
+    </div>
+    <div>
+      <div class="flex flex-row items-center gap-1">
+        <spam class="text-sm">🔵</spam>
+        <h3 class="font-semibold text-lg">Step 5 Deposit & Pre-reservation</h3>
+      </div>
+      <p class="mb-3">
+        The tour is officially reserved when the client deposits 20% of the
+        total tour price per person before the 15-day hold period ends. If no
+        deposit is received, your Travel & Tour Poposal will be canceled. We’ll
+        officially confirm your pre-reservation after the deposit of 20% of the
+        total tour price per person.
+      </p>
+    </div>
+    <div>
+      <div class="flex flex-row items-center gap-1">
+        <spam class="text-sm">🔵</spam>
+        <h3 class="font-semibold text-lg">Step 6 The remaining balance</h3>
+      </div>
+      <p class="mb-3">
+        We send the client an email with the remaining balance.
+      </p>
+    </div>
+  </div>
+
+  <div class="mb-5">
+    <div class="flex items-center">
+      <input
+        id="understad-checkbox"
+        type="checkbox"
+        required
+        value="I understad"
+        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+      />
+      <label for="understad-checkbox" class="ms-2 text-md"
+        >I read and undestad the bookings steps</label
+      >
+    </div>
+    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+      We need to know that you read all the steps for booking a tour
+    </div>
+  </div>
+  <h2 class="text-2xl font-bold mb-2">Important</h2>
+  <p></p>
+
+  <div class="mb-5">
+    <div class="flex items-center">
+      <input
+        id="understad-checkbox"
+        type="checkbox"
+        required
+        value="I understad"
+        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+      />
+      <label for="understad-checkbox" class="ms-2 text-md">I agreed</label>
+    </div>
+    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+      We need to know that you read all the steps for booking a tour
+    </div>
+  </div>
+
+  <Button type="submit" size="lg" block>Send Message</Button>
+  <div id="result" class="mt-3 text-center"></div>
+</form>
+
+<style>
+  .invalid-feedback,
+  .empty-feedback {
+    display: none;
+  }
+
+  .was-validated :placeholder-shown:invalid ~ .empty-feedback {
+    display: block;
+  }
+
+  .was-validated :not(:placeholder-shown):invalid ~ .invalid-feedback {
+    display: block;
+  }
+
+  .is-invalid,
+  .was-validated :invalid {
+    border-color: #dc3545;
+  }
+</style>
+
+<script is:inline>
+  const form = document.getElementById("form");
+  const result = document.getElementById("result");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    form.classList.add("was-validated");
+    if (!form.checkValidity()) {
+      form.querySelectorAll(":invalid")[0].focus();
+      return;
+    }
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    result.innerHTML = "Sending...";
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: json,
+    })
+      .then(async (response) => {
+        let json = await response.json();
+        if (response.status == 200) {
+          result.classList.add("text-green-500");
+          result.innerHTML = json.message;
+        } else {
+          console.log(response);
+          result.classList.add("text-red-500");
+          result.innerHTML = json.message;
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        result.innerHTML = "Something went wrong!";
+      })
+      .then(function () {
+        form.reset();
+        form.classList.remove("was-validated");
+        setTimeout(() => {
+          result.style.display = "none";
+        }, 5000);
+      });
+  });
+</script>

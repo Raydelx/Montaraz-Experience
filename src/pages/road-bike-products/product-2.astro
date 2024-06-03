@@ -1,0 +1,21 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Container from "../../components/container.astro";
+import Sectionhead from "../../components/sectionhead.astro";
+import Pills from "../../components/ui/pills.astro";
+---
+
+<Layout title="Road Bike Products">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title"> Road Bike Product </Fragment>
+      <Fragment slot="desc"
+        >This is a full page for product 2 of Tour Kife
+      </Fragment>
+    </Sectionhead>
+    <Pills class="bg-green-600">Easy</Pills>
+    <main class="mt-16">
+      <ul class="grid gap-16 max-w-4xl mx-auto rounded-xl"></ul>
+    </main>
+  </Container>
+</Layout>

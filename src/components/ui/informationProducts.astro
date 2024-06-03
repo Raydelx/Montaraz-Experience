@@ -1,0 +1,22 @@
+---
+interface Props {
+  class?: string;
+  title: string;
+  subtitle?: string;
+}
+
+const { title, subtitle } = Astro.props;
+---
+
+<div class="grid p-3 lg:items-center md:justify-center">
+  <div
+    class="md:p-5 border-none rounded-2xl bg-opacity-70 md:shadow-[10px_10px_55px_18px_#00000024]">
+    <p class="text-black font-semibold text-sm tracking-wider md:text-center">
+      {title}
+    </p>
+    <div class="flex gap-2 md:justify-center mt-1">
+      <slot name="icon" />
+      <p class="text-black">{subtitle}</p>
+    </div>
+  </div>
+</div>
