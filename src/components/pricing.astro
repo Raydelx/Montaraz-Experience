@@ -17,23 +17,24 @@ const { plan } = Astro.props;
             : plan.price
         }
       </p>
-      <!-- {
+      {
         plan.price.original && (
           <p class="mt-1 text-xl font-medium text-gray-400 line-through md:text-2xl">
             {plan.price.original}
           </p>
         )
-      } -->
+      }
     </div><ul class="grid mt-8 text-left gap-y-4">
       {
-        plan.features.map((item) => (
+        plan.features.map((item: unknown) => (
           <li class="flex items-start gap-3 text-gray-800">
             <Tick class="w-6 h-6" />
             <span>{item}</span>
           </li>
         ))
       }
-    </ul><div class="flex mt-8">
+    </ul>
+    <div class="flex mt-8">
       <Link
         href={plan.button.link || "#"}
         block
