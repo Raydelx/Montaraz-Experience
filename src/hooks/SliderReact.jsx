@@ -18,16 +18,11 @@ export default function App({IMG}) {
         }}
         key="2"
         modules={[Pagination]}
-        className="mySwiper "
-        
-      >
-        
+        className="mySwiper rounded-3xl mx-8 " 
+      >  
        {IMG.map(function(i, index) {
-        
-  return <SwiperSlide key={index}><img className="m-auto h-[300px] md:h-96 rounded-lg object-fill w-[900px]" src={i.src}/></SwiperSlide>;
-  })}
-        
-       
+          return <SwiperSlide key={index}><img className="m-auto h-[250px] md:h-[450px]  object-cover w-full" src={i.src}/></SwiperSlide>;
+        })}      
       </Swiper>
     </>
   );

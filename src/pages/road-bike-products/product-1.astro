@@ -2,12 +2,12 @@
 import Container from "../../components/container.astro";
 import Icon from "../../components/Icon.astro";
 import InformationProducts from "../../components/ui/informationProducts.astro";
-import ExperienceItem from "../../components/timeLine.astro";
 import Layout from "../../layouts/Layout.astro";
 import SliderReact from "../../hooks/SliderReact";
 import NewFaq from "../../components/newFaq.astro";
 import faqs from "../../data_files/faqs.json";
 import Days from "@/components/days.astro";
+
 const DAYS = [
   {
     title: "Day 1",
@@ -70,56 +70,50 @@ const IMG = [
 
           <h1
             class="text-3xl font-extrabold tracking-tight leading-none text-white md:text-4xl lg:text-5xl">
-            Road Biek to Canarias
+            Road Bike to Canarias
           </h1>
         </div>
       </div>
 
       <!-- Informacion general de los viajes -->
 
-      <div class="flex flex-col">
-        <h2 class="mt-5 ml-2 font-bold text-xl">General Information</h2>
-        <div class="grid md:grid-cols-5 w-auto h-auto mt-3">
-          <InformationProducts title="Price pre-booking" subtitle="250">
-            <div slot="icon">
-              <Icon icon="usd-logo" size="1.6rem" color="#0E46A3" />
-            </div>
-          </InformationProducts>
-          <InformationProducts title="Price" subtitle="1400">
-            <div slot="icon">
-              <Icon icon="price-logo" size="1.6rem" color="#0E46A3" />
-            </div>
-          </InformationProducts>
-          <InformationProducts title="Minimum of persons" subtitle="6">
-            <div slot="icon">
-              <Icon icon="group-logo" size="1.6rem" color="#0E46A3" />
-            </div>
-          </InformationProducts>
-          <InformationProducts title="Accommodation" subtitle="2 nights">
-            <div slot="icon">
-              <Icon icon="accommodation-logo" size="1.6rem" color="#0E46A3" />
-            </div>
-          </InformationProducts>
-          <InformationProducts title="Tipo de viaje" subtitle="Guiado">
-            <div slot="icon">
-              <Icon icon="guide-logo" size="1.6rem" color="#0E46A3" />
-            </div>
-          </InformationProducts>
-        </div>
+      <div class="grid md:grid-cols-6 h-auto mt-3 gap-3 place-content-start">
+        <InformationProducts title="Price" subtitle="1400">
+          <div slot="icon">
+            <Icon icon="price-logo" size="1.6rem" color="#0E46A3" />
+          </div>
+        </InformationProducts>
+        <InformationProducts title="Pre-booking" subtitle="250">
+          <div slot="icon">
+            <Icon icon="price-logo" size="1.6rem" color="#0E46A3" />
+          </div>
+        </InformationProducts>
+        <InformationProducts title="Minimum of persons" subtitle="6">
+          <div slot="icon">
+            <Icon icon="group-logo" size="1.6rem" color="#0E46A3" />
+          </div>
+        </InformationProducts>
+        <InformationProducts title="Duration" subtitle="8 Days">
+          <div slot="icon">
+            <Icon icon="timer-logo" size="1.6rem" color="#0E46A3" />
+          </div>
+        </InformationProducts>
+        <InformationProducts title="Tour type" subtitle="Guided">
+          <div slot="icon">
+            <Icon icon="guide-logo" size="1.6rem" color="#0E46A3" />
+          </div>
+        </InformationProducts>
+        <InformationProducts title="Season" subtitle="Spring">
+          <div slot="icon">
+            <Icon icon="spring-logo" size="1.6rem" color="#0E46A3" />
+          </div>
+        </InformationProducts>
       </div>
 
       <!-- Informacion tecnica -->
 
-      <div class="flex flex-col">
-        <h2 class="mt-5 ml-2 font-bold text-xl">Tecnical Information</h2>
-        <div class="grid md:grid-cols-5 w-auto h-auto mt-3">
-          <InformationProducts
-            title="Type of terrain"
-            subtitle="Padev road 100%">
-            <div slot="icon">
-              <Icon icon="road-logo" size="1.6rem" color="#0E46A3" />
-            </div>
-          </InformationProducts>
+      <div class="flex flex-wrap">
+        <div class="grid md:grid-cols-6 h-auto mt-3 gap-3">
           <InformationProducts title="Total distance" subtitle="1382 km">
             <div slot="icon">
               <Icon icon="distance-logo" size="1.6rem" color="#0E46A3" />
@@ -132,6 +126,16 @@ const IMG = [
               <Icon icon="up-down-logo" size="1.6rem" color="#0E46A3" />
             </div>
           </InformationProducts>
+          <InformationProducts title="Total ascent" subtitle="1000 km">
+            <div slot="icon">
+              <Icon icon="up-logo" size="1.6rem" color="#0E46A3" />
+            </div>
+          </InformationProducts>
+          <InformationProducts title="Total descent" subtitle="382 km">
+            <div slot="icon">
+              <Icon icon="down-logo" size="1.6rem" color="#0E46A3" />
+            </div>
+          </InformationProducts>
           <InformationProducts title="Difficulty" subtitle="Easy">
             <div slot="icon">
               <Icon icon="bike-logo" size="1.6rem" color="#0E46A3" />
@@ -140,166 +144,96 @@ const IMG = [
         </div>
       </div>
 
-      <!--  Descripcion de la actividad  -->
-
-      <h2 class="mt-6 ml-2 font-bold text-xl">
-        Here goes the activity descripcion
-      </h2>
-      <p class="mt-3 ml-2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-        sapiente amet consectetur, quia, veritatis dolore expedita beatae
-        tempore assumenda eos explicabo eum dignissimos voluptates. Quam fugiat
-        dignissimos reprehenderit officiis sequi.
-      </p>
-
       <!--  Include, exclude, complementaries  -->
 
-      <div class="grid md:grid-cols-3 mt-3 md:mt-5">
+      <div class="grid md:grid-cols-3 mt-3 md:mt-5 md:px-8 gap-4">
         <!-- Include -->
-        <div class="grid md:grid-flow-col mt-5 md:justify-center">
-          <div class="">
-            <h3
-              class="font-bold text-xl ml-2 w-[200px] inline
+        <div class="mt-5">
+          <h3
+            class="font-bold text-xl w-[200px] inline
             bg-[#0E46A3] text-white p-2 rounded-xl">
-              Price include
-            </h3>
-            <div class="flex flex-col gap-2 mt-2">
-              <div class="flex flex-row gap-2 ml-2 mt-2">
-                <div>
-                  <Icon icon="uncheck-logo" size="1.6rem" color="#0E46A3" />
-                </div>
-                <p class="max-w-[320px]">
-                  Use of trekking poles and Microspike Crampons if necessary
-                </p>
-              </div>
-              <div class="flex flex-row gap-2 ml-2">
-                <div>
-                  <Icon icon="uncheck-logo" size="1.6rem" color="#0E46A3" />
-                </div>
-                <p class="max-w-[320px]">
-                  Entrance fees and national pa rk permits
-                </p>
-              </div>
-              <div class="flex flex-row gap-2 ml-2">
-                <div>
-                  <Icon icon="uncheck-logo" size="1.6rem" color="#0E46A3" />
-                </div>
-                <p class="max-w-[320px]">
-                  Emergency equipment including a company-issued first-aid kit
-                  and satellite phone
-                </p>
-              </div>
-              <div class="flex flex-row gap-2 ml-2">
-                <div>
-                  <Icon icon="uncheck-logo" size="1.6rem" color="#0E46A3" />
-                </div>
-                <p class="max-w-[320px]">
-                  Roundtrip transportation from your hotel in Flagstaff, Arizona
-                  to the Grand Canyon and back
-                </p>
-              </div>
-            </div>
+            Price include
+          </h3>
+          <div class="flex flex-col gap-2 mt-4">
+            <p class="max-w-[320px]">
+              Use of trekking poles and Microspike Crampons if necessary
+            </p>
+
+            <p class="max-w-[320px]">
+              Entrance fees and national pa rk permits
+            </p>
+
+            <p class="max-w-[320px]">
+              Emergency equipment including a company-issued first-aid kit and
+              satellite phone
+            </p>
+
+            <p class="max-w-[320px]">
+              Roundtrip transportation from your hotel in Flagstaff, Arizona to
+              the Grand Canyon and back
+            </p>
           </div>
         </div>
 
         <!-- Exclude -->
 
-        <div class="grid md:grid-flow-col mt-5 md:justify-center">
-          <div class="">
-            <h3
-              class="font-bold text-xl ml-2 w-[200px] inline
+        <div class="mt-5">
+          <h3
+            class="font-bold text-xl w-[200px] inline
             bg-[#0E46A3] text-white py-2 px-3 rounded-xl">
-              Price exclude
-            </h3>
-            <div class="flex flex-col gap-2 mt-2">
-              <div class="flex flex-row gap-2 ml-2 mt-2">
-                <div>
-                  <Icon icon="uncheck-logo" size="1.6rem" color="#0E46A3" />
-                </div>
-                <p class="max-w-[320px]">
-                  Use of trekking poles and Microspike Crampons if necessary
-                </p>
-              </div>
-              <div class="flex flex-row gap-2 ml-2">
-                <div>
-                  <Icon icon="uncheck-logo" size="1.6rem" color="#0E46A3" />
-                </div>
-                <p class="max-w-[320px]">
-                  Entrance fees and national park permits
-                </p>
-              </div>
-              <div class="flex flex-row gap-2 ml-2">
-                <div>
-                  <Icon icon="uncheck-logo" size="1.6rem" color="#0E46A3" />
-                </div>
-                <p class="max-w-[320px]">
-                  Emergency equipment including a company-issued first-aid kit
-                  and satellite phone
-                </p>
-              </div>
-              <div class="flex flex-row gap-2 ml-2">
-                <div>
-                  <Icon icon="uncheck-logo" size="1.6rem" color="#0E46A3" />
-                </div>
+            Price exclude
+          </h3>
+          <div class="flex flex-col gap-2 mt-4">
+            <p class="max-w-[320px]">
+              Use of trekking poles and Microspike Crampons if necessary
+            </p>
 
-                <p class="max-w-[320px]">
-                  Roundtrip transportation from your hotel in Flagstaff, Arizona
-                  to the Grand Canyon and back
-                </p>
-              </div>
-            </div>
+            <p class="max-w-[320px]">Entrance fees and national park permits</p>
+
+            <p class="max-w-[320px]">
+              Emergency equipment including a company-issued first-aid kit and
+              satellite phone
+            </p>
+
+            <p class="max-w-[320px]">
+              Roundtrip transportation from your hotel in Flagstaff, Arizona to
+              the Grand Canyon and back
+            </p>
           </div>
         </div>
         <!-- Complementaries -->
-        <div class="grid md:grid-flow-col mt-5 md:justify-center">
-          <div class="">
-            <h3
-              class="font-bold text-xl ml-2 inline
+        <div class="mt-5">
+          <h3
+            class="font-bold text-xl inline
             bg-[#0E46A3] text-white p-2 rounded-xl">
-              Complementaries
-            </h3>
-            <div class="flex flex-col gap-2 mt-2">
-              <div class="flex flex-row gap-2 ml-2 mt-2">
-                <div>
-                  <Icon icon="umbrella-logo" size="1.6rem" color="#0E46A3" />
-                </div>
+            Complementaries
+          </h3>
+          <div class="flex flex-col gap-2 mt-4">
+            <p class="max-w-[320px]">Umbrella</p>
 
-                <p class="max-w-[320px]">Umbrella</p>
-              </div>
-              <div class="flex flex-row gap-2 ml-2">
-                <div>
-                  <Icon icon="umbrella-logo" size="1.6rem" color="#0E46A3" />
-                </div>
-                <p class="max-w-[320px]">T-shirt</p>
-              </div>
-              <div class="flex flex-row gap-2 ml-2">
-                <div>
-                  <Icon icon="umbrella-logo" size="1.6rem" color="#0E46A3" />
-                </div>
-                <p class="max-w-[320px]">Deuter or Osprey backpacks</p>
-              </div>
-              <div class="flex flex-row gap-2 ml-2">
-                <div>
-                  <Icon icon="umbrella-logo" size="1.6rem" color="#0E46A3" />
-                </div>
-                <p class="max-w-[320px]">Microspike crampons when necessary</p>
-              </div>
-            </div>
+            <p class="max-w-[320px]">T-shirt</p>
+
+            <p class="max-w-[320px]">Deuter or Osprey backpacks</p>
+
+            <p class="max-w-[320px]">Microspike crampons when necessary</p>
           </div>
         </div>
       </div>
 
       <!--  Highlight  -->
-      <h2 class="mt-10 ml-2 font-bold text-xl">Highlight</h2>
-      <p class="mt-2 ml-2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-        sapiente amet consectetur, quia, veritatis dolore expedita beatae
-        tempore assumenda eos explicabo eum dignissimos voluptates. Quam fugiat
-        dignissimos reprehenderit officiis sequi.
-      </p>
+      <section class="md:px-8">
+        <h2 class="mt-10 font-bold text-4xl">Highlight</h2>
+        <p class="mt-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+          sapiente amet consectetur, quia, veritatis dolore expedita beatae
+          tempore assumenda eos explicabo eum dignissimos voluptates. Quam
+          fugiat dignissimos reprehenderit officiis sequi.
+        </p>
+      </section>
+
       <!--  Photos  -->
       <!-- <Slider /> -->
-      <section class="m-auto md:w-[800px]">
+      <section class="m-auto md:w-full rounded-xl md:px-8">
         <ol class="relative mt-16">
           {(<SliderReact IMG={IMG} client:visible />)}
         </ol>
@@ -321,7 +255,7 @@ const IMG = [
       </section> -->
 
       <!--  FAQ  -->
-      <section class="mt-16 w-auto flex justify-center">
+      <section class="mt-10 w-auto flex justify-center">
         <NewFaq title="Frequently<br />asked questions" faqs={faqs} />
       </section>
     </main>
