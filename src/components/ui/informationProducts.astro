@@ -8,12 +8,12 @@ interface Props {
 const { title, subtitle } = Astro.props;
 ---
 
-<div class="grid">
-  <div class="md:p-8">
-    <p class="text-black font-semibold md:text-lg text-sm tracking-wider">
+<div class="grid hover:scale-110 transition-all duration-200 hover:-rotate-6">
+  <div class="md:p-3">
+    <p class="text-black font-semibold md:text-xl text-sm tracking-wider">
       {title}
     </p>
-    <div class="flex gap-2 mt-1">
+    <div class="flex gap-2 mt-1 r">
       <slot name="icon" />
       <p class="text-black md:text-lg text-sm">{subtitle}</p>
     </div>

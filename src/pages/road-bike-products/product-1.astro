@@ -8,35 +8,12 @@ import NewFaq from "../../components/newFaq.astro";
 import faqs from "../../data_files/faqs.json";
 import Days from "@/components/days.astro";
 
-const DAYS = [
-  {
-    title: "Day 1",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. In labore placeat quos quis doloremque, quam amet impedit ad debitis libero aperiam optio, corporis animi numquam repudiandae exercitationem illo eius enim!",
-  },
-  {
-    title: "Day 2",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. In labore placeat quos quis doloremque, quam amet impedit ad debitis libero aperiam optio, corporis animi numquam repudiandae exercitationem illo eius enim!",
-  },
-  {
-    title: "Day 3",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. In labore placeat quos quis doloremque, quam amet impedit ad debitis libero aperiam optio, corporis animi numquam repudiandae exercitationem illo eius enim!",
-  },
-  {
-    title: "Day 4",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. In labore placeat quos quis doloremque, quam amet impedit ad debitis libero aperiam optio, corporis animi numquam repudiandae exercitationem illo eius enim!",
-  },
-  {
-    title: "Day 5",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. In labore placeat quos quis doloremque, quam amet impedit ad debitis libero aperiam optio, corporis animi numquam repudiandae exercitationem illo eius enim!",
-  },
-];
+// Duplica y cambia las rutas para añadir o modificar las fotos
 
 const IMG = [
+  {
+    src: "/e-bike.jpg",
+  },
   {
     src: "/e-bike.jpg",
   },
@@ -98,14 +75,14 @@ const IMG = [
             <Icon icon="timer-logo" size="1.6rem" color="#0E46A3" />
           </div>
         </InformationProducts>
-        <InformationProducts title="Tour type" subtitle="Guided">
+        <InformationProducts title="Tour type" subtitle="Self - Guided">
           <div slot="icon">
             <Icon icon="guide-logo" size="1.6rem" color="#0E46A3" />
           </div>
         </InformationProducts>
-        <InformationProducts title="Season" subtitle="Spring">
+        <InformationProducts title="Season" subtitle="Autumn">
           <div slot="icon">
-            <Icon icon="spring-logo" size="1.6rem" color="#0E46A3" />
+            <Icon icon="autumn-logo" size="1.6rem" color="#0E46A3" />
           </div>
         </InformationProducts>
       </div>
@@ -119,13 +96,7 @@ const IMG = [
               <Icon icon="distance-logo" size="1.6rem" color="#0E46A3" />
             </div>
           </InformationProducts>
-          <InformationProducts
-            title="Total ascent and descent"
-            subtitle="1999 M">
-            <div slot="icon">
-              <Icon icon="up-down-logo" size="1.6rem" color="#0E46A3" />
-            </div>
-          </InformationProducts>
+
           <InformationProducts title="Total ascent" subtitle="1000 km">
             <div slot="icon">
               <Icon icon="up-logo" size="1.6rem" color="#0E46A3" />
@@ -136,9 +107,25 @@ const IMG = [
               <Icon icon="down-logo" size="1.6rem" color="#0E46A3" />
             </div>
           </InformationProducts>
-          <InformationProducts title="Difficulty" subtitle="Easy">
+          <InformationProducts title="Route type" subtitle="Point to point">
             <div slot="icon">
-              <Icon icon="bike-logo" size="1.6rem" color="#0E46A3" />
+              <Icon icon="down-logo" size="1.6rem" color="#0E46A3" />
+            </div>
+          </InformationProducts>
+          <InformationProducts title="Difficulty">
+            <div slot="icon">
+              <Icon icon="tire-logo" size="1.6rem" color="#0E46A3" />
+            </div>
+            <div slot="icon">
+              <Icon icon="tire-logo" size="1.6rem" color="#0E46A3" />
+            </div>
+            <div slot="icon">
+              <Icon icon="tire-logo" size="1.6rem" color="#0E46A3" />
+            </div>
+          </InformationProducts>
+          <InformationProducts title="E-Bike" subtitle="Yes">
+            <div slot="icon">
+              <Icon icon="down-logo" size="1.6rem" color="#0E46A3" />
             </div>
           </InformationProducts>
         </div>
@@ -146,7 +133,8 @@ const IMG = [
 
       <!--  Include, exclude, complementaries  -->
 
-      <div class="grid md:grid-cols-3 mt-3 md:mt-5 md:px-8 gap-4">
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-3 mt-3 md:mt-5 md:px-8 gap-4">
         <!-- Include -->
         <div class="mt-5">
           <h3
@@ -221,6 +209,7 @@ const IMG = [
       </div>
 
       <!--  Highlight  -->
+
       <section class="md:px-8">
         <h2 class="mt-10 font-bold text-4xl">Highlight</h2>
         <p class="mt-2">
@@ -259,5 +248,7 @@ const IMG = [
         <NewFaq title="Frequently<br />asked questions" faqs={faqs} />
       </section>
     </main>
+
+    <!-- Buttom -->
   </Container>
 </Layout>
