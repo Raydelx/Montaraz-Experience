@@ -1,9 +1,8 @@
 ---
+import NewFaq from "@/components/newFaq.astro";
 import Container from "../components/container.astro";
-import Cta from "../components/cta.astro";
-
+import faqs from "../data_files/faqs.json";
 import Hero from "../components/hero.astro";
-import Logos from "../components/logos.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -11,7 +10,8 @@ import Layout from "../layouts/Layout.astro";
   <Container>
     <Hero />
 
-    <!-- <Logos />
-    <Cta /> -->
+    <section class="mt-10 w-auto flex justify-center">
+      <NewFaq title="Frequently<br />asked questions" faqs={faqs} />
+    </section>
   </Container>
 </Layout>
