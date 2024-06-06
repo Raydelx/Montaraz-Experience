@@ -4,9 +4,10 @@ import Icon from "../../components/Icon.astro";
 import InformationProducts from "../../components/ui/informationProducts.astro";
 import Layout from "../../layouts/Layout.astro";
 import SliderReact from "../../hooks/SliderReact";
-import Days from "@/components/days.astro";
+import Days from "@/components/products-components/days.astro";
 import Wheel from "@/components/ui/icons/wheel.astro";
 import Route from "@/components/ui/icons/route.astro";
+import CalendarPic from "@/components/products-components/calendarPic.astro";
 
 // Duplica y cambia las rutas para añadir o modificar las fotos
 
@@ -126,7 +127,6 @@ const IMG = [
           <InformationProducts title="E-Bike" subtitle="Yes">
             <div slot="icon">
               <svg
-                <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="45"
                 height="30"
@@ -219,6 +219,16 @@ const IMG = [
           </div>
         </div>
       </div>
+      <section class="md:px-8 md:py-14">
+        <CalendarPic title="Avalible for day:" subtitle="29/10/2024">
+          <img
+            class="rounded-xl object-cover"
+            slot="picture"
+            src="/calendar.png"
+            alt="calendar vector art style"
+          /></CalendarPic
+        >
+      </section>
 
       <!--  Highlight  -->
 
