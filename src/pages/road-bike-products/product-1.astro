@@ -8,6 +8,7 @@ import Days from "@/components/products-components/days.astro";
 import Wheel from "@/components/ui/icons/wheel.astro";
 import Route from "@/components/ui/icons/route.astro";
 import CalendarPic from "@/components/products-components/calendarPic.astro";
+import AvalibleDate from "@/components/products-components/avalibleDate.astro";
 
 // Duplica y cambia las rutas para añadir o modificar las fotos
 
@@ -220,40 +221,44 @@ const IMG = [
         </div>
       </div>
       <section class="md:px-8 md:py-14">
-        <CalendarPic title="Avalible for day:" subtitle="29/10/2024">
+        <CalendarPic title="Avalible for:">
           <img
             class="rounded-xl object-cover"
             slot="picture"
             src="/calendar.png"
             alt="calendar vector art style"
-          /></CalendarPic
-        >
+          />
+          <AvalibleDate slot="date" from="29/10/2024" to="5/11/2024" />
+          <AvalibleDate slot="date" from="29/10/2024" to="5/11/2024" />
+          <AvalibleDate slot="date" from="29/10/2024" to="5/11/2024" />
+        </CalendarPic>
       </section>
+    </main>
 
-      <!--  Highlight  -->
+    <!--  Highlight  -->
 
-      <section class="md:px-8">
-        <h2 class="mt-10 font-bold text-4xl">Highlight</h2>
-        <p class="mt-2">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-          sapiente amet consectetur, quia, veritatis dolore expedita beatae
-          tempore assumenda eos explicabo eum dignissimos voluptates. Quam
-          fugiat dignissimos reprehenderit officiis sequi.
-        </p>
-      </section>
+    <section class="md:px-8">
+      <h2 class="mt-10 font-bold text-4xl">Highlight</h2>
+      <p class="mt-2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+        sapiente amet consectetur, quia, veritatis dolore expedita beatae
+        tempore assumenda eos explicabo eum dignissimos voluptates. Quam fugiat
+        dignissimos reprehenderit officiis sequi.
+      </p>
+    </section>
 
-      <!--  Photos  -->
-      <!-- <Slider /> -->
-      <section class="m-auto md:w-full rounded-xl md:px-8">
-        <ol class="relative mt-16">
-          {(<SliderReact IMG={IMG} client:visible />)}
-        </ol>
-      </section>
+    <!--  Photos  -->
+    <!-- <Slider /> -->
+    <section class="m-auto md:w-full rounded-xl md:px-8">
+      <ol class="relative mt-16">
+        {(<SliderReact IMG={IMG} client:visible />)}
+      </ol>
+    </section>
 
-      <!--  TimeLine per days  -->
-      <Days />
+    <!--  TimeLine per days  -->
+    <Days />
 
-      <!-- <section class="m-auto md:w-[800px]">
+    <!-- <section class="m-auto md:w-[800px]">
         <ol class="relative mt-16">
           {
             DAYS.map((experiencie) => (
@@ -265,9 +270,8 @@ const IMG = [
         </ol>
       </section> -->
 
-      <!--  FAQ  -->
-    </main>
-
-    <!-- Buttom -->
+    <!--  FAQ  -->
   </Container>
 </Layout>
+
+<!-- Buttom -->
