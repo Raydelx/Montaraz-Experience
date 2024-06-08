@@ -1,0 +1,68 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/container.astro";
+import Sectionhead from "../components/sectionhead.astro";
+import Card from "../components/card.astro";
+
+const HikinkTrekking = [
+  {
+    name: "michel",
+    description: "aqui va descripcion de michel ",
+    href: "/road-bike-products/product-1/",
+    href_img: "/road-bike.jpg",
+    alt_img: "string",
+  },
+  {
+    name: "Product 2",
+    description: "aqui va la descripcion del producto numero 1",
+    href: "road-bike-products/product-2/",
+    href_img: "/road-bike.jpg",
+    alt_img: "string",
+  },
+  {
+    name: "Product 3",
+    description: "aqui va la descripcion del producto numero 1",
+    href: "road-bike-products/product-3/",
+    href_img: "/road-bike.jpg",
+    alt_img: "string",
+  },
+  {
+    name: "Product 4",
+    description: "aqui va la descripcion del producto numero 1",
+    href: "road-bike-products/product-4/",
+    href_img: "/road-bike.jpg",
+    alt_img: "string",
+  },
+  {
+    name: "Product 5",
+    description: "aqui va la descripcion del producto numero 1",
+    href: "road-bike-products/product-5/",
+    href_img: "/road-bike.jpg",
+    alt_img: "string",
+    class: "bg-gradient-to-r from-blue-200 to-cyan-200",
+  },
+];
+---
+
+<Layout title="About">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Hiking & Trekking</Fragment>
+      <Fragment slot="desc"
+        >Here you can find ours Hiking & Trekking products, just the best for
+        you</Fragment
+      >
+    </Sectionhead>
+    <main class="mt-16">
+      <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+        {
+          HikinkTrekking.map((tour) => (
+            <li class="mb-10">
+              <Card {...tour} />
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </Container>
+</Layout>
