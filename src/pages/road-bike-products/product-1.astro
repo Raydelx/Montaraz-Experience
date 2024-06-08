@@ -8,7 +8,9 @@ import Days from "@/components/products-components/days.astro";
 import Wheel from "@/components/ui/icons/wheel.astro";
 import Route from "@/components/ui/icons/route.astro";
 import CalendarPic from "@/components/products-components/calendarPic.astro";
+import Highlight from "@/components/products-components/highlight.astro";
 import AvalibleDate from "@/components/products-components/avalibleDate.astro";
+import Link from "@/components/ui/link.astro";
 
 // Duplica y cambia las rutas para añadir o modificar las fotos
 
@@ -27,6 +29,32 @@ const IMG = [
   },
   {
     src: "/e-bike.jpg",
+  },
+];
+const DAYS = [
+  {
+    day: "1",
+    totalDistance: "14562 KM",
+    totalAscent: "456 KM",
+    totalDescent: "124 KM",
+  },
+  {
+    day: "2",
+    totalDistance: "14562 KM",
+    totalAscent: "456 KM",
+    totalDescent: "124 KM",
+  },
+  {
+    day: "3",
+    totalDistance: "14562 KM",
+    totalAscent: "456 KM",
+    totalDescent: "124 KM",
+  },
+  {
+    day: "3",
+    totalDistance: "14562 KM",
+    totalAscent: "456 KM",
+    totalDescent: "124 KM",
   },
 ];
 ---
@@ -56,7 +84,8 @@ const IMG = [
 
       <!-- Informacion general de los viajes -->
 
-      <div class="grid md:grid-cols-6 h-auto mt-3 gap-3 place-content-start">
+      <div
+        class="grid grid-cols-2 md:grid-cols-6 h-auto mt-3 gap-3 place-content-start md:px-6">
         <InformationProducts title="Price" subtitle="1400">
           <div slot="icon">
             <Icon icon="price-logo" size="1.6rem" color="#0E46A3" />
@@ -91,8 +120,9 @@ const IMG = [
 
       <!-- Informacion tecnica -->
 
-      <div class="flex flex-wrap">
-        <div class="grid md:grid-cols-6 h-auto mt-3 gap-3">
+      <div class="">
+        <div
+          class="grid grid-cols-2 justify-between md:grid-cols-6 h-auto mt-3 gap-3 md:px-6">
           <InformationProducts title="Total distance" subtitle="1382 km">
             <div slot="icon">
               <Icon icon="distance-logo" size="1.6rem" color="#0E46A3" />
@@ -228,6 +258,7 @@ const IMG = [
             src="/calendar.png"
             alt="calendar vector art style"
           />
+
           <AvalibleDate slot="date" from="29/10/2024" to="5/11/2024" />
           <AvalibleDate slot="date" from="29/10/2024" to="5/11/2024" />
           <AvalibleDate slot="date" from="29/10/2024" to="5/11/2024" />
@@ -237,18 +268,36 @@ const IMG = [
 
     <!--  Highlight  -->
 
-    <section class="md:px-8">
-      <h2 class="mt-10 font-bold text-4xl">Highlight</h2>
-      <p class="mt-2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
-        sapiente amet consectetur, quia, veritatis dolore expedita beatae
-        tempore assumenda eos explicabo eum dignissimos voluptates. Quam fugiat
-        dignissimos reprehenderit officiis sequi.
+    <Highlight title="Highlight">
+      <img
+        class="rounded-xl object-cover size-[450px] -mt-20"
+        slot="picture"
+        src="/vector-bike.png"
+        alt="calendar vector art style"
+      />
+      <p slot="description" class="text-start">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis
+        eius ex rem, beatae nam quidem ipsam, hic rerum aspernatur cupiditate
+        repudiandae, amet quam nostrum at obcaecati illo autem fugit. Error!
       </p>
-    </section>
+    </Highlight>
+    <!-- Button to download PDF -->
+    <div
+      class="grid bg-[#0E46A3] place-items-center md:mt-12 border-spacing-3 backdrop-blur-sm w-fit m-auto md:px-28 p-6 mt-12 rounded-xl shadow-[0px_0px_23px_14px_#00000024]">
+      <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-200">
+        More information about our tour
+      </h2>
+      <Link
+        style="muted"
+        href="/anxo.png"
+        download="Anxo"
+        class="flex gap-1 items-center justify-center mt-8"
+        rel="noopener">
+        Descargar PDF
+      </Link>
+    </div>
 
-    <!--  Photos  -->
-    <!-- <Slider /> -->
+    <!-- Slider Photos -->
     <section class="m-auto md:w-full rounded-xl md:px-8">
       <ol class="relative mt-16">
         {(<SliderReact IMG={IMG} client:visible />)}
@@ -256,21 +305,16 @@ const IMG = [
     </section>
 
     <!--  TimeLine per days  -->
-    <Days />
-
-    <!-- <section class="m-auto md:w-[800px]">
-        <ol class="relative mt-16">
-          {
-            DAYS.map((experiencie) => (
-              <li class="">
-                <ExperienceItem {...experiencie} />
-              </li>
-            ))
-          }
+    <h2 class="text-4xl md:text-5xl xl:text-6xl md:p-8 mt-16 font-bold mb-4">
+      Every day a <br /> New adventure
+    </h2>
+    {
+      DAYS.map((tour) => (
+        <ol class="mb-10">
+          <Days {...tour} />
         </ol>
-      </section> -->
-
-    <!--  FAQ  -->
+      ))
+    }
   </Container>
 </Layout>
 
