@@ -3,62 +3,64 @@ import Icon from "../Icon.astro";
 
 interface Props {
   day: string;
+  description: string;
   totalDistance: string;
   totalAscent: string;
   totalDescent: string;
 }
-const { day, totalDistance, totalAscent, totalDescent } = Astro.props;
+const { day, description, totalDistance, totalAscent, totalDescent } =
+  Astro.props;
 ---
 
 <div class="grid md:grid-cols-6 md:p-8 md:gap-10 gap-3">
   <div class="col-span-3">
-    <h2 class="md:text-3xl text-2xl font-bold">Day {day}</h2>
+    <div>
+      <h2 class="md:text-3xl text-2xl font-bold">Day {day}</h2>
+    </div>
+    <p class="text-gray-500 text-md">{description}</p>
   </div>
-  <div class="md:col-span-3 grid gap-4">
-    <div>
-      <div class="grid grid-cols-6 gap-8 md:gap-2">
-        <div class="col-span-1">
-          <Icon icon="distance-logo" size="3rem" color="#0E46A3" />
-        </div>
-        <div class="grid col-span-5">
-          <h2 class="text-pretty text-neutral-900 text-xl font-bold">
-            Total Distance
-          </h2>
-          <p class="text-pretty text-neutral-600 text-md">
-            {totalDistance}
-          </p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="grid grid-cols-6 gap-8 md:gap-2">
-        <div class="col-span-1">
-          <Icon icon="up-logo" size="3rem" color="#0E46A3" />
-        </div>
-        <div class="grid col-span-5">
-          <h2 class="text-pretty text-neutral-900 text-xl font-bold">
-            Total Ascent
-          </h2>
 
-          <p class="text-pretty text-neutral-600 text-md">
-            {totalAscent}
-          </p>
-        </div>
+  <div class="md:col-span-3 grid gap-4">
+    <div class="grid grid-cols-6 gap-8 md:gap-2">
+      <div class="col-span-1">
+        <Icon icon="distance-logo" size="3rem" color="#0E46A3" />
+      </div>
+      <div class="grid col-span-5">
+        <h2 class="text-pretty text-neutral-900 text-xl font-bold">
+          Total Distance
+        </h2>
+        <p class="text-pretty text-gray-500 text-md">
+          {totalDistance}
+        </p>
       </div>
     </div>
-    <div>
-      <div class="grid grid-cols-6 gap-8 md:gap-2">
-        <div class="col-span-1">
-          <Icon icon="down-logo" size="3rem" color="#0E46A3" />
-        </div>
-        <div class="grid col-span-5">
-          <h2 class="text-pretty text-neutral-900 text-xl font-bold">
-            Total Descent
-          </h2>
-          <p class="text-pretty text-neutral-600 text-md">
-            {totalDescent}
-          </p>
-        </div>
+
+    <div class="grid grid-cols-6 gap-8 md:gap-2">
+      <div class="col-span-1">
+        <Icon icon="up-logo" size="3rem" color="#0E46A3" />
+      </div>
+      <div class="grid col-span-5">
+        <h2 class="text-pretty text-neutral-900 text-xl font-bold">
+          Total Ascent
+        </h2>
+
+        <p class="text-pretty text-gray-500 text-md">
+          {totalAscent}
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-6 gap-8 md:gap-2">
+      <div class="col-span-1">
+        <Icon icon="down-logo" size="3rem" color="#0E46A3" />
+      </div>
+      <div class="grid col-span-5">
+        <h2 class="text-pretty text-neutral-900 text-xl font-bold">
+          Total Descent
+        </h2>
+        <p class="text-pretty text-gray-500 text-md">
+          {totalDescent}
+        </p>
       </div>
     </div>
   </div>
