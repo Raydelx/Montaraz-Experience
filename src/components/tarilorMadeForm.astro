@@ -136,8 +136,8 @@ import Button from "./ui/button.astro";
         class="w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
       />
       <datalist id="Experiences">
-        <option value="Cycling Holiday"></option>
-        <option value="Hiking & Treakking"></option>
+        <option value="Cycling Tours"></option>
+        <option value="Hiking & Trekking"></option>
         <option value="Cultural Travel Tours"></option>
         <option value="Multi-Adventure Tours"></option>
         <option value="Other"></option>
@@ -162,12 +162,27 @@ Raquel Doret 24"
       Introduce travelers please.
     </div>
   </div>
+  <!-- Room preference -->
+  <div class="mb-3">
+    <label for="Room preference" class="ml-1">Room preference </label>
+
+    <textarea
+      id="Room preference"
+      name="Room preference"
+      required
+      placeholder="Single room, Twin or double room, etc..."
+      class="w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
+    ></textarea>
+    <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
+      Introduce room preference.
+    </div>
+  </div>
   <!-- Which places would you like to explore? -->
   <div class="mb-3">
     <label for="destinations" class="ml-1"
       >Which places would you like to explore?
     </label>
-    <label for="Travelers and Ages" class="ml-1"></label>
+    <label for="destinations" class="ml-1"></label>
     <textarea
       id="destinations"
       name="Destinations"
@@ -196,14 +211,14 @@ Raquel Doret 24"
   <!-- What is the most important thing you look in a vacation? -->
   <div class="mb-3">
     <label for="important" class="ml-1"
-      >What is the most important thing you look in a vacation?
+      >What are the most important thing you look in a vacation?
     </label>
-    <label for="Travelers and Ages" class="ml-1"></label>
+    <label for="important" class="ml-1"></label>
     <textarea
       id="important"
       name="What is the most important thing you look in a vacation?"
       required
-      placeholder="Good vives and chills moments"
+      placeholder="Beach vacation, city tour, hiking, etc..."
       class="w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none h-36 focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100"
     ></textarea>
     <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
@@ -270,8 +285,8 @@ Raquel Doret 24"
         The clients are required to complete and sign our release of liability
         form and understand the full terms and conditions of the provided tours.
         Signatures are required before pre-reservation. We're unable to allow
-        travelers to participate in any aspect of a Montaraz Experience tours
-        without a signed release form.
+        travelers to participate in any aspect of a Montaraz Outdoors & Culture
+        tours without a signed release form.
       </p>
     </div>
     <div>
@@ -308,11 +323,11 @@ Raquel Doret 24"
         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
       />
       <label for="understad-checkbox" class="ms-2 text-md"
-        >I read and undestad the bookings steps</label
+        >I read and undestad the bookings steps.</label
       >
     </div>
     <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
-      We need to know that you read all the steps for booking a tour
+      We need to know that you read all the steps for booking a tour.
     </div>
   </div>
   <h2 class="text-2xl font-bold mb-2">Important</h2>
@@ -321,13 +336,13 @@ Raquel Doret 24"
   <div class="mb-5">
     <div class="flex items-center">
       <input
-        id="understad-checkbox"
+        id="agreed-checkbox"
         type="checkbox"
         required
-        value="I understad"
+        value="I agreed"
         class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
       />
-      <label for="understad-checkbox" class="ms-2 text-md">I agreed</label>
+      <label for="agreed-checkbox" class="ms-2 text-md">I agreed</label>
     </div>
     <div class="empty-feedback invalid-feedback text-red-400 text-sm mt-1">
       We need to know that you read all the steps for booking a tour
