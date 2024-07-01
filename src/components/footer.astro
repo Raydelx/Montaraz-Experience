@@ -1,7 +1,42 @@
-<footer class="my-20">
-  <p class="text-center text-md text-gray-700">
-    Montaraz Experience © {new Date().getFullYear()} Travel with us
-  </p>
+---
+import Icon from "./Icon.astro";
+---
+
+<footer class="my-20 p-4">
+  <div class="flex flex-row">
+    <div class="grid gap-2">
+      <div class="flex flex-row place-items-center gap-4">
+        <img
+          src="/public/logo.png"
+          class="size-12 md:size-16"
+          alt="logo montaraz outdoor & culture"
+        />
+        <p class="text-center text-lg font-semibold text-gray-700">
+          Montaraz Experience
+        </p>
+      </div>
+
+      <div class="grid p-2">
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          class="flex place-items-center gap-2"
+          ><Icon icon="instagram-logo" size="1.5rem" color="#616161" />
+          Instagram account</a
+        >
+      </div>
+      <div class="grid p-2">
+        <a
+          href="https://www.instagram.com/"
+          target="_blank"
+          class="flex place-items-center gap-2"
+          ><Icon icon="phone-logo" size="1.5rem" color="#616161" />
+          (+34) 665 311 314
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!--
     Can we ask you a favor 🙏
     Please keep this backlink on your website if possible.
