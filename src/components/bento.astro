@@ -6,7 +6,7 @@ import BentoItem from "../components/bentoItem.astro";
   class={`
     w-full max-w-[1400px]
     grid lg:grid-cols-10 auto-rows-[22rem] gap-4
-    mx-auto mt-10 md:p-12 lg:p-20
+    mx-auto  md:p-12 lg:p-20
   `}>
   <BentoItem
     class="col-span-10 lg:col-span-6"
@@ -17,14 +17,8 @@ import BentoItem from "../components/bentoItem.astro";
       class="background transition-scale absolute bottom-0 left-0 top-0
         -z-10 h-full w-full bg-blue-350
         bg-cover bg-center bg-no-repeat opacity-95 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      style="background-image: url('/road-bike.jpg')">
+      style="background-image: url('/cycle-tour/leisure.webp')">
     </div>
-
-    <p
-      slot="content"
-      class="max-w-xl text-white md:text-lg"
-      set:html="This is a descriotion for Leisure Cycling"
-    />
   </BentoItem>
 
   <BentoItem
@@ -36,13 +30,8 @@ import BentoItem from "../components/bentoItem.astro";
       class="background transition-scale absolute bottom-0 left-0 top-0
         -z-10 h-full w-full bg-blue-350
         bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      style="background-image: url('/mtb.jpg')">
+      style="background-image: url('/cycle-tour/montainbike.webp')">
     </div>
-    <p
-      slot="content"
-      class="max-w-xl text-white md:text-lg"
-      set:html="This is a description for Gravel Bike / MTB"
-    />
   </BentoItem>
 
   <BentoItem
@@ -54,13 +43,8 @@ import BentoItem from "../components/bentoItem.astro";
       class="background transition-scale absolute bottom-0 left-0 top-0
         -z-10 h-full w-full bg-blue-350
         bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      style="background-image: url('/e-bike.jpg')">
+      style="background-image: url('/cycle-tour/roadbike.webp')">
     </div>
-    <p
-      slot="content"
-      class="max-w-xl text-white md:text-lg"
-      set:html="This is a description for Road Bike"
-    />
   </BentoItem>
   <BentoItem class="col-span-10 lg:col-span-6" title="Bikepack" href="/e-bike/">
     <div
@@ -68,12 +52,7 @@ import BentoItem from "../components/bentoItem.astro";
       class="background transition-scale absolute bottom-0 left-0 top-0
         -z-10 h-full w-full bg-blue-350
         bg-cover bg-center bg-no-repeat opacity-90 bg-blend-luminosity duration-1000 ease-in-out group-hover:scale-110"
-      style="background-image: url('/e-bike.jpg')">
+      style="background-image: url('/cycle-tour/bikepack.webp')">
     </div>
-    <p
-      slot="content"
-      class="max-w-xl text-white md:text-lg"
-      set:html="This is a description for BikePack"
-    />
   </BentoItem>
 </section>
