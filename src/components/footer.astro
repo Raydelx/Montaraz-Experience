@@ -1,51 +1,49 @@
 ---
 import Icon from "./Icon.astro";
+import Container from "../components/container.astro";
 ---
 
-<footer class="my-20 p-4">
-  <div class="flex flex-row">
-    <div class="grid gap-2">
-      <div class="flex flex-row place-items-center gap-4">
-        <img
-          src="/logo.png"
-          class="size-12 md:size-16"
-          alt="logo montaraz outdoor & culture"
-        />
-        <p class="text-center text-lg font-semibold text-gray-700">
-          Montaraz Experience
-        </p>
-      </div>
+<footer class="py-16">
+  <Container>
+    <div class="flex flex-col md:flex-row justify-between">
+      <div class="grid gap-2">
+        <div class="flex flex-row place-items-center gap-2">
+          <img
+            src="/logo.png"
+            class="size-12 md:size-16"
+            alt="logo montaraz outdoor & culture"
+          />
+          <p class="text-center text-2xl font-semibold text-gray-700">
+            Montaraz Experience
+          </p>
+        </div>
 
-      <div class="grid p-2">
-        <a
-          href="https://www.instagram.com/"
-          target="_blank"
-          class="flex place-items-center gap-2"
-          ><Icon icon="instagram-logo" size="1.5rem" color="#616161" />
-          Instagram account</a
-        >
+        <div class="grid mx-2">
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            class="flex place-items-center gap-2"
+            ><Icon icon="instagram-logo" size="1.5rem" color="#E56969" />
+            Instagram account</a
+          >
+        </div>
+        <div class="grid mx-2">
+          <!-- <a
+            href="https://wa.me/34665311314?text=hola mundo"
+            target="_blank"
+            class="flex place-items-center gap-2">
+            <Icon icon="whatsap-logo" size="1.5rem" color="#616161" />
+            (+34) 665 311 314
+          </a> -->
+          <p class="flex place-items-center gap-2">
+            <Icon icon="whatsap-logo" size="1.5rem" color="green" />
+            (+34) 665 311 314
+          </p>
+        </div>
       </div>
-      <div class="grid p-2">
-        <p class="flex place-items-center gap-2">
-          <Icon icon="phone-logo" size="1.5rem" color="#616161" />
-          (+34) 665 311 314
-        </p>
+      <div class="">
+        <h2 class="p-2 text-lg font-semibold text-gray-700">Quick Links</h2>
       </div>
     </div>
-  </div>
-
-  <!--
-    Can we ask you a favor 🙏
-    Please keep this backlink on your website if possible.
-    or Purchase a commercial license from https://web3templates.com
-  -->
-  <p class="text-center text-sm text-gray-700 mt-1">
-    Contact with us <a
-      href="https://web3templates.com"
-      target="_blank"
-      rel="noopener"
-      class="hover:underline">
-      here
-    </a>
-  </p>
+  </Container>
 </footer>
