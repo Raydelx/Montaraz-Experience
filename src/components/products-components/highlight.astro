@@ -5,70 +5,12 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<div class="grid max-w-screen-xl mx-auto gap-14 mt-6 lg:grid-cols-12">
-  <div
-    id="theater"
-    class="hidden lg:col-span-7 lg:flex max-h-96 place-content-start">
-    <slot name="picture" />
-  </div>
-  <div class="mr-auto lg:col-span-5 md:text-right" id="theater-text">
+<div class="grid mt-6 md:p-6 h-auto text-center">
+  <div class="lg:col-span-5">
     <h2
-      class="max-w-2xl mb-4 md:px-0 font-bold tracking-tight leading-none text-start text-4xl md:text-5xl xl:text-6xl">
+      class="max-w-2xl mb-2 md:px-0 font-bold tracking-tight leading-none text-start text-4xl md:text-5xl xl:text-6xl">
       {title}
     </h2>
     <slot name="description" />
   </div>
 </div>
-
-<!-- <style>
-  #theater,
-  #trophies-text h2,
-  #trophies-text p {
-    animation: cover-animation linear both;
-    animation-timeline: view();
-  }
-  #theater-text h2,
-  #theater-text p,
-  #trophies {
-    animation: entry-animation linear both;
-    animation-timeline: view();
-  }
-  #theater {
-    animation-range: entry 10% cover 40%;
-  }
-  #theater-text h2 {
-    animation-range: entry 10% cover 30%;
-  }
-  #theater-text p {
-    animation-range: entry 10% cover 20%;
-  }
-  #trophies {
-    animation-range: entry 30% cover 50%;
-  }
-  #trophies-text h2 {
-    animation-range: entry 30% cover 40%;
-  }
-  #trophies-text p {
-    animation-range: entry 20% cover 30%;
-  }
-  @keyframes entry-animation {
-    0% {
-      opacity: 0;
-      translate: var(--entry-animation) 0;
-    }
-    100% {
-      opacity: 1;
-      translate: 0 0;
-    }
-  }
-  @keyframes cover-animation {
-    0% {
-      opacity: 0;
-      translate: var(--cover-animation) 0;
-    }
-    100% {
-      opacity: 1;
-      translate: 0 0;
-    }
-  }
-</style> -->

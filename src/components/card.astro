@@ -12,12 +12,11 @@ const { name, description, href_img, alt_img, href } = Astro.props;
 ---
 
 <div class="mx-auto grid gap-6 md:w-3/4 lg:w-full h-full pb-6 justify-end">
-  <div
-    class="bg-white rounded-2xl shadow-xl px-8 pt-12 sm:px-12 lg:px-8 flex flex-col">
+  <div class="bg-white rounded-2xl shadow-xl px-6 pt-12 flex flex-col">
     <div class="">
       <img
         src={href_img}
-        class="w-full ml-auto rounded-2xl -mt-24"
+        class="ml-auto rounded-2xl -mt-24 h-[250px] w-[310px]"
         alt={alt_img}
         loading="lazy"
       />

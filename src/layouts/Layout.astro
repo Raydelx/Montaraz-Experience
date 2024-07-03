@@ -5,7 +5,6 @@ import Navbar from "../components/navbar/navbar.astro";
 import "@fontsource/lato"; // Defaults to weight 400
 import "@fontsource/lato/400.css"; // Specify weight
 import "@fontsource/lato/400-italic.css"; // Specify weight and style
-import { ViewTransitions } from "astro:transitions";
 
 export interface Props {
   title: string;
@@ -13,15 +12,12 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const resolvedImageWithDomain = new URL(
-  "/opengraph.jpg",
-  Astro.site,
-).toString();
+const resolvedImageWithDomain = new URL("/montaraz.jpg", Astro.site).toString();
 
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Montaraz Experience"
+  ? title + " | " + "Outdoor & Culture"
   : "Montaraz Experience, travels, tours, cycling and hiking";
 ---
 
@@ -36,22 +32,22 @@ const makeTitle = title
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
     <SEO
       title={makeTitle}
-      description="Montaraz Experience oficial website, travels, tours, tripis, hikking, bikes. "
+      description="Montaraz Outdoor & Culture oficial website, travels, tours, tripis, hikking, bikes. "
       canonical={canonicalURL}
       twitter={{
         creator: "Raydel Conesa Perez",
-        site: "@web3templates",
+        site: "Montaraz Outdoor & Culture",
         card: "summary_large_image",
       }}
       openGraph={{
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Montaraz Experiences - Guieded Tours`,
+          title: `Montaraz Outdoor & Culture - Guieded Tours`,
           image: resolvedImageWithDomain,
         },
         image: {
-          alt: "Astroship Homepage Screenshot",
+          alt: "",
         },
       }}
     />

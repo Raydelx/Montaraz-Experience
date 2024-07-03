@@ -22,7 +22,7 @@ import Container from "../components/container.astro";
           <a
             href="https://www.instagram.com/"
             target="_blank"
-            class="flex place-items-center gap-2"
+            class="flex place-items-center gap-2 hover:opacity-50"
             ><Icon icon="instagram-logo" size="1.5rem" color="#E56969" />
             Instagram account</a
           >
@@ -35,14 +35,28 @@ import Container from "../components/container.astro";
             <Icon icon="whatsap-logo" size="1.5rem" color="#616161" />
             (+34) 665 311 314
           </a> -->
-          <p class="flex place-items-center gap-2">
+          <p
+            class="flex place-items-center gap-2 hover:opacity-50 cursor-pointer">
             <Icon icon="whatsap-logo" size="1.5rem" color="green" />
             (+34) 665 311 314
           </p>
         </div>
       </div>
-      <div class="">
-        <h2 class="p-2 text-lg font-semibold text-gray-700">Quick Links</h2>
+      <div class="grid gap-2 px-2 mt-8 md:mt-0">
+        <h2 class="text-lg font-semibold text-gray-700">Quick Links</h2>
+        <a
+          href="/public/terms-and-conditions.pdf"
+          target="_blank"
+          class="hover:opacity-50">Terms & Conditions</a
+        >
+        <a
+          href="/public/privacy-policy.pdf"
+          target="_blank"
+          class="hover:opacity-50">Privacy Policy</a
+        >
+        <a href="/public/faq.pdf" target="_blank" class="hover:opacity-50"
+          >FAQ</a
+        >
       </div>
     </div>
   </Container>
