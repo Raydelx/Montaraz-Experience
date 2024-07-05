@@ -1,7 +1,7 @@
 ---
 import Container from "../../components/container.astro";
-import Icon from "../../components/Icon.astro";
 import InformationProducts from "../../components/ui/informationProducts.astro";
+import Icon from "../../components/Icon.astro";
 import Layout from "../../layouts/Layout.astro";
 import SliderReact from "../../hooks/SliderReact";
 import Days from "@/components/products-components/days.astro";
@@ -34,9 +34,9 @@ const DAYS = [
     day: "1",
     description:
       "Imagine starting your bicycle tour in the Sierra Nevada at an elevation of 2.000 meters. As you set off, the crisp mountain air fills your lungs, and the breathtaking views of the peaks surround you. The route takes you closer to nature, with every turn revealing vistas of beautiful landscapes. Each pedal stroke brings you closer to Granada where the Alhambra Palace comes into view. Cycling through the city's small streets, you feel a sense of accomplishment and connection with the beauty of Sierra Nevada.",
-    totalDistance: "58 KM",
-    totalAscent: "500 KM",
-    totalDescent: "1700 KM",
+    totalDistance: "58 km",
+    totalAscent: "500 m",
+    totalDescent: "1700 m",
   },
 ];
 ---
@@ -155,17 +155,38 @@ const DAYS = [
         class="grid md:grid-cols-2 lg:grid-cols-3 mt-20 md:mt-26 md:mb-36 gap-16 md:gap-4">
         <!-- Include -->
         <Includes title="Include">
-          <div slot="description" class="flex flex-col gap-2 mt-4 p-3">
-            <p class="max-w-[320px] text-md">Professional guide</p>
-            <p class="max-w-[320px] text-md">
-              Liability insurance and assistance
-            </p>
-            <p class="max-w-[320px] text-md">Vehicle supported tour</p>
-            <p class="max-w-[320px] text-md">Transfer</p>
-            <p class="max-w-[320px] text-md">E-bike</p>
-            <p class="max-w-[320px] text-md">Helmet, gloves, wind jacket</p>
-            <p class="max-w-[320px] text-md">Snack and water</p>
-          </div>
+          <ul slot="description" class="mt-4 flex flex-col gap-2">
+            <li class="flex flex-wrap gap-2">
+              <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
+              <p class="max-w-[320px] text-md">Professional guide</p>
+            </li>
+            <li class="flex flex-wrap gap-2">
+              <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
+              <p class="max-w-[320px] text-md">
+                Liability insurance and assistance
+              </p>
+            </li>
+            <li class="flex flex-wrap gap-2">
+              <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
+              <p class="max-w-[320px] text-md">Vehicle supported tour</p>
+            </li>
+            <li class="flex flex-wrap gap-2">
+              <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
+              <p class="max-w-[320px] text-md">Transfer</p>
+            </li>
+            <li class="flex flex-wrap gap-2">
+              <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
+              <p class="max-w-[320px] text-md">E-bike</p>
+            </li>
+            <li class="flex flex-wrap gap-2">
+              <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
+              <p class="max-w-[320px] text-md">Helmet, gloves, wind jacket</p>
+            </li>
+            <li class="flex flex-wrap gap-2">
+              <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
+              <p class="max-w-[320px] text-md">Snack and water</p>
+            </li>
+          </ul>
         </Includes>
         <!-- Exclude -->
         <Includes title="No Include">
@@ -200,7 +221,7 @@ const DAYS = [
       <div class="grid gap-5">
         <div class="">
           <h2
-            class="max-w-2xl mb-2 md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
+            class="max-w-2xl mb-4 md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
             Available
           </h2>
 
@@ -222,7 +243,7 @@ const DAYS = [
 
         <div class="">
           <h2
-            class="max-w-2xl mb-2 md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
+            class="max-w-2xl mb-4 md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
             Highlight
           </h2>
           <p class="text-md text-gray-900 mb-1">
