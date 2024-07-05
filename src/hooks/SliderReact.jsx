@@ -22,7 +22,7 @@ export default function App({IMG}) {
         }}
         navigation={true}
         modules={[Pagination, Navigation]}
-        className="mySwiper rounded-3xl mx-8 "
+        className="mySwiper rounded-3xl mx-8"
         
       >
        {IMG.map(function(i, index) {

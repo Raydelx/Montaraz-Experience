@@ -130,7 +130,7 @@ const DAYS = [
               <Wheel />
             </div>
           </InformationProducts>
-          <InformationProducts title="E-Bike" subtitle="No">
+          <InformationProducts title="E-Bike" subtitle="Yes">
             <div slot="icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -199,33 +199,67 @@ const DAYS = [
       </div>
     </main>
 
-    <div
-      class="grid md:grid-cols-2 mt-6 md:p-20 h-auto md:text-center gap-4 md">
-      <div class="md:text-center">
-        <h2
-          class="max-w-2xl mb-2 md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
-          Available
-        </h2>
-        <p class="text-md text-gray-900 mb-1">Spring / Summer / Autumn</p>
+    <div class="grid md:grid-cols-2 h-auto gap-10 md:gap-20 md:py-36 py-10">
+      <div class="static h-[385px] hidden md:block">
+        <img
+          class="rounded-xl absolute md:w-[20rem] lg:w-[25rem] hover:z-40 transition-all duration-300 ease-out hover:scale-105"
+          src="/public/cycle-tour/montainbike/sierra-nevada/sierra-feature.webp"
+          alt="ciclista mirando la sierra con cicicleta a su lado"
+        />
+        <img
+          class="rounded-xl absolute md:w-[10rem] lg:w-[12rem] md:mt-48 lg:mt-60 ml-6 z-10 grayscale-[60%] hover:grayscale-0 transition-all duration-300 ease-out hover:scale-105"
+          src="/public/cycle-tour/montainbike/sierra-nevada/sierra-feature2.webp"
+          alt="ciclista mirando la sierra con cicicleta a su lado"
+        />
+        <img
+          class="rounded-xl absolute md:w-[10rem] lg:w-[15em] ml-64 md:-mt-24 lg:-mt-32 grayscale-[60%] hover:grayscale-0 transition-all duration-300 ease-out hover:scale-105"
+          src="/public/cycle-tour/montainbike/sierra-nevada/sierra-feature3.webp"
+          alt="ciclista mirando la sierra con cicicleta a su lado"
+        />
       </div>
-      <div class="md:text-center">
-        <h2
-          class="max-w-2xl mb-2 md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
-          Highlight
-        </h2>
-        <p class="text-md text-gray-900 mb-1">
-          Cycling in the National Park Sierra Nevada.
-        </p>
-        <p class="text-md text-gray-900">
-          Start at 2.000 meters with a stunning panorama over the three highest
-          peaks of the Sierra Nevada.
-        </p>
+
+      <div class="grid gap-5">
+        <div class="">
+          <h2
+            class="max-w-2xl mb-2 md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
+            Available
+          </h2>
+
+          <ul class="grid gap-2">
+            <li class="flex flex-wrap gap-2">
+              <Icon icon="spring-logo" size="1.6rem" color="#0E46A3" />
+              <p>Spring</p>
+            </li>
+            <li class="flex flex-wrap gap-2">
+              <Icon icon="summer-logo" size="1.6rem" color="#0E46A3" />
+              <p>Summer</p>
+            </li>
+            <li class="flex flex-wrap gap-2">
+              <Icon icon="autumn-logo" size="1.6rem" color="#0E46A3" />
+              <p>Autumn</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="">
+          <h2
+            class="max-w-2xl mb-2 md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
+            Highlight
+          </h2>
+          <p class="text-md text-gray-900 mb-1">
+            Cycling in the National Park Sierra Nevada.
+          </p>
+          <p class="text-md text-gray-900">
+            Start at 2.000 meters with a stunning panorama over the three
+            highest peaks of the Sierra Nevada.
+          </p>
+        </div>
       </div>
     </div>
 
     <!-- Button to download PDF -->
     <div
-      class="grid bg-[#0E46A3] place-items-center md:mt-12 border-spacing-3 backdrop-blur-sm w-fit m-auto md:px-28 p-6 mt-12 rounded-xl shadow-[0px_0px_23px_14px_#00000024]">
+      class="grid bg-[#0E46A3] place-items-center md:mb-36 border-spacing-3 backdrop-blur-sm w-fit m-auto md:px-28 p-10 mt-12 rounded-xl shadow-[0px_0px_23px_14px_#00000024]">
       <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-200">
         More information about our tour
       </h2>
@@ -240,7 +274,7 @@ const DAYS = [
     </div>
 
     <!-- Slider Photos -->
-    <section class="m-auto md:w-full rounded-xl md:px-8">
+    <section class="m-auto md:w-full rounded-xl md:px-8 md:py-20">
       <ol class="relative mt-16">
         {(<SliderReact IMG={IMG} client:visible />)}
       </ol>
@@ -248,7 +282,7 @@ const DAYS = [
 
     <!--  TimeLine per days  -->
     <h2 class="text-4xl md:text-5xl xl:text-6xl md:p-8 mt-16 font-bold mb-4">
-      Every day a <br /> New adventure
+      What to expect
     </h2>
     {
       DAYS.map((tour) => (
