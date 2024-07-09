@@ -3,19 +3,22 @@ interface Props {
   class?: string;
   title: string;
   subtitle?: string;
+  subtitle2?: string;
 }
 
-const { title, subtitle } = Astro.props;
+const { title, subtitle, subtitle2 } = Astro.props;
 ---
 
-<div class="grid hover:scale-110 transition-all duration-200 hover:-rotate-6">
+<div
+  class="grid hover:scale-110 transition-all duration-200 drop-shadow-md hover:drop-shadow-xl">
   <div class="md:p-3">
-    <p class="text-black font-semibold md:text-xl text-sm tracking-wider">
+    <p class="text-black font-semibold md:text-xl text-md tracking-wider">
       {title}
     </p>
-    <div class="flex gap-2 mt-1 r">
+    <div class="flex gap-2 mt-1">
       <slot name="icon" />
       <p class="text-black md:text-lg text-sm">{subtitle}</p>
+      <p class="text-black md:text-lg text-sm w-1">{subtitle2}</p>
     </div>
   </div>
 </div>

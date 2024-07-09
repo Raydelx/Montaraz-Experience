@@ -6,6 +6,7 @@ import Layout from "../../layouts/Layout.astro";
 import SliderReact from "../../hooks/SliderReact";
 import Days from "@/components/products-components/days.astro";
 import Includes from "@/components/products-components/includes.astro";
+import HowToBook from "@/components/products-components/howToBook.astro";
 import Wheel from "@/components/ui/icons/wheel.astro";
 import Route from "@/components/ui/icons/route.astro";
 import Link from "@/components/ui/link.astro";
@@ -37,6 +38,7 @@ const DAYS = [
     totalDistance: "58 km",
     totalAscent: "500 m",
     totalDescent: "1700 m",
+    duration: "5 hours",
   },
 ];
 ---
@@ -73,7 +75,7 @@ const DAYS = [
             <Icon icon="price-logo" size="1.6rem" color="#0E46A3" />
           </div>
         </InformationProducts>
-        <InformationProducts title="Pre-booking" subtitle="92">
+        <InformationProducts title="Pre-booking" subtitle="98">
           <div slot="icon">
             <Icon icon="price-logo" size="1.6rem" color="#0E46A3" />
           </div>
@@ -83,7 +85,7 @@ const DAYS = [
             <Icon icon="group-logo" size="1.6rem" color="#0E46A3" />
           </div>
         </InformationProducts>
-        <InformationProducts title="Duration" subtitle="5 Hours">
+        <InformationProducts title="Duration" subtitle="6 Hours">
           <div slot="icon">
             <Icon icon="timer-logo" size="1.6rem" color="#0E46A3" />
           </div>
@@ -93,10 +95,10 @@ const DAYS = [
             <Icon icon="guide-logo" size="1.6rem" color="#0E46A3" />
           </div>
         </InformationProducts>
-        <InformationProducts title="Season" subtitle="Spring / Summer / Autumn">
-          <div slot="icon">
+        <InformationProducts title="Season" subtitle2="Spring  Summer  Autumn">
+          <!-- <div slot="icon">
             <Icon icon="autumn-logo" size="1.6rem" color="#0E46A3" />
-          </div>
+          </div> -->
         </InformationProducts>
       </div>
 
@@ -154,7 +156,7 @@ const DAYS = [
       <div
         class="grid md:grid-cols-2 lg:grid-cols-3 mt-20 md:mt-26 md:mb-36 gap-16 md:gap-4">
         <!-- Include -->
-        <Includes title="Include">
+        <Includes title="Included">
           <ul slot="description" class="mt-4 flex flex-col gap-2">
             <li class="flex flex-wrap gap-2">
               <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
@@ -189,7 +191,7 @@ const DAYS = [
           </ul>
         </Includes>
         <!-- Exclude -->
-        <Includes title="No Include">
+        <Includes title="Not Included">
           <div slot="description" class="flex flex-col gap-2 mt-4"></div>
         </Includes>
         <!-- Complementaries -->
@@ -222,10 +224,10 @@ const DAYS = [
         <div class="">
           <h2
             class="max-w-2xl mb-4 md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
-            Available
+            Availability
           </h2>
 
-          <ul class="grid gap-2">
+          <ul class="grid gap-2 text-lg">
             <li class="flex flex-wrap gap-2">
               <Icon icon="spring-logo" size="1.6rem" color="#0E46A3" />
               <p>Spring</p>
@@ -246,32 +248,35 @@ const DAYS = [
             class="max-w-2xl mb-4 md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
             Highlight
           </h2>
-          <p class="text-md text-gray-900 mb-1">
-            Cycling in the National Park Sierra Nevada.
+          <p class="text-lg text-gray-900 mb-1">
+            <span class="text-xl">🔹</span> Cycling in the National Park Sierra Nevada.
           </p>
-          <p class="text-md text-gray-900">
-            Start at 2.000 meters with a stunning panorama over the three
-            highest peaks of the Sierra Nevada.
+          <p class="text-lg text-gray-900">
+            <span class="text-xl">🔹</span> Start at 2.000 meters with a stunning
+            panorama over the three highest peaks of the Sierra Nevada.
           </p>
         </div>
       </div>
     </div>
 
     <!-- Button to download PDF -->
-    <div
-      class="grid bg-[#0E46A3] place-items-center md:mb-20 border-spacing-3 backdrop-blur-sm w-fit m-auto md:px-28 p-10 mt-12 rounded-xl shadow-[0px_0px_23px_14px_#00000024]">
-      <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-200">
-        More information about our tour
-      </h2>
-      <Link
-        style="muted"
-        href="/anxo.png"
-        download="Anxo"
-        class="flex gap-1 items-center justify-center mt-8 font-semibold"
-        rel="noopener">
-        View trip notes
-      </Link>
-    </div>
+    <section class="grid md:grid-cols-2">
+      <HowToBook />
+      <div
+        class="grid bg-[#0E46A3] place-items-center md:mb-20 border-spacing-3 backdrop-blur-sm w-fit m-auto md:px-28 p-10 mt-12 rounded-xl shadow-[0px_0px_23px_14px_#00000024]">
+        <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-200">
+          More information about our tour
+        </h2>
+        <Link
+          style="muted"
+          href="/anxo.png"
+          download="Anxo"
+          class="flex gap-1 items-center justify-center mt-8 font-semibold"
+          rel="noopener">
+          View trip notes
+        </Link>
+      </div>
+    </section>
 
     <!-- Slider Photos -->
     <section class="m-auto md:w-full rounded-xl md:px-8 md:py-20">

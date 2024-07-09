@@ -7,12 +7,13 @@ interface Props {
   totalDistance: string;
   totalAscent: string;
   totalDescent: string;
+  duration: string;
 }
-const { day, description, totalDistance, totalAscent, totalDescent } =
+const { day, description, totalDistance, totalAscent, totalDescent, duration } =
   Astro.props;
 ---
 
-<div class="grid md:grid-cols-6 md:p-8 md:gap-10 gap-3">
+<div class="grid md:grid-cols-6 md:p-8 md:gap-10 gap-5">
   <div class="col-span-3">
     <div>
       <h2 class="md:text-3xl text-2xl font-bold mb-2">Day {day}</h2>
@@ -60,6 +61,17 @@ const { day, description, totalDistance, totalAscent, totalDescent } =
         </h2>
         <p class="text-pretty text-gray-500 text-md">
           {totalDescent}
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-6 gap-14 md:gap-2">
+      <div class="col-span-1">
+        <Icon icon="timer-logo" size="3rem" color="#0E46A3" />
+      </div>
+      <div class="grid col-span-5">
+        <h2 class="text-pretty text-neutral-900 text-xl font-bold">Duration</h2>
+        <p class="text-pretty text-gray-500 text-md">
+          {duration}
         </p>
       </div>
     </div>
