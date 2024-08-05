@@ -6,7 +6,7 @@ import { Icon } from "astro-icon";
 ---
 
 <main
-  class="grid lg:grid-cols-2 place-items-center gap-10 p-5 md:pt-12 md:pb-24">
+  class="grid lg:grid-cols-2 place-items-center gap-10 md:p-5 md:pt-12 md:pb-24">
   <div class="py-6 md:order-1 md:block">
     <Picture
       src={heroImage}
@@ -28,25 +28,5 @@ import { Icon } from "astro-icon";
       well as their happiness and joy. In addition to a responsible tourism with
       the environment.
     </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
-      <Link
-        href="#"
-        href="/"
-        class="flex gap-1 items-center justify-center"
-        rel="noopener">
-        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
-
-        Free Guide
-      </Link>
-      <Link
-        size="lg"
-        style="muted"
-        rel="noopener"
-        href="/"
-        class="flex gap-1 items-center justify-center">
-        <Icon class="text-black w-5 h-5" name="bx:bxl-github" />
-        Socials
-      </Link>
-    </div>
   </div>
 </main>

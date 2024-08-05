@@ -2,12 +2,13 @@
 interface Props {
   title: string;
   subtitle: string;
+  class?: string;
 }
-const { title, subtitle } = Astro.props;
+const { title, subtitle, class: className } = Astro.props;
 ---
 
-<div class="grid max-w-screen-xl mt-6 mx-auto gap-14 lg:grid-cols-12">
-  <div class="hidden lg:mt-0 lg:col-span-6 lg:flex max-h-80">
+<div class="grid max-w-screen-xl mt-6 mx-auto gap-4 md:gap-14 lg:grid-cols-12">
+  <div class:list={[" lg:mt-0 lg:col-span-6 lg:flex max-h-80", className]}>
     <slot name="picture" />
   </div>
   <div class="mr-auto lg:col-span-6 text-center md:text-left content-center">

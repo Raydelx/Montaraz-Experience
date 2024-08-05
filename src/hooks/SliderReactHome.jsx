@@ -28,7 +28,7 @@ export default function App({IMG}) {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper rounded-3xl mx-8 "
+        className="mySwiper  mx-8"
         
       >
        {IMG.map(function(i, index) {

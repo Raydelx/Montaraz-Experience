@@ -1,0 +1,79 @@
+---
+import AboutHero from "../components/about-components/aboutHero.astro";
+import AboutHeroIzq from "../components/about-components/aboutHeroIzq.astro";
+---
+
+<h1
+  class="text-4xl lg:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter md:p-16 mb-16">
+  Explore our <spam class="text-[#0E46A3]"
+    >true outdoor travel experiences
+  </spam>
+  suitable for anyone who enjoys an active way of traveling
+</h1>
+
+<!-- <div class="flex flex-col md:flex-row md:gap-12 gap-8 m-auto md:p-5">
+  <div>
+    <h2
+      class="text-4xl lg:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">
+      Cycle Tours
+    </h2>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+      Ride on scenic and epic roads through ever-changing landscapes
+    </p>
+  </div>
+  <div>
+    <img
+      class="object-cover rounded-xl md:h-80 h-60"
+      src="/home/cycle-tour.webp"
+      alt=""
+    />
+  </div>
+</div> -->
+
+<AboutHero
+  title="Cycle Tours"
+  subtitle="Ride on scenic and epic roads through ever-changing landscapes">
+  <a slot="picture" href="/cycling/"
+    ><img
+      class="rounded-xl object-cover h-80 hover:scale-105 duration-300 hover:shadow-2xl hover:shadow-black"
+      src="/home/cycle-tour.webp"
+      alt=""
+    />
+  </a>
+</AboutHero>
+
+<AboutHeroIzq
+  title="Hiking & Trekking"
+  subtitle="Explore on foot the natural beauty, an authentic way to travel">
+  <a class="order-0" slot="picture" href="/hiking/"
+    ><img
+      class="rounded-xl object-cover h-80 hover:scale-105 duration-300 hover:shadow-2xl hover:shadow-black"
+      src="/home/hiking.webp"
+      alt=""
+    />
+  </a>
+</AboutHeroIzq>
+
+<AboutHero
+  title="Cultural Travel Tours"
+  subtitle="Immerse yourself in a country's culture for the ultimate local experience">
+  <a slot="picture" href="/cultural-travel/"
+    ><img
+      class="rounded-xl object-cover h-80 hover:scale-105 duration-300 hover:shadow-2xl hover:shadow-black"
+      src="/home/cultural-travel.webp"
+      alt=""
+    />
+  </a>
+</AboutHero>
+
+<AboutHeroIzq
+  title="Multi-Activity Tours"
+  subtitle="A perfect blend of exciting activities to experience during a single tour">
+  <a slot="picture" href="/multi-activity/"
+    ><img
+      class="rounded-xl object-cover h-80 hover:scale-105 duration-300 hover:shadow-2xl hover:shadow-black"
+      src="/home/multi-adventure.webp"
+      alt=""
+    />
+  </a>
+</AboutHeroIzq>

@@ -2,13 +2,34 @@
 import NewFaq from "@/components/newFaq.astro";
 import Container from "../components/container.astro";
 import faqs from "../data_files/faqs.json";
-import Hero from "../components/hero.astro";
+
 import Layout from "../layouts/Layout.astro";
+import SliderReactHome from "../hooks/SliderReactHome";
+import CardHome from "@/components/cardHome.astro";
+
+const IMG = [
+  {
+    src: "/home/home1.webp",
+  },
+  {
+    src: "/home/home2.webp",
+  },
+  {
+    src: "/home/home3.webp",
+  },
+];
 ---
 
 <Layout title="">
-  <Container>
-    <Hero />
+  <section class="m-auto md:w-full">
+    <ol class="relative">
+      {(<SliderReactHome IMG={IMG} client:visible />)}
+    </ol>
+  </section>
+  <Container class="w-full">
+    <section class="pt-16">
+      <CardHome />
+    </section>
 
     <section class="mt-10 w-auto flex justify-center">
       <NewFaq title="Frequently<br />asked questions" faqs={faqs} />
