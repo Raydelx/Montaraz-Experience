@@ -2,10 +2,10 @@
 import NewFaq from "@/components/newFaq.astro";
 import Container from "../components/container.astro";
 import faqs from "../data_files/faqs.json";
-
 import Layout from "../layouts/Layout.astro";
 import SliderReactHome from "../hooks/SliderReactHome";
 import CardHome from "@/components/cardHome.astro";
+import Gallery from "@/components/gallery.astro";
 
 const IMG = [
   {
@@ -16,6 +16,18 @@ const IMG = [
   },
   {
     src: "/home/home3.webp",
+  },
+  {
+    src: "/home/home4.webp",
+  },
+  {
+    src: "/home/home5.webp",
+  },
+  {
+    src: "/home/home6.webp",
+  },
+  {
+    src: "/home/home7.webp",
   },
 ];
 ---
@@ -34,5 +46,7 @@ const IMG = [
     <section class="mt-10 w-auto flex justify-center">
       <NewFaq title="Frequently<br />asked questions" faqs={faqs} />
     </section>
+
+    <Gallery />
   </Container>
 </Layout>

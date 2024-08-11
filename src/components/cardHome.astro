@@ -1,36 +1,181 @@
 ---
+import Icon from "../components/Icon.astro";
 import AboutHero from "../components/about-components/aboutHero.astro";
 import AboutHeroIzq from "../components/about-components/aboutHeroIzq.astro";
 ---
 
 <h1
-  class="text-4xl lg:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter md:p-16 mb-16">
+  class="text-4xl text-center lg:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter md:p-16 mb-16">
   Explore our <spam class="text-[#0E46A3]"
-    >true outdoor travel experiences
+    >True Outdoor Travel Experiences
   </spam>
   suitable for anyone who enjoys an active way of traveling
 </h1>
 
-<!-- <div class="flex flex-col md:flex-row md:gap-12 gap-8 m-auto md:p-5">
-  <div>
-    <h2
-      class="text-4xl lg:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">
-      Cycle Tours
-    </h2>
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Ride on scenic and epic roads through ever-changing landscapes
-    </p>
-  </div>
-  <div>
-    <img
-      class="object-cover rounded-xl md:h-80 h-60"
-      src="/home/cycle-tour.webp"
-      alt=""
-    />
-  </div>
-</div> -->
+<div class="relative overflow-hidden pt-8 pb-8 space-y-24">
+  <div class="relative">
+    <div
+      class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
+      <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
+        <div>
+          <div>
+            <span
+              class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-200">
+              <Icon icon="bicycle-logo" size="2.5rem" color="#0E46A3" />
+            </span>
+          </div>
 
-<AboutHero
+          <div class="mt-6">
+            <h2 class="text-3xl font-bold tracking-tight mb-2">Cycle Tours</h2>
+            <p
+              class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
+              Ride on scenic and epic roads through ever-changing landscapes
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 sm:mt-16 lg:mt-0">
+        <div class="-mr-48 pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+          <a href="/cycling/"
+            ><img
+              loading="lazy"
+              width="647"
+              height="300"
+              class="w-full rounded-xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-[540px] lg:max-w-none hover:scale-105 duration-200"
+              style="color:transparent"
+              src="/home/cycle-tour.webp"
+            /></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative">
+    <div
+      class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
+      <div
+        class="mx-auto max-w-xl lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 lg:col-start-2">
+        <div>
+          <div>
+            <span
+              class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-200">
+              <Icon icon="hike-logo" size="2.5rem" color="#0E46A3" />
+            </span>
+          </div>
+          <div class="mt-6">
+            <h2 class="text-3xl font-bold tracking-tight mb-2">
+              Hiking & Trekking
+            </h2>
+            <p
+              class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
+              Explore on foot the natural beauty, an authentic way to travel
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 sm:mt-16 lg:mt-0">
+        <div class="-ml-48 pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+          <a href="/trekking-hikking/"
+            ><img
+              alt="Inbox user interface"
+              loading="lazy"
+              width="800"
+              height="486"
+              class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-[540px] lg:max-w-none hover:scale-105 duration-200"
+              style="color:transparent"
+              src="/home/hiking.webp"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="relative">
+    <div
+      class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
+      <div class="mx-auto max-w-xl lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
+        <div>
+          <div>
+            <span
+              class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-200">
+              <Icon icon="cultural-logo" size="2.5rem" color="#0E46A3" />
+            </span>
+          </div>
+
+          <div class="mt-6">
+            <h2 class="text-3xl font-bold tracking-tight mb-2">
+              Cultural Travel Tours
+            </h2>
+            <p
+              class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
+              Immerse yourself in a country's culture for the ultimate local
+              experience
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 sm:mt-16 lg:mt-0">
+        <div class="-mr-48 pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+          <a href="/cycling/"
+            ><img
+              loading="lazy"
+              width="647"
+              height="300"
+              class="w-full rounded-xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-[540px] lg:max-w-none hover:scale-105 duration-200"
+              style="color:transparent"
+              src="/home/cultural-travel.webp"
+            /></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="relative">
+    <div
+      class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
+      <div
+        class="mx-auto max-w-xl lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 lg:col-start-2">
+        <div>
+          <div>
+            <span
+              class="flex h-12 w-12 items-center justify-center rounded-xl bg-slate-200">
+              <Icon icon="aventure-logo" size="2.5rem" color="#0E46A3" />
+            </span>
+          </div>
+          <div class="mt-6">
+            <h2 class="text-3xl font-bold tracking-tight mb-2">
+              Multi-Activity Tours
+            </h2>
+            <p
+              class="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">
+              A perfect blend of exciting activities to experience during a
+              single tour
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mt-12 sm:mt-16 lg:mt-0">
+        <div class="-ml-48 pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0">
+          <a href="/trekking-hikking/"
+            ><img
+              alt="Inbox user interface"
+              loading="lazy"
+              width="800"
+              height="486"
+              class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-[540px] lg:max-w-none hover:scale-105 duration-200"
+              style="color:transparent"
+              src="/home/multi-adventure.webp"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <AboutHero
   title="Cycle Tours"
   subtitle="Ride on scenic and epic roads through ever-changing landscapes">
   <a slot="picture" href="/cycling/"
@@ -75,5 +220,4 @@ import AboutHeroIzq from "../components/about-components/aboutHeroIzq.astro";
       src="/home/multi-adventure.webp"
       alt=""
     />
-  </a>
-</AboutHeroIzq>
+  </a> -->

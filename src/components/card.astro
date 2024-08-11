@@ -11,12 +11,13 @@ interface Props {
 const { name, description, href_img, alt_img, href } = Astro.props;
 ---
 
-<div class="mx-auto grid gap-6 md:w-3/4 lg:w-full h-full pb-6 justify-end">
+<div
+  class="m-auto grid gap-12 lg:w-full h-full pb-12 hover:scale-105 duration-200">
   <div class="bg-white rounded-2xl shadow-xl px-6 pt-12 flex flex-col">
     <div class="">
       <img
         src={href_img}
-        class="ml-auto rounded-2xl -mt-24 h-[250px] w-[310px]"
+        class="m-auto rounded-full md:rounded-2xl md:-mt-24 -mt-32 h-[250px] w-[250px] md:w-[310px]"
         alt={alt_img}
         loading="lazy"
       />

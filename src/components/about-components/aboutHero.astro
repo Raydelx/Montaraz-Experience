@@ -19,7 +19,8 @@ const { title, subtitle, class: className } = Astro.props;
       {subtitle}
     </p>
   </div>
-  <div class:list={[" lg:mt-0 lg:col-span-6 lg:flex max-h-80", className]}>
+  <div
+    class:list={[" lg:mt-0 lg:col-span-6 lg:flex max-h-80 hidden", className]}>
     <slot name="picture" />
   </div>
 </div>
