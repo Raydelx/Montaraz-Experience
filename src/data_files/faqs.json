@@ -2,33 +2,26 @@
     "subTitle": "Ask us anything about our brand and products, and get factual responses.",
     "faqs": [
       {
-        "question": "Que es montaraz?",
-        "answer": "The Starter Kit features essential hand and power tools for diverse DIY projects, including hammers, drills, screwdrivers, and a variety of fasteners. It's a curated selection to help beginners and experienced DIYers alike tackle most home improvement tasks."
+        "question": "How do i book my tour?",
+        "answer": "Click  \"Book my tour \" on the homepage and answer the following questions. Fill out the form that will appear below. You receive a confirmation by email with the payment - and tour details. "
       },
       {
-        "question": "Can I upgrade from the Starter Kit to the Professional Toolbox?",
-        "answer": "Absolutely! You can upgrade to the Professional Toolbox at any time to access a wider range of high-quality tools, enjoy priority customer support, and receive exclusive content. Contact our support team for a seamless transition."
+        "question": "What methods of payment are accepted?",
+        "answer": "Bank transfer payment. After booking a tour you will receive a proforma invoice with your tour- and payment details. We reserve the right to cancel your reservation if the final payment is not received when due."
       },
       {
-        "question": "What discounts are available for bulk orders through the Professional Toolbox plan?",
-        "answer": "Professional Toolbox members are entitled to exclusive discounts on bulk orders, the percentage of which may vary depending on the order volume. Get in touch with us to discuss your needs, and we'll provide a tailored discount structure."
+        "question": "Do i need travel insurance?",
+        "answer": "The company Montaraz Outdoors & Culture does not offer insurance. To ensure the safety and security of our clients we recommend arranging appropriate travel insurance during your trip. On multi-day or 8-day tours, it is obligatory and your responsibility to arrange travel insurance. Ensure you have read and understood the full terms and conditions of your travel insurance policy and that you are covered for all activities you intend to undertake whilst on the tour. Your Insurance Policy must fully cover you for medical expenses and emergency repatriation to your home country. "
       },
       {
-        "question": "What kind of customer support can I expect?",
-        "answer": "All our customers receive dedicated email support. With the Starter Kit, you'll receive our standard support, while the Professional Toolbox plan upgrades you to priority support, meaning faster response times and specialized assistance."
+        "question": "Is my deposit refundable?",
+        "answer": "The client has the right to cancel the tour in writing and sign if the cancellation takes place more than the given date. (See Terms and Conditions - Cancellation Policy for each activity) Once, we have received your notice, the cancellation will take effect."
       },
       {
-        "question": "How current are the online resources and tutorials?",
-        "answer": "We regularly update our online resources and tutorials to reflect the latest trends in DIY and construction, as well as introductions to new tools and techniques. Our material aims to be comprehensive and user-friendly for all skill levels."
-      },
-      {
-        "question": "How current are the online resources and tutorials?",
-        "answer": "We regularly update our online resources and tutorials to reflect the latest trends in DIY and construction, as well as introductions to new tools and techniques. Our material aims to be comprehensive and user-friendly for all skill levels."
-      },
-      {
-        "question": "Does ScrewFast offer services for large-scale construction projects?",
-        "answer": "Yes, our Enterprise Solutions are designed for larger companies requiring comprehensive services. We provide consultation, planning, and supply of high-grade tools and materials, as well as staffing solutions for substantial construction needs. Contact us for a customized quote."
+        "question": "When will i receive more detailed information about my tour so i can starting planning my travel?",
+        "answer": "General information about each activity you find in the trip notes. Detailed information about the activity will be sent after making a pre-reservation."
       }
+      
     ]
   }
 

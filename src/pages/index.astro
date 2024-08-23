@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
 import SliderReactHome from "../hooks/SliderReactHome";
 import CardHome from "@/components/cardHome.astro";
 import Gallery from "@/components/gallery.astro";
-import Icon from "../components/Icon.astro";
+import Hero from "@/components/hero.astro";
 
 const IMG = [
   {
@@ -41,43 +41,10 @@ const IMG = [
   </section>
   <Container class="w-full">
     <section class="grid md:grid-cols-2 mb-10 md:mb-28">
-      <div class="grid grid-col md:p-6 mt-10">
-        <h1
-          class="text-4xl lg:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter md:pt-16 pb-4">
-          Explore our <spam class="text-[#0E46A3]"
-            >True Outdoor Travel Experiences
-          </spam>
-          suitable for anyone who enjoys an active way of traveling
-        </h1>
-        <div class="flex gap-3">
-          <a
-            class="bg-slate-200 grid justify-center content-center rounded-full size-12 hover:scale-110 duration-200 active:scale-90"
-            href="https://wa.me/34665311314?text=Hello, welcome to Montaraz Outdoors and Culture! How can we help you?"
-            target="_blank"
-            ><Icon icon="whatsap-logo" size="2rem" color="#25d366" /></a
-          >
-
-          <a
-            class="bg-slate-200 grid justify-center content-center rounded-full size-12 hover:scale-110 duration-200"
-            href="https://www.instagram.com/montaraz_outdoors_culture/"
-            target="_blank"
-            ><Icon icon="instagram-logo" size="2rem" color="#F7098B" /></a
-          >
-
-          <a
-            class="bg-slate-200 grid justify-center content-center rounded-full size-12 hover:scale-110 duration-200"
-            href=""><Icon icon="mail-logo" size="2rem" color="#0E46A3" /></a
-          >
-        </div>
-      </div>
-      <img
-        class="md:mt-10 mt-6 m-auto rotate-12 hidden md:block"
-        src="/logo.svg"
-        alt=""
-      />
+      <Hero />
     </section>
 
-    <section class="">
+    <section>
       <CardHome />
     </section>
 

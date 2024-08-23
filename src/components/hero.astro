@@ -1,32 +1,38 @@
 ---
-import { Picture } from "astro:assets";
-import heroImage from "../assets/hero-cycling.jpg";
-import Link from "../components/ui/link.astro";
-import { Icon } from "astro-icon";
+import Icon from "../components/Icon.astro";
 ---
 
-<main
-  class="grid lg:grid-cols-2 place-items-center gap-10 md:p-5 md:pt-12 md:pb-24">
-  <div class="py-6 md:order-1 md:block">
-    <Picture
-      src={heroImage}
-      alt="Astronaut in the air"
-      widths={[200, 400, 600]}
-      sizes="(max-width: 800px) 100vw, 620px"
-      loading="eager"
-      format="avif"
-      class="rounded-xl"
-    />
+<div class="grid grid-col md:p-6 mt-10">
+  <h1
+    class="text-4xl lg:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter md:pt-16 pb-4">
+    Explore our <spam class="text-[#0E46A3]"
+      >True Outdoor Travel Experiences
+    </spam>
+    suitable for anyone who enjoys an active way of traveling
+  </h1>
+  <div class="flex gap-3">
+    <a
+      class="bg-slate-200 grid justify-center content-center rounded-full size-12 hover:scale-110 duration-200 active:scale-90"
+      href="https://wa.me/34665311314?text=Hello, welcome to Montaraz Outdoors and Culture! How can we help you?"
+      target="_blank"
+      ><Icon icon="whatsap-logo" size="2rem" color="#25d366" /></a
+    >
+
+    <a
+      class="bg-slate-200 grid justify-center content-center rounded-full size-12 hover:scale-110 duration-200"
+      href="https://www.instagram.com/montaraz_outdoors_culture/"
+      target="_blank"
+      ><Icon icon="instagram-logo" size="2rem" color="#F7098B" /></a
+    >
+
+    <a
+      class="bg-slate-200 grid justify-center content-center rounded-full size-12 hover:scale-110 duration-200"
+      href=""><Icon icon="mail-logo" size="2rem" color="#0E46A3" /></a
+    >
   </div>
-  <div>
-    <h1
-      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-      The best tours, just for you and your family
-    </h1>
-    <p class="text-lg mt-4 text-slate-600 max-w-xl">
-      Montaraz Experience has as a premise the well-being of our clients, as
-      well as their happiness and joy. In addition to a responsible tourism with
-      the environment.
-    </p>
-  </div>
-</main>
+</div>
+<img
+  class="md:mt-10 mt-6 m-auto rotate-12 hidden md:block"
+  src="/logo.svg"
+  alt=""
+/>
