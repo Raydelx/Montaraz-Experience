@@ -8,9 +8,19 @@ interface Props {
   totalAscent: string;
   totalDescent: string;
   duration: string;
+  optional1?: string;
+  optional2?: string;
 }
-const { day, description, totalDistance, totalAscent, totalDescent, duration } =
-  Astro.props;
+const {
+  day,
+  description,
+  totalDistance,
+  totalAscent,
+  totalDescent,
+  duration,
+  optional1,
+  optional2,
+} = Astro.props;
 ---
 
 <div class="grid md:grid-cols-6 md:p-8 md:gap-10 gap-5">
@@ -19,6 +29,22 @@ const { day, description, totalDistance, totalAscent, totalDescent, duration } =
       <h2 class="md:text-3xl text-2xl font-bold mb-2">Day {day}</h2>
     </div>
     <p class="text-gray-500 text-md">{description}</p>
+    {
+      optional1 && (
+        <p class="text-gray-500 text-md">
+          <span class="font-bold">Optional: </span>
+          {optional1}
+        </p>
+      )
+    }
+    {
+      optional2 && (
+        <p class="text-gray-500 text-md">
+          <span class="font-bold">Optional: </span>
+          {optional2}
+        </p>
+      )
+    }
   </div>
 
   <div class="md:col-span-3 grid gap-4 place-items-end">
@@ -69,7 +95,9 @@ const { day, description, totalDistance, totalAscent, totalDescent, duration } =
         <Icon icon="timer-logo" size="3rem" color="#0E46A3" />
       </div>
       <div class="grid col-span-5">
-        <h2 class="text-pretty text-neutral-900 text-xl font-bold">Duration</h2>
+        <h2 class="text-pretty text-neutral-900 text-xl font-bold">
+          Duration Trial
+        </h2>
         <p class="text-pretty text-gray-500 text-md">
           {duration}
         </p>
