@@ -1,8 +1,8 @@
 ---
-import BookForm from "@/components/bookForm.astro";
 import Container from "../components/container.astro";
 import Sectionhead from "../components/sectionhead.astro";
 import Layout from "../layouts/Layout.astro";
+import Form from "@/hooks/Form";
 ---
 
 <Layout title="Contact">
@@ -12,6 +12,6 @@ import Layout from "../layouts/Layout.astro";
       <Fragment slot="desc"></Fragment>
     </Sectionhead>
 
-    <BookForm />
+    <Form client:visible />
   </Container>
 </Layout>
