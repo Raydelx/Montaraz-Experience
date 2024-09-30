@@ -1,0 +1,71 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Container from "../components/container.astro";
+import Sectionhead from "../components/sectionhead.astro";
+import Card from "../components/card.astro";
+
+const TOURBIKEPRODUCTS = [
+  {
+    name: "Product 1",
+    description: "aqui va la descripcion del producto numero 1 ",
+    href: "tour-bike-products/product 1",
+    href_img: "/road-bike.jpg/",
+    alt_img: "string",
+  },
+  {
+    name: "Product 2",
+    description: "aqui va la descripcion del producto numero 2",
+    href: "aqui va la descripcion del producto numero 1",
+    href_img: "/road-bike.jpg/",
+    alt_img: "string",
+  },
+  {
+    name: "Product 3",
+    description: "aqui va la descripcion del producto numero 3",
+    href: "aqui va la descripcion del producto numero 1",
+    href_img: "/road-bike.jpg/",
+    alt_img: "string",
+  },
+  {
+    name: "Product 4",
+    description: "aqui va la descripcion del producto numero 4",
+    href: "aqui va la descripcion del producto numero 1",
+    href_img: "/road-bike.jpg/",
+    alt_img: "string",
+  },
+  {
+    name: "Product 5",
+    description: "aqui va la descripcion del producto numero 5",
+    href: "aqui va la descripcion del producto numero 1",
+    href_img: "/road-bike.jpg/",
+    alt_img: "string",
+  },
+  {
+    name: "Product 6",
+    description: "aqui va la descripcion del producto numero 6",
+    href: "aqui va la descripcion del producto numero 1",
+    href_img: "/road-bike.jpg/",
+    alt_img: "string",
+  },
+];
+---
+
+<Layout title="E-Bike Products">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Bikepack products</Fragment>
+      <Fragment slot="desc"> Only the best options for you </Fragment>
+    </Sectionhead>
+    <main class="mt-24">
+      <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+        {
+          TOURBIKEPRODUCTS.map((tour) => (
+            <li class="mb-10 ">
+              <Card {...tour} />
+            </li>
+          ))
+        }
+      </ul>
+    </main>
+  </Container>
+</Layout>
