@@ -5,9 +5,20 @@ import Container from "../../components/container.astro";
 
 // Generate a new path for every collection entry
 export async function getStaticPaths() {
-  const blogEntries = await getCollection("blog");
-  return blogEntries.map((entry) => ({
-    params: { slug: entry.slug },
+  const blogEntries1 = await getCollection("montaraz");
+  const blogEntries2 = await getCollection("cycling");
+  const blogEntries3 = await getCollection("hiking");
+  const blogEntries4 = await getCollection("destinations");
+
+  const allEntries = [
+    ...blogEntries1,
+    ...blogEntries2,
+    ...blogEntries3,
+    ...blogEntries4,
+  ];
+
+  return allEntries.map((entry) => ({
+    params: { blog: entry.slug },
     props: { entry },
   }));
 }
@@ -40,7 +51,7 @@ const { Content } = await entry.render();
         <span class="text-gray-400 hidden md:block">•</span>
         <div class="w-full md:w-auto flex flex-wrap gap-3">
           {
-            entry.data.tags.map((tag) => (
+            entry.data.tags.map((tag: unknown) => (
               <span class="text-sm text-gray-500">#{tag}</span>
             ))
           }

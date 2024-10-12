@@ -1,10 +1,10 @@
 .swiper-button-prev{
     --swiper-navigation-size: 25px;
-    color: aliceblue;
+    color: gray;
 }
 .swiper-button-next{
     --swiper-navigation-size: 25px;
-    color: aliceblue;
+    color: gray;
 }
 .swiper-pagination-bullet {
     --swiper-pagination-color: white
