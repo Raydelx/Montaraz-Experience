@@ -56,7 +56,6 @@ const makeId = (base: any, index: any) => `${base}${index + 1}`;
 
             return (
               <AccordionItem
-                client:load
                 {...question}
                 id={id}
                 collapseId={collapseId}
@@ -73,5 +72,5 @@ const makeId = (base: any, index: any) => `${base}${index + 1}`;
 <!--https://preline.co/plugins/html/accordion.html-->
 <script
   is:inline
-  astro-data-reload
+  data-astro-rerun
   src="/scripts/vendor/preline/accordion/index.js"></script>
