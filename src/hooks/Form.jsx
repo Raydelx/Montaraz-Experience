@@ -16,6 +16,7 @@ const ClientForm = () => {
   const [activityNationality, setActivityNationality] = useState('');
   const [activityPersonName, setActivityPersonName] = useState('');
   const [activityTotal, setActivityTotal] = useState('');
+  const [language, setLanguage] = useState('');
 
   // Función para añadir un nuevo cliente
   const addClient = () => {
@@ -51,7 +52,7 @@ const ClientForm = () => {
     // Preparar el objeto para enviar
     const formData = {
       access_key: 'e1368d60-eed2-4455-a494-1dd150659cf8', // Reemplaza con tu clave de Web3Forms
-      activity: `Name: ${activityPersonName}\nEmail: ${activityEmail}\nPhone Number: ${activityPhone}\nNationality: ${activityNationality}\nActivity Name: ${activityName}\nDate of Joining: ${activityDate}\nHow many persons: ${activityTotal}`, // Datos de la actividad
+      activity: `Name: ${activityPersonName}\nEmail: ${activityEmail}\nPhone Number: ${activityPhone}\nNationality: ${activityNationality}\nActivity Name: ${activityName}\nDate of Joining: ${activityDate}\nHow many persons: ${activityTotal}\nLanguage: ${language}`, // Datos de la actividad
       participantes: formattedClients, // Incluir los clientes formateados en el campo 'message'
     };
 
@@ -106,7 +107,7 @@ const ClientForm = () => {
             required
           />
         </div></div>
-          <div className='grid md:grid-cols-2 gap-2'>
+        <div className='grid md:grid-cols-3 gap-2'>
             <div className='mb-2'>
             <label htmlFor="activityPhone">Phone number</label>
             <input
@@ -373,6 +374,20 @@ const ClientForm = () => {
               <option value="Zimbabwe">Zimbabwe</option>
             </datalist>
           </div>
+          
+          <div className='mb-2'>
+            <label htmlFor="language">What language do you speak?</label>
+              <input
+                id='language'
+                type="text"
+                name="language"
+                placeholder="Dutch"
+                className='w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100'
+                value={language}
+                onChange={(e) => setLanguage(e.target.value)}
+                required
+              />
+          </div>
         </div>
         
         <div className='grid md:grid-cols-3 gap-2'>
@@ -382,20 +397,13 @@ const ClientForm = () => {
             id='activityName'
             type="text"
             name="activityName"
-            list='Activity'
+            
             placeholder="Select activity"
             className='w-full px-4 py-3 border-2 placeholder:text-gray-400 rounded-md outline-none focus:ring-4 border-gray-300 focus:border-gray-600 ring-gray-100'
             value={activityName}
             onChange={(e) => setActivityName(e.target.value)}
             required
           />
-          <datalist id="Activity">
-            <option value="Cycling Tours"></option>
-            <option value="Hiking & Trekking"></option>
-            <option value="Cultural Travel Tours"></option>
-            <option value="Multi-Adventure Tours"></option>
-            <option value="Other"></option>
-          </datalist>
         </div>
         <div className='mb-2'>
         <label htmlFor="activityDate">Date of joinig the activity</label>
