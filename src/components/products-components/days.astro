@@ -3,6 +3,10 @@ import Icon from "../Icon.astro";
 
 interface Props {
   day: string;
+  title?: string;
+  strong?: string;
+  strong2?: string;
+  strong3?: string;
   description: string;
   description2?: string;
   description3?: string;
@@ -16,9 +20,14 @@ interface Props {
   optional1?: string;
   optional2?: string;
   tecnicalInfo?: boolean;
+  difficulty?: string;
 }
 const {
   day,
+  title,
+  strong,
+  strong2,
+  strong3,
   description,
   description2,
   description3,
@@ -32,6 +41,7 @@ const {
   optional1,
   optional2,
   tecnicalInfo,
+  difficulty,
 } = Astro.props;
 ---
 
@@ -42,15 +52,23 @@ const {
         <div>
           <h2 class="md:text-3xl text-2xl font-bold mb-2">Day {day}</h2>
         </div>
+        {title && <p class="text-gray-500 text-xl mt-2 font-bold">{title}</p>}
         <p class="text-gray-500 text-md">{description}</p>
         {description2 && (
           <p class="text-gray-500 text-md mt-2">{description2}</p>
         )}
+        {strong && <p class="text-gray-500 text-xl mt-2 font-bold">{strong}</p>}
         {description3 && (
           <p class="text-gray-500 text-md mt-2">{description3}</p>
         )}
+        {strong2 && (
+          <p class="text-gray-500 text-xl mt-2 font-bold">{strong2}</p>
+        )}
         {description4 && (
           <p class="text-gray-500 text-md mt-2">{description4}</p>
+        )}
+        {strong3 && (
+          <p class="text-gray-500 text-xl mt-2 font-bold">{strong3}</p>
         )}
         {description5 && (
           <p class="text-gray-500 text-md mt-2">{description5}</p>
@@ -117,6 +135,19 @@ const {
               <p class="text-pretty text-gray-500 text-md">{duration}</p>
             </div>
           </div>
+          {difficulty && (
+            <div class="grid grid-cols-6 gap-14 md:gap-2">
+              <div class="col-span-1">
+                <Icon icon="difficulty-logo" size="3rem" color="#0E46A3" />
+              </div>
+              <div class="grid col-span-5">
+                <h2 class="text-pretty text-neutral-900 text-xl font-bold">
+                  Difficulty
+                </h2>
+                <p class="text-pretty text-gray-500 text-md">{difficulty}</p>
+              </div>
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -126,15 +157,20 @@ const {
         <div>
           <h2 class="md:text-3xl text-2xl font-bold mb-2">Day {day}</h2>
         </div>
+        {title && <p class="text-gray-500 text-xl mt-2 font-bold">{title}</p>}
         <p class="text-gray-500 text-md">{description}</p>
         {description2 && (
           <p class="text-gray-500 text-md mt-2">{description2}</p>
         )}
+        {strong && <p class="text-gray-500 text-xl mt-2 font-bold">{strong}</p>}
         {description3 && (
           <p class="text-gray-500 text-md mt-2">{description3}</p>
         )}
         {description4 && (
           <p class="text-gray-500 text-md mt-2">{description4}</p>
+        )}
+        {strong3 && (
+          <p class="text-gray-500 text-xl mt-2 font-bold">{strong3}</p>
         )}
         {description5 && (
           <p class="text-gray-500 text-md mt-2">{description5}</p>
