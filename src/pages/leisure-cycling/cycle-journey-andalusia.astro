@@ -49,6 +49,7 @@ type ReviewsProps = {
   header: {
     name: string;
     productName: string;
+    valoration: string;
   };
   body: {
     text: string;
@@ -202,11 +203,16 @@ const DAYS = [
               Andalusia
             </p>
           </div>
-
-          <h1
-            class="text-3xl font-extrabold tracking-tight leading-none text-white md:text-4xl lg:text-5xl [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
-            Cycle Journey Andalusia
-          </h1>
+          <div>
+            <h1
+              class="text-3xl font-extrabold tracking-tight leading-none text-white md:text-4xl lg:text-5xl [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
+              Cycle Journey Andalusia E -Bike Tour
+            </h1>
+            <p
+              class="text-xl font-normal text-white lg:text-2xl flex flex-col h-full [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
+              Part 1 Ronda - Córdoba
+            </p>
+          </div>
         </div>
       </div>
 
@@ -214,7 +220,7 @@ const DAYS = [
 
       <div
         class="grid grid-cols-2 md:grid-cols-6 h-auto mt-3 gap-3 place-content-start md:px-6">
-        <InformationProducts title="Price" subtitle="1.490">
+        <InformationProducts title="Price" subtitle="1.550">
           <div slot="icon">
             <Icon icon="price-logo" size="1.6rem" color="#0E46A3" />
           </div>
@@ -541,21 +547,19 @@ const DAYS = [
       <div class="">
         <h2
           class="max-w-2xl mb-4 md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
-          What to Expect
+          Requirements
         </h2>
         <p class="text-lg text-gray-900 mb-1">
-          <span class="text-xl strong">🔹</span> Uncover the hidden beauty of Andalusia,
-          a treasure to discover!
+          <span class="text-xl strong">🔹</span> Booking Conditions. See terms and
+          conditions.
         </p>
-        <p class="text-lg text-gray-900">
-          <span class="text-xl">🔹</span> 8 days immersing in the rich Andalusian
-          culture, natural beauty, and history as you cycle through picturesque landscapes,
-          charming villages, and iconic landmarks.
+        <p class="text-lg text-gray-900 mb-1">
+          <span class="text-xl strong">🔹</span> Travel insurance. See terms and
+          conditions.
         </p>
-        <p class="text-lg text-gray-900">
-          <span class="text-xl">🔹</span> The South of Spain has so much to offer,
-          from the charming city of Ronda to the historic city of Córdoba, an unforgettable
-          cycling adventure through the heart of Andalusia.
+        <p class="text-lg text-gray-900 mb-1">
+          <span class="text-xl strong">🔹</span> Release of liability form. See terms
+          and conditions.
         </p>
       </div>
       <!-- <Cancellation /> -->
@@ -576,8 +580,8 @@ const DAYS = [
       </h2>
       <Link
         style="muted"
-        href="/cycle-tour/leisure-cycling/from-montains-to-coastline/TRIP NOTES FROM MOUNTAINS TO COASTLINE (3).pdf"
-        download="Trips Notes From Mountains to Coastline"
+        href="/cycle-tour/leisure-cycling/cycle-journey-andalusia/CYCLE JOURNEY RONDA TO CÓRDOBA.pdf"
+        download="Trips Notes Cycle Journey Ronda to Córdoba"
         class="flex gap-1 items-center justify-center mt-8 font-semibold"
         rel="noopener">
         View trip notes
@@ -592,9 +596,27 @@ const DAYS = [
     </section>
 
     <!--  TimeLine per days  -->
-    <h2 class="text-4xl md:text-5xl xl:text-6xl md:p-8 mt-16 font-bold mb-4">
-      What to expect
-    </h2>
+    <div class="md:p-8">
+      <h2
+        class="max-w-2xl md:p-8 mb-4 md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
+        What to Expect
+      </h2>
+      <p class="text-lg text-gray-900 mb-1">
+        <span class="text-xl strong">🔹</span> Uncover the hidden beauty of Andalusia,
+        a treasure to discover!
+      </p>
+      <p class="text-lg text-gray-900">
+        <span class="text-xl">🔹</span> 8 days immersing in the rich Andalusian culture,
+        natural beauty, and history as you cycle through picturesque landscapes,
+        charming villages, and iconic landmarks.
+      </p>
+      <p class="text-lg text-gray-900">
+        <span class="text-xl">🔹</span> The South of Spain has so much to offer,
+        from the charming city of Ronda to the historic city of Córdoba, an unforgettable
+        cycling adventure through the heart of Andalusia.
+      </p>
+    </div>
+
     {
       DAYS.map((tour) => (
         <ol class="mb-10">
