@@ -4,7 +4,7 @@ title: "Mountain walking is good for you!"
 snippet: "Mountain walking and hiking are active ways to explore the beautiful mountains. Hiking in the mountains is something different than walking in the city."
 image:
   {
-    src: "/public/blogs/hiking-and-trekking/mountain-walking-is-good-for-you/mwigfy-blog.webp",
+    src: "/blogs/hiking-and-trekking/mountain-walking-is-good-for-you/mwigfy-blog.webp",
     alt: "ciclismo en islas canarias",
   }
 publishDate: "2024-02-15 11:39"
