@@ -39,4 +39,4 @@ Keep in mind that the grades are somewhat subjective!
 
 **Duration trail:** the total duration of the cycle trail from start to finish, including panoramic viewpoints, snack breaks, picnics, etc.
 
-<a href="/public/leisure-cycling.pdf" target="_blank">Download PDF for Leisure Grades difficulty</a>
+<a href="/public/leisure-cycling.pdf" target="_blank">Download PDF for Leisure Cycling difficulty</a>
