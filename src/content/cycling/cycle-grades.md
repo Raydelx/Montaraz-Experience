@@ -4,7 +4,7 @@ title: "Cycle Grades "
 snippet: "The cycle grades will allow you to understand what sort of ride you are looking at with the information necessary, to choose the perfect tour for you. "
 image:
   {
-    src: "/src/content/cycling/cycle-grades/cg-blog.webp",
+    src: "/src/assets/blogs/cycling/cycle-grades/cg-blog.webp",
     alt: "cycle grades",
   }
 publishDate: "2024-10-21 11:39"
