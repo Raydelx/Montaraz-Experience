@@ -40,5 +40,3 @@ I still pursue my passion and interest in the great outdoors **which shows the b
 Michael Hugo,
 
 ![Super Wide](./we-are-montaraz/tdtcmf-3.jpg)
-
-![Super Wide](./we-are-montaraz/tdtcmf-2.jpg)
