@@ -11,10 +11,8 @@ const blogCollection = defineCollection({
       src: z.string(),
       alt: z.string(),
     }),
-    publishDate: z.string().transform(str => new Date(str)),
-    author: z.string().default('Montaza Outdoor'),
-    category: z.string(),
-    tags: z.array(z.string()),
+    publishDate: z.string().transform(str => new Date(str)), 
+    category: z.string(),    
   }),
 });
 
@@ -27,10 +25,8 @@ const blogCollection2 = defineCollection({
       src: z.string(),
       alt: z.string(),
     }),
-    publishDate: z.string().transform(str => new Date(str)),
-    author: z.string().default('Montaza Outdoor'),
-    category: z.string(),
-    tags: z.array(z.string()),
+    publishDate: z.string().transform(str => new Date(str)),  
+    category: z.string(),  
   }),
 });
 const blogCollection3 = defineCollection({
@@ -43,9 +39,7 @@ const blogCollection3 = defineCollection({
       alt: z.string(),
     }),
     publishDate: z.string().transform(str => new Date(str)),
-    author: z.string().default('Montaza Outdoor'),
     category: z.string(),
-    tags: z.array(z.string()),
   }),
 });
 const blogCollection4 = defineCollection({
@@ -58,9 +52,8 @@ const blogCollection4 = defineCollection({
       alt: z.string(),
     }),
     publishDate: z.string().transform(str => new Date(str)),
-    author: z.string().default('Montaza Outdoor'),
     category: z.string(),
-    tags: z.array(z.string()),
+    
   }),
 });
 

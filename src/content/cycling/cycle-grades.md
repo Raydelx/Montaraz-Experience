@@ -9,8 +9,7 @@ image:
   }
 publishDate: "2024-10-21 11:39"
 category: "Cycling"
-author: "Michael Hugo"
-tags: [cycleGrades, montaraz, bikes, difficulty]
+
 ---
 
 ![Super Wide](./cycle-grades/cg-principal.webp)
@@ -39,4 +38,4 @@ Keep in mind that the grades are somewhat subjective!
 
 **Duration trail:** the total duration of the cycle trail from start to finish, including panoramic viewpoints, snack breaks, picnics, etc.
 
-<a href="/public/leisure-cycling.pdf" target="_blank">Download PDF for Leisure Cycling difficulty</a>
+<a href="/leisure-cycling.pdf" target="_blank">Download PDF for Leisure Cycling difficulty</a>
