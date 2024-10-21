@@ -52,7 +52,14 @@ const ClientForm = () => {
     // Preparar el objeto para enviar
     const formData = {
       access_key: 'e1368d60-eed2-4455-a494-1dd150659cf8', // Reemplaza con tu clave de Web3Forms
-      activity: `Name: ${activityPersonName}\nEmail: ${activityEmail}\nPhone Number: ${activityPhone}\nNationality: ${activityNationality}\nActivity Name: ${activityName}\nDate of Joining: ${activityDate}\nHow many persons: ${activityTotal}\nLanguage: ${language}`, // Datos de la actividad
+      activity: `Name: ${activityPersonName}\n
+      Email: ${activityEmail}\n
+      Phone Number: ${activityPhone}\n
+      Nationality: ${activityNationality}\n
+      Activity Name: ${activityName}\n
+      Date of Joining: ${activityDate}\n
+      How many persons: ${activityTotal}\n
+      Language: ${language}`, // Datos de la actividad
       participantes: formattedClients, // Incluir los clientes formateados en el campo 'message'
     };
 
