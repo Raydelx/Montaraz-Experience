@@ -4,7 +4,7 @@ title: "The decision that changed my life"
 snippet: "I spent a decade traveling the world, embracing diverse cultures, working various jobs, and pursuing outdoor adventures to discover my true self."
 image:
   {
-    src: "/public/blogs/montaraz/we-are-montaraz/tdtcmf-principal.jpg",
+    src: "/blogs/montaraz/we-are-montaraz/tdtcmf-principal.jpg",
     alt: "ciclismo en islas canarias",
   }
 publishDate: "2024-10-21 11:39"
