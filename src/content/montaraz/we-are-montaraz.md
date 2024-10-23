@@ -39,3 +39,5 @@ I still pursue my passion and interest in the great outdoors which shows the bes
 Michael Hugo,
 
 ![Super Wide](./we-are-montaraz/tdtcmf-3.jpg)
+
+<img style='margin:auto' title='ahlambra' alt='alhambra' src='../../../public/blogs/montaraz/we-are-montaraz/tdtcmf-2.jpg' />
