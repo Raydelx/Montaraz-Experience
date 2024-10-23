@@ -29,5 +29,5 @@ Snow, Europe’s southernmost ski resort, the Sierra Nevada, attracts thousands 
 
 Join us and see everything that Granada has to offer from a beautiful Andalusian city to a great diversity of protected natural areas. Great for a family trip, with your partner, with friends, or alone. From cultural tours to active travelers with mountains and excursions is possible to fully experience the province of Granada. 
 
-<img style='margin:auto' title='ahlambra' alt='alhambra' src='../../../public/blogs/destinations/the-province-of-granada/dpog-2.webp' />
+<img style='margin:auto' title='ahlambra' alt='alhambra' src='/blogs/destinations/the-province-of-granada/dpog-2.webp' />
 

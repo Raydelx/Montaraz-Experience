@@ -40,4 +40,4 @@ Michael Hugo,
 
 ![Super Wide](./we-are-montaraz/tdtcmf-3.jpg)
 
-<img style='margin:auto' title='ahlambra' alt='alhambra' src='../../../public/blogs/montaraz/we-are-montaraz/tdtcmf-2.jpg' />
+<img style='margin:auto' title='ahlambra' alt='alhambra' src='/blogs/montaraz/we-are-montaraz/tdtcmf-2.jpg' />

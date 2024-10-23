@@ -7,6 +7,7 @@ import "@fontsource/lato/400.css"; // Specify weight
 import "@fontsource/lato/400-italic.css"; // Specify weight and style
 import ViewTransitions from "astro/components/ViewTransitions.astro";
 import WhatsappButton from "@/components/ui/whatsappButton.astro";
+import Link from "@/components/ui/link.astro";
 
 export interface Props {
   title: string;
@@ -64,6 +65,10 @@ const makeTitle = title
     <Navbar />
     <slot />
     <WhatsappButton />
+    <div class="m-auto mt-10 grid justify-center">
+      <Link style="inverted" href="#">Scroll to Top</Link>
+    </div>
+
     <Footer />
     <style is:global>
       /* Improve Page speed */
