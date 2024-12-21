@@ -5,12 +5,26 @@ import Icon from "../components/Icon.astro";
 <div class="grid md:grid-cols-2 md:p-6 mt-10">
   <div>
     <h1
-      class="text-4xl lg:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter md:pt-16 pb-10">
+      class="text-4xl lg:text-5xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter md:pt-16 pb-5 md:pb-10">
       Explore our <spam class="text-[#0E46A3]"
         >True Outdoor Travel Experiences
       </spam>
       suitable for anyone who enjoys an active way of traveling
     </h1>
+    <div class="flex justify-center md:w-auto">
+      <div class="relative inline-flex w-full group mb-5 md:mb-10">
+        <div
+          class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200">
+        </div>
+        <a
+          href="/book-my-tour/"
+          title=""
+          role="button"
+          class="relative w-full px-14 py-4 font-bold text-white transition-all duration-200 bg-gray-900 text-center text-xl border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-800 rounded">
+          Book my Tour
+        </a>
+      </div>
+    </div>
     <div class="flex gap-3">
       <a
         class="bg-slate-200 grid justify-center content-center rounded-full size-12 hover:scale-110 duration-200 active:scale-90"
@@ -30,21 +44,6 @@ import Icon from "../components/Icon.astro";
         class="bg-slate-200 grid justify-center content-center rounded-full size-12 hover:scale-110 duration-200"
         href=""><Icon icon="mail-logo" size="2rem" color="#0E46A3" /></a
       >
-    </div>
-    <div class="flex">
-      <div
-        class="relative inline-flex group mt-10 content-center justify-center">
-        <div
-          class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg filter group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200">
-        </div>
-        <a
-          href="/book-my-tour/"
-          title=""
-          role="button"
-          class="relative items-center justify-center px-5 py-2 text-base font-bold text-white transition-all duration-200 bg-gray-900 border-2 border-transparent focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 hover:bg-gray-800 rounded">
-          Book my Tour
-        </a>
-      </div>
     </div>
   </div>
   <div class="rotate-12 md:-mr-32">
