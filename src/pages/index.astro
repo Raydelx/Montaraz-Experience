@@ -7,6 +7,7 @@ import SliderReactHome from "../hooks/SliderReactHome";
 import CardHome from "@/components/cardHome.astro";
 import Gallery from "@/components/gallery.astro";
 import Hero from "@/components/hero.astro";
+import Reviews from "@/components/reviews.astro";
 
 const IMG = [
   {
@@ -70,6 +71,7 @@ const IMG = [
       <NewFaq title="Frequently<br />asked questions" faqs={faqs} />
     </section>
 
+    <Reviews />
     <Gallery />
   </Container>
 </Layout>
