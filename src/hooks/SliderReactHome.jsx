@@ -32,7 +32,7 @@ export default function App({IMG}) {
         
       >
        {IMG.map(function(i, index) {
-          return <SwiperSlide key={index}><img className="m-auto h-[350px] md:h-[550px]  object-cover w-full" src={i.src}/></SwiperSlide>;
+          return <SwiperSlide key={index}><img className="m-auto h-[350px] md:h-[75vh] object-cover w-full" src={i.src}/></SwiperSlide>;
         })}      
       </Swiper>
     </>
