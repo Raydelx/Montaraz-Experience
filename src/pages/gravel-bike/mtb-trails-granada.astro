@@ -91,7 +91,7 @@ const DAYS = [
 
       <div
         class="grid grid-cols-2 md:grid-cols-6 h-auto mt-3 gap-3 place-content-start md:px-6">
-        <InformationProducts title="Price" subtitle="Prive Tour">
+        <InformationProducts title="Price" subtitle="95 - 170 ">
           <div slot="icon">
             <Icon icon="price-logo" size="1.6rem" color="#0E46A3" />
           </div>
@@ -295,9 +295,9 @@ const DAYS = [
       </div>
 
       <Widget
-        title="What to bring for rock climbing"
+        title="What to bring for cycling"
         description="Weather is important to consider while packing for your outdoor activity. Your packing list is based on your comfort and sensitivity. The best way to travel and to be outdoors is to layer your clothes. Highly recommended as best way to stay warm and keep cool, as the weather is bound to change in the mountains."
-        img="/multi-adventure/rock-climbing/rc-product.webp"
+        img="/cycle-tour/montainbike/mtb-trails-granada/mtb-tg-6.webp"
         text="We help you fit your pedals, saddle, etc. if you'd like to bring them. Any questions about the recommendations of the material do not hesitate to contact us. "
         brings={brings}
       />
@@ -340,8 +340,20 @@ const DAYS = [
       </div>
 
       <!-- Button to download PDF -->
-      <section class="grid md:grid-cols-2 gap-6">
+      <section class="grid md:grid-cols-2 gap-6 items-center">
         <Cancellation />
+        <div class="flex flex-col gap-2 md:p-4">
+          <div>
+            <h3 class="text-4xl md:text-5xl xl:text-6xl font-bold">Price:</h3>
+            <Dots class="mb-4" />
+          </div>
+          <p>1 person - 170 €</p>
+          <p>2 people - 140 € p.p</p>
+          <p>3 people - 130 € p.p</p>
+          <p>4 people - 120 € p.p</p>
+          <p>5 people - 100 € p.p</p>
+          <p>7 people - 95 € p.p</p>
+        </div>
       </section>
 
       <!-- Slider Photos -->
