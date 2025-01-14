@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Modal from './Modal';
 
 import './formStyles.css'; // Importa tu archivo CSS
 
@@ -81,6 +82,9 @@ const ClientForm = () => {
     } catch (error) {
       setFormMessage('Hubo un error al enviar el formulario.');
     }
+
+    
+    
   };
 
   return (
@@ -518,7 +522,7 @@ const ClientForm = () => {
             
           </div>
         ))}
-               
+         <Modal></Modal>       
         <button className='bg-[#0E46A3] text-white hover:bg-[#074173]  border-2 border-transparent rounded text-center transition focus-visible:ring-2 ring-offset-2 mt-4 px-6 py-3 ring-gray-200' type="submit">Send</button>
       </form>
       {formMessage && <p>{formMessage}</p>}
