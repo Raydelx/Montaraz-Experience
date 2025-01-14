@@ -68,7 +68,7 @@ const ClientForm = () => {
     // e1368d60-eed2-4455-a494-1dd150659cf8---raydel pass key
     //e851d321-0271-42c5-a243-3d405050de0f---montaraz pass key
     const formData = {
-      access_key: 'e1368d60-eed2-4455-a494-1dd150659cf8', // Reemplaza con tu clave de Web3Forms
+      access_key: 'e851d321-0271-42c5-a243-3d405050de0f', // Reemplaza con tu clave de Web3Forms
       activity: `Name: ${activityPersonName}\n
       Email: ${activityEmail}\n
       Phone Number: ${activityPhone}\n
