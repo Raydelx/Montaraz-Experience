@@ -4,30 +4,31 @@ import LiabilityModal from './LiabilityModal';
 const ClientForm = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLiabilityChecked, setIsLiabilityChecked] = useState(false);
-  const [formMessage, setFormMessage] = useState('');
+  const [formMessage2, setFormMessage2] = useState('');
 
   const handleModalOpen = () => setIsModalOpen(true);
   const handleModalClose = () => setIsModalOpen(false);
   const handleCheckboxChange = (e) => setIsLiabilityChecked(e.target.checked);
 
-  const handleSubmit = (e) => {
+  const handleSubmit1 = (e) => {
     e.preventDefault();
     if (!isLiabilityChecked) {
-      setFormMessage('You must accept the liability terms to proceed.');
+      setFormMessage2('You must accept the liability terms to proceed.');
       return;
     }
     // Handle form submission logic here
-    setFormMessage('Form submitted successfully!');
+    setFormMessage2('Form submitted successfully!');
   };
 
   return (
     <div className='mt-8'>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit1}>
         <div className="mb-5">
           <label htmlFor="liability" className="flex items-center">
             <input
               type="checkbox"
               id="liability"
+              required
               checked={isLiabilityChecked}
               onChange={handleCheckboxChange}
               className="mr-2"
@@ -38,7 +39,7 @@ const ClientForm = () => {
         </div>
        
       </form>
-      {formMessage && <p>{formMessage}</p>}
+      {formMessage2 && <p>{formMessage2}</p>}
       <LiabilityModal isOpen={isModalOpen} onClose={handleModalClose} />
     </div>
   );

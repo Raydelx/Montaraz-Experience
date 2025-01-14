@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Modal from './Modal';
+import LiabilityModal from './LiabilityModal';
 
 import './formStyles.css'; // Importa tu archivo CSS
 
@@ -18,6 +19,16 @@ const ClientForm = () => {
   const [activityPersonName, setActivityPersonName] = useState('');
   const [activityTotal, setActivityTotal] = useState('');
   const [language, setLanguage] = useState('');
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isLiabilityChecked, setIsLiabilityChecked] = useState(false);
+  const [formMessage2, setFormMessage2] = useState('');
+  
+  const handleModalOpen = () => setIsModalOpen(true);
+  const handleModalClose = () => setIsModalOpen(false);
+  const handleCheckboxChange = (e) => setIsLiabilityChecked(e.target.checked);
+  
+    
 
   // Función para añadir un nuevo cliente
   const addClient = () => {
@@ -44,15 +55,20 @@ const ClientForm = () => {
   // Función para manejar el envío del formulario
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    if (!isLiabilityChecked) {
+      setFormMessage2('You must accept the liability terms to proceed.');
+      return;
+    }
     // Formatear los datos de los clientes en un formato legible
     const formattedClients = clients
       .map(client => `Name: ${client.name}\nDate of birth: ${client.date}\nWeight: ${client.weight}\nHeight: ${client.height}`)
       .join('\n\n'); // Unir clientes con doble salto de línea
 
     // Preparar el objeto para enviar
+    // e1368d60-eed2-4455-a494-1dd150659cf8---raydel pass key
+    //e851d321-0271-42c5-a243-3d405050de0f---montaraz pass key
     const formData = {
-      access_key: 'e851d321-0271-42c5-a243-3d405050de0f', // Reemplaza con tu clave de Web3Forms
+      access_key: 'e1368d60-eed2-4455-a494-1dd150659cf8', // Reemplaza con tu clave de Web3Forms
       activity: `Name: ${activityPersonName}\n
       Email: ${activityEmail}\n
       Phone Number: ${activityPhone}\n
@@ -516,13 +532,29 @@ const ClientForm = () => {
             <svg className='text-white hidden md:block m-auto' xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#fff" viewBox="0 0 256 256"><path d="M216,40H68.53a16.08,16.08,0,0,0-13.72,7.77L9.14,123.88a8,8,0,0,0,0,8.24l45.67,76.11A16.08,16.08,0,0,0,68.53,216H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM61.67,204.12,68.53,200h0ZM216,200H68.53l-43.2-72,43.2-72H216ZM106.34,146.34,124.69,128l-18.35-18.34a8,8,0,0,1,11.32-11.32L136,116.69l18.34-18.35a8,8,0,0,1,11.32,11.32L147.31,128l18.35,18.34a8,8,0,0,1-11.32,11.32L136,139.31l-18.34,18.35a8,8,0,0,1-11.32-11.32Z"></path></svg>
             <span className=' md:hidden m-auto'>Delete participant</span>
             </button>
-            </div>
-            
-            
-            
+            </div> 
           </div>
         ))}
-         <Modal></Modal>       
+        <div className='mt-8'>
+        <div className="mb-5">
+            <label htmlFor="liability" className="flex items-center">
+              <input
+                type="checkbox"
+                id="liability"
+                required
+                checked={isLiabilityChecked}
+                onChange={handleCheckboxChange}
+                className="mr-2"
+              />
+              <p>I accept the <button type="button" className="text-blue-500 underline" onClick={handleModalOpen}> liability terms</button></p>
+              
+            </label>
+          </div>
+        
+        {formMessage2 && <p>{formMessage2}</p>}
+        <LiabilityModal isOpen={isModalOpen} onClose={handleModalClose} />
+      </div>
+               
         <button className='bg-[#0E46A3] text-white hover:bg-[#074173]  border-2 border-transparent rounded text-center transition focus-visible:ring-2 ring-offset-2 mt-4 px-6 py-3 ring-gray-200' type="submit">Send</button>
       </form>
       {formMessage && <p>{formMessage}</p>}

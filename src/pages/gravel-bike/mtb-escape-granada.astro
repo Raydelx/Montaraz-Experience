@@ -62,7 +62,7 @@ const IMG = [
 
       <div
         class="grid grid-cols-2 md:grid-cols-6 h-auto mt-3 gap-3 place-content-start md:px-6">
-        <InformationProducts title="Price" subtitle="Private Tour">
+        <InformationProducts title="Price" subtitle="680">
           <div slot="icon">
             <Icon icon="price-logo" size="1.6rem" color="#0E46A3" />
           </div>
@@ -424,7 +424,15 @@ const IMG = [
 
       <!-- Button to download PDF -->
       <section class="grid md:grid-cols-2 gap-6 md:gap-12">
-        <Cancellation />
+        <div class="grid">
+          <div>
+            <h2 class="md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
+              Cancellation Policy
+            </h2>
+            <Dots class="mb-4" />
+            <p class="text-lg text-gray-700 mt-1">See Terms and Conditions.</p>
+          </div>
+        </div>
         <div class="">
           <h2
             class="max-w-2xl md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
@@ -441,55 +449,54 @@ const IMG = [
         </div>
       </section>
     </main>
-
-    <div
-      class="grid bg-[#0E46A3] place-items-center md:mb-20 border-spacing-3 backdrop-blur-sm w-fit m-auto md:px-28 p-10 mt-12 rounded-xl shadow-[0px_0px_23px_14px_#00000024]">
-      <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-200">
-        More information about our tour
-      </h2>
-      <Link
-        style="muted"
-        href="/cycle-tour/montainbike/mtb-escape-granada/MTB ESCAPE GRANADA.pdf"
-        download="MTB Escape Granada"
-        class="flex gap-1 items-center justify-center mt-8 font-semibold"
-        rel="noopener">
-        View trip notes
-      </Link>
-    </div>
-
-    <!-- Slider Photos -->
-    <section class="m-auto md:w-full rounded-xl md:px-8 md:py-20">
-      <ol class="relative mt-16">
-        {(<SliderReact IMG={IMG} client:visible />)}
-      </ol>
-    </section>
-
-    <!--  TimeLine per days  -->
-    <h2 class="text-4xl md:text-5xl xl:text-6xl md:p-4 mt-16 font-bold mb-4">
-      What to expect
-    </h2>
-    <p class="text-gray-700 text-lg mt-4 px-4">
-      Granada is a perfect cycling getaway destination, excellent for a cycling
-      holiday. There is an infinity of MTB trails for all levels from beginners
-      to advanced cyclists with different gradient climbs of varying lengths and
-      a huge variety of elevation profiles through an area with a great
-      diversity of landscapes from rolling hills, pine forests, deserts, and
-      mountains to the tropical coast. The MTB Escape Granada Tour takes you on
-      3 varied trails. Except for the first day, the rides are organized in the
-      morning, giving you time to relax in the afternoon while enjoying your
-      rural accommodation. On the first day, we organize a route in the
-      afternoon. There is the option to visit the city of Granada and explore
-      the many cultural sites and countless tapa bars and restaurants. For those
-      who would like to visit the Alhambra Palace, there is the option to
-      organize the tour on the last day in the morning. Being a tour of 4 days,
-      the MTB Escape Granada is designed for those who need a break and want to
-      take a few days off looking for some great riding. For non-riding
-      partners, we organize extra activities during your stay. Easy to get to
-      Granada by our organized transport either in the airport Málaga or
-      Granada. We have extensive knowledge of all the trails and tailor each
-      ride to the guests to ensure you a great experience with us. Join us and
-      explore our trails with your friends or family in the great outdoors of
-      Granada.
-    </p>
   </Container>
+
+  <div
+    class="grid bg-[#0E46A3] place-items-center md:mb-20 border-spacing-3 backdrop-blur-sm w-fit m-auto md:px-28 p-10 mt-12 rounded-xl shadow-[0px_0px_23px_14px_#00000024]">
+    <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-200">
+      More information about our tour
+    </h2>
+    <Link
+      style="muted"
+      href="/cycle-tour/montainbike/mtb-escape-granada/MTB ESCAPE GRANADA.pdf"
+      download="MTB Escape Granada"
+      class="flex gap-1 items-center justify-center mt-8 font-semibold"
+      rel="noopener">
+      View trip notes
+    </Link>
+  </div>
+
+  <!-- Slider Photos -->
+  <section class="m-auto md:w-full rounded-xl md:px-8 md:py-20">
+    <ol class="relative mt-16">
+      {(<SliderReact IMG={IMG} client:visible />)}
+    </ol>
+  </section>
+
+  <!--  TimeLine per days  -->
+  <h2 class="text-4xl md:text-5xl xl:text-6xl md:p-4 mt-16 font-bold mb-4">
+    What to expect
+  </h2>
+  <p class="text-gray-700 text-lg mt-4 px-4">
+    Granada is a perfect cycling getaway destination, excellent for a cycling
+    holiday. There is an infinity of MTB trails for all levels from beginners to
+    advanced cyclists with different gradient climbs of varying lengths and a
+    huge variety of elevation profiles through an area with a great diversity of
+    landscapes from rolling hills, pine forests, deserts, and mountains to the
+    tropical coast. The MTB Escape Granada Tour takes you on 3 varied trails.
+    Except for the first day, the rides are organized in the morning, giving you
+    time to relax in the afternoon while enjoying your rural accommodation. On
+    the first day, we organize a route in the afternoon. There is the option to
+    visit the city of Granada and explore the many cultural sites and countless
+    tapa bars and restaurants. For those who would like to visit the Alhambra
+    Palace, there is the option to organize the tour on the last day in the
+    morning. Being a tour of 4 days, the MTB Escape Granada is designed for
+    those who need a break and want to take a few days off looking for some
+    great riding. For non-riding partners, we organize extra activities during
+    your stay. Easy to get to Granada by our organized transport either in the
+    airport Málaga or Granada. We have extensive knowledge of all the trails and
+    tailor each ride to the guests to ensure you a great experience with us.
+    Join us and explore our trails with your friends or family in the great
+    outdoors of Granada.
+  </p>
 </Layout>
