@@ -486,7 +486,8 @@ const ClientForm = () => {
               required
             /></div>
             
-            <div className='flex gap-2'><div>
+            <div className='flex flex-col md:flex-row  gap-2'>
+              <div>
               <label htmlFor="date">Date of Birth</label>
               <input
               id='date'
@@ -500,7 +501,7 @@ const ClientForm = () => {
             />
             </div>
               <div>
-                <label htmlFor="weight">Weight</label>
+                <label htmlFor="weight">Weight (Only cycle tours)</label>
                 <input
                 id='weight'
                   type="number"
@@ -513,7 +514,7 @@ const ClientForm = () => {
                 />
               </div>
               <div>
-              <label htmlFor="height">Height</label>
+              <label htmlFor="height">Height (Only cycle tours)</label>
               <input
                 id='height'
                 type="number"

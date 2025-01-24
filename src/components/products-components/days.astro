@@ -21,6 +21,8 @@ interface Props {
   optional2?: string;
   tecnicalInfo?: boolean;
   difficulty?: string;
+  physical_difficulty?: string;
+  technical_difficulty?: string;
 }
 const {
   day,
@@ -42,6 +44,8 @@ const {
   optional2,
   tecnicalInfo,
   difficulty,
+  physical_difficulty,
+  technical_difficulty,
 } = Astro.props;
 ---
 
@@ -145,6 +149,36 @@ const {
                   Difficulty
                 </h2>
                 <p class="text-pretty text-gray-500 text-md">{difficulty}</p>
+              </div>
+            </div>
+          )}
+          {physical_difficulty && (
+            <div class="grid grid-cols-6 gap-14 md:gap-2">
+              <div class="col-span-1">
+                <Icon icon="difficulty-logo" size="3rem" color="#0E46A3" />
+              </div>
+              <div class="grid col-span-5">
+                <h2 class="text-pretty text-neutral-900 text-xl font-bold">
+                  Physical Difficulty
+                </h2>
+                <p class="text-pretty text-gray-500 text-md">
+                  {physical_difficulty}
+                </p>
+              </div>
+            </div>
+          )}
+          {technical_difficulty && (
+            <div class="grid grid-cols-6 gap-14 md:gap-2">
+              <div class="col-span-1">
+                <Icon icon="boot-logo" size="3rem" color="#0E46A3" />
+              </div>
+              <div class="grid col-span-5">
+                <h2 class="text-pretty text-neutral-900 text-xl font-bold">
+                  Technical Difficulty
+                </h2>
+                <p class="text-pretty text-gray-500 text-md">
+                  {technical_difficulty}
+                </p>
               </div>
             </div>
           )}
