@@ -18,7 +18,11 @@ const { title, subtitle, subtitle2 } = Astro.props;
     <div class="flex gap-2 mt-1">
       <slot name="icon" />
       <p class="text-black md:text-lg text-lg">{subtitle}</p>
-      <p class="text-black md:text-lg text-lg md:w-5">{subtitle2}</p>
+      {
+        subtitle2 && (
+          <p class="text-black md:text-lg text-lg md:w-5">{subtitle2}</p>
+        )
+      }
     </div>
   </div>
 </div>
