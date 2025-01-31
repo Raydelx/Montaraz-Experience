@@ -4,9 +4,10 @@ interface Props {
   title: string;
   subtitle?: string;
   subtitle2?: string;
+  subtitle3?: string;
 }
 
-const { title, subtitle, subtitle2 } = Astro.props;
+const { title, subtitle, subtitle2, subtitle3 } = Astro.props;
 ---
 
 <div
@@ -15,12 +16,22 @@ const { title, subtitle, subtitle2 } = Astro.props;
     <p class="text-black font-semibold md:text-xl text-xl tracking-wider">
       {title}
     </p>
-    <div class="flex gap-2 mt-1">
-      <slot name="icon" />
-      <p class="text-black md:text-lg text-lg">{subtitle}</p>
+    <div class="flex flex-col gap-2 mt-1">
+      <div class="flex gap-2 mt-1">
+        <slot name="icon" />
+        <p class="text-black md:text-lg text-lg">{subtitle}</p>
+        {
+          subtitle2 && (
+            <p class="text-black md:text-lg text-lg md:w-5">{subtitle2}</p>
+          )
+        }
+      </div>
       {
-        subtitle2 && (
-          <p class="text-black md:text-lg text-lg md:w-5">{subtitle2}</p>
+        subtitle3 && (
+          <div class="flex gap-2 mt-1">
+            <slot name="icon" />
+            <p class="text-black md:text-lg text-lg">{subtitle3}</p>
+          </div>
         )
       }
     </div>

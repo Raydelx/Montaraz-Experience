@@ -7,7 +7,6 @@ import SliderReact from "../../hooks/SliderReact";
 import Days from "@/components/products-components/days.astro";
 import Includes from "@/components/products-components/includes.astro";
 import Route from "@/components/ui/icons/route.astro";
-import Link from "@/components/ui/link.astro";
 import Dots from "@/components/ui/dots.astro";
 import Widget from "@/components/products-components/widget.astro";
 import Cancellation from "@/components/products-components/cancellation.astro";
@@ -36,17 +35,20 @@ const IMG = [
   {
     src: "/hiking-and-trekking/1-day-summit-mulhacen/1dsm-7.webp",
   },
+  {
+    src: "/hiking-and-trekking/1-day-summit-mulhacen/1dsm-8.webp",
+  },
 ];
 const DAYS = [
   {
-    title2: "Difficult Option: North Face",
+    title2: "Track 1 Nort-face (Challenging): North Face",
     tecnicalInfo: true,
     description:
       "The route starts at Europe’s southernmost ski resort and follows a great ascent along the San Juan Valley towards the second-highest peak of the mountain range, Veleta 3.392 meters. The trail brings you to the Carihuela Refuge located in the mountain pass “Collado de la Veleta” on its southern slope at an altitude of 3.025 meters where you can see the remains of the trenches from the Civil War.",
     description2:
       "Before our eyes, a wide landscape of the Mediterranean mountain range opens, and the peak Mulhacén rises majestically. The trails continue to the “Caldera Lagoon” of glacial origin and one of the most emblematic lagoons in the Sierra Nevada. From the mountain refuge, the iconic steep climb awaits us up to the peak of Mulhacén. We take the same path to return to the mountain village.",
     description3:
-      "We classify the north-face route as a challenging trail with characteristics of a high-altitude adventure (3.480 meters) with boulder crossing in some parts. For more information check our blog and look for 'Trail grades'",
+      "e classify the south-face route as a moderate trail with characteristics of a high-altitude adventure (3.480 meters) with a steep ascent at the end. For more information check our blog and look for 'Trail grades'",
     description4:
       "Optional: there is a minibus or the summer ski lift at your disposal, which leaves us at around 3.000 meters, a significant reduction of ascent, distance, and the demands of the route. Ask for more information.",
     totalDistance: "28 Km",
@@ -54,10 +56,10 @@ const DAYS = [
     totalDescent: "1500 m",
     routeType: "Out-and-Back",
     physical_difficulty: "D",
-    technical_difficulty: "D",
+    technical_difficulty: "C",
   },
   {
-    title2: "Easy Option: South Face",
+    title2: "Track 2 South-face (Moderate): South Face",
     tecnicalInfo: true,
     description:
       "The south-face option starts at the “Mirador de Trevelez” at 2.700 meters which we reach by the shuttle bus from the village of Capileira. From the starting point, there are privileged views of the Sierra Nevada Mountain range and the Granada coast.",
@@ -168,7 +170,8 @@ const brings = [
         </InformationProducts>
         <InformationProducts
           title="Duration Trail"
-          subtitle="Tr.1: 9-10 hours / Tr.2: 6 hours">
+          subtitle="Trail 1: 9-10 hours"
+          subtitle3="Trail 2: 6 hours">
           <div slot="icon">
             <Icon icon="timer-logo" size="1.6rem" color="#0E46A3" />
           </div>
@@ -192,7 +195,8 @@ const brings = [
           class="grid grid-cols-2 justify-between md:grid-cols-6 h-auto mt-3 gap-3 md:px-6">
           <InformationProducts
             title="Total distance"
-            subtitle="Tr.1: 28 km / Tr.2: 12 km">
+            subtitle="Trail 1: 28 km"
+            subtitle3="Trail 2: 12 km">
             <div slot="icon">
               <Icon icon="distance-logo" size="1.6rem" color="#0E46A3" />
             </div>
@@ -200,14 +204,16 @@ const brings = [
 
           <InformationProducts
             title="Total ascent"
-            subtitle="Tr.1:1.500 m / Tr.2: 780 m">
+            subtitle="Trail 1: 1.500 m"
+            subtitle3="Trail 2: 780 m">
             <div slot="icon">
               <Icon icon="up-logo" size="1.6rem" color="#0E46A3" />
             </div>
           </InformationProducts>
           <InformationProducts
             title="Total descent"
-            subtitle="Tr.1: 1.500 m / Tr.2: 780 m">
+            subtitle="Trail 1: 1.500 m"
+            subtitle3="Trail 2: 780 m">
             <div slot="icon">
               <Icon icon="down-logo" size="1.6rem" color="#0E46A3" />
             </div>
@@ -219,11 +225,13 @@ const brings = [
           </InformationProducts>
           <InformationProducts
             title="Physical Difficulty"
-            subtitle="Tr.1: D / Tr.2: C"
+            subtitle="Trail 1: D"
+            subtitle3="Trail 2: C"
           />
           <InformationProducts
             title="Technical Difficulty"
-            subtitle="Tr.1: D / Tr.2: C"
+            subtitle="Trail 1: C"
+            subtitle3="Trail 2: C"
           />
         </div>
       </div>
@@ -237,6 +245,12 @@ const brings = [
             <li class="flex flex-wrap gap-2">
               <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
               <p class="max-w-[320px] text-md">Professional guide</p>
+            </li>
+            <li class="flex flex-wrap gap-2">
+              <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
+              <p class="max-w-[320px] text-md">
+                Professional Qualified Mountain Leader
+              </p>
             </li>
             <li class="flex flex-wrap gap-2">
               <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
@@ -270,7 +284,7 @@ const brings = [
         <Includes title="Extra">
           <div slot="description" class="flex flex-col gap-2 mt-4">
             <h2 class="max-w-[320px] text-md font-semibold">
-              Difficult option:
+              Track 1 North-face (Challenging):
             </h2>
             <li class="flex flex-wrap gap-2">
               <p class="max-w-[320px] text-md">
@@ -286,7 +300,7 @@ const brings = [
               </p>
             </li>
             <h2 class="max-w-[320px] text-md mt-3 font-semibold">
-              Easy option:
+              Track 2 South-face (Moderate):
             </h2>
             <li class="flex flex-wrap gap-2">
               <p class="max-w-[320px] text-md">
@@ -329,7 +343,7 @@ const brings = [
           <div class="flex gap-2">
             <Icon icon="spring-logo" size="1.6rem" color="#0E46A3" />
             <p class="max-w-2xl text-gray-900 mb-2 md:px-0 text-xl md:text-xl">
-              All Year
+              Summer
             </p>
           </div>
         </div>
@@ -352,10 +366,10 @@ const brings = [
     </div>
 
     <Widget
-      title="What to bring for rock Hiking"
+      title="What to bring for Hiking"
       description="Weather is important to consider while packing for your outdoor activity. Your packing list is based on your comfort and sensitivity. Layering your clothes is the best way to travel and be outdoors. It is highly recommended as the best way to stay warm and cool, as the weather is bound to change in the mountains."
       img="/hiking-and-trekking/trekking-alpujarras/bring.webp"
-      text="Any questions about the recommendations of the material do not hesitate to contact us. "
+      text="If you have any questions about the material's recommendations, contact us or check out our blog, “What to Bring for Hiking.”"
       brings={brings}
     />
 
@@ -367,15 +381,21 @@ const brings = [
           Requirements
         </h2>
         <p class="text-lg text-gray-900 mb-1">
-          <span class="text-xl strong">🔹</span> Physical fitness: Very good.
+          <span class="text-xl strong">🔹</span> Physical fitness:
+        </p>
+        <p class="text-lg text-gray-900 mb-1 ml-5">- Track 1: Very good.</p>
+        <p class="text-lg text-gray-900 mb-1 ml-5">
+          - Track 2: Good, with the habit of doing aerobic sports.
         </p>
         <p class="text-lg text-gray-900">
           <span class="text-xl">🔹</span> Proper hiking equipment is required. Walking
           sticks are recommended. Ankle-high hiking boots are required.
         </p>
         <p class="text-lg text-gray-900">
-          <span class="text-xl">🔹</span> Previous mountain hiking experience: necessary.
+          <span class="text-xl">🔹</span> Previous mountain hiking experience:
         </p>
+        <p class="text-lg text-gray-900 mb-1 ml-5">- Track 1: Necessary.</p>
+        <p class="text-lg text-gray-900 mb-1 ml-5">- Track 2: Recommended.</p>
       </div>
     </section>
     <section class="grid md:grid-cols-2 gap-10 items-center mt-10">
@@ -394,7 +414,7 @@ const brings = [
       <div>
         <h2
           class="max-w-2xl mb-4 md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
-          Preparetion
+          Preparation
         </h2>
         <Dots class="mb-4" />
         <p class="text-lg text-gray-700 mb-1">
@@ -429,11 +449,11 @@ const brings = [
         </h2>
         <Dots class="mb-4" />
         <p class="text-lg text-gray-700 mb-1">
-          For the difficult option, we drive from the city of Granada to the
-          mountain refuge at 2.500 meters. (approximately 1 hour drive)
+          For the first track, we drive from the city of Granada to the mountain
+          refuge at 2.500 meters. (approximately 1 hour drive)
         </p>
         <p class="text-lg text-gray-700 mb-1">
-          For the easy option, we drive from the city of Granada to the village
+          For the second track, we drive from the city of Granada to the village
           of Capileira. (approximately 1h30 drive)
         </p>
       </div>

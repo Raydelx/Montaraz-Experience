@@ -7,7 +7,6 @@ import SliderReact from "../../hooks/SliderReact";
 import Days from "@/components/products-components/days.astro";
 import Includes from "@/components/products-components/includes.astro";
 import Route from "@/components/ui/icons/route.astro";
-import Link from "@/components/ui/link.astro";
 import Dots from "@/components/ui/dots.astro";
 import Widget from "@/components/products-components/widget.astro";
 import Cancellation from "@/components/products-components/cancellation.astro";
@@ -27,6 +26,9 @@ const IMG = [
   {
     src: "/hiking-and-trekking/the-old-mine-trail/tomt-4.webp",
   },
+  {
+    src: "/hiking-and-trekking/the-old-mine-trail/tomt-5.webp",
+  },
 ];
 const DAYS = [
   {
@@ -39,6 +41,15 @@ const DAYS = [
     description3:
       "(Check out our blog for more information about our hiking grades)",
     techical_optional: "First loop",
+    totalDistance: "22 KM",
+    totalAscent: "1000 M",
+    totalDescent: "1000 M",
+    duration: "7 - 8 hours",
+
+    totalDistance2: "15 KM",
+    totalAscent2: "800 M",
+    totalDescent2: "800 M",
+    duration2: "6 hours",
     physical_difficulty: "B",
     technical_difficulty: "B",
     techical_optional2: "Second  loop",
@@ -49,7 +60,7 @@ const DAYS = [
 
 const brings = [
   {
-    title: "Water (incl.) minimum 1.5 L",
+    title: "water bottle min. 1.5 L",
   },
   {
     title: "Water bottle",
@@ -137,7 +148,8 @@ const brings = [
         </InformationProducts>
         <InformationProducts
           title="Duration Trail"
-          subtitle="Tr.1: 7-8 hours / Tr.2: 6 hours">
+          subtitle="Trail 1: 7-8 hours"
+          subtitle3="Trail 2: 6-7 hours">
           <div slot="icon">
             <Icon icon="timer-logo" size="1.6rem" color="#0E46A3" />
           </div>
@@ -161,7 +173,8 @@ const brings = [
           class="grid grid-cols-2 justify-between md:grid-cols-6 h-auto mt-3 gap-3 md:px-6">
           <InformationProducts
             title="Total distance"
-            subtitle="Tr.1: 22 km / Tr.2: 15 km">
+            subtitle="Trai1 1: 22 km"
+            subtitle3="Trai1 2: 15 km">
             <div slot="icon">
               <Icon icon="distance-logo" size="1.6rem" color="#0E46A3" />
             </div>
@@ -169,14 +182,16 @@ const brings = [
 
           <InformationProducts
             title="Total ascent"
-            subtitle="Tr.1: 1.000 m. / Tr.2: 800 m.">
+            subtitle="Trai1 1: 1.000 m"
+            subtitle3="Trai1 2: 800 m">
             <div slot="icon">
               <Icon icon="up-logo" size="1.6rem" color="#0E46A3" />
             </div>
           </InformationProducts>
           <InformationProducts
             title="Total descent"
-            subtitle="Tr.1: 1000 m. / Tr.2: 800 m.">
+            subtitle="Trai1 1: 1000 m"
+            subtitle3="Trai1 2: 800 m">
             <div slot="icon">
               <Icon icon="down-logo" size="1.6rem" color="#0E46A3" />
             </div>
@@ -188,11 +203,13 @@ const brings = [
           </InformationProducts>
           <InformationProducts
             title="Physical Difficulty"
-            subtitle="Tr.1: C / Tr.2: B"
+            subtitle="Trai1 1: C"
+            subtitle3="Trai1 2: B"
           />
           <InformationProducts
             title="Technical Difficulty"
-            subtitle="Tr.1: B / Tr.2: B"
+            subtitle="Trai1 1: B"
+            subtitle3="Trai1 2: B"
           />
         </div>
       </div>
@@ -210,16 +227,18 @@ const brings = [
             <li class="flex flex-wrap gap-2">
               <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
               <p class="max-w-[320px] text-md">
+                professional qualified mountain leader
+              </p>
+            </li>
+            <li class="flex flex-wrap gap-2">
+              <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
+              <p class="max-w-[320px] text-md">
                 Liability insurance and assistance
               </p>
             </li>
             <li class="flex flex-wrap gap-2">
               <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
               <p class="max-w-[320px] text-md">Transfer</p>
-            </li>
-            <li class="flex flex-wrap gap-2">
-              <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
-              <p class="max-w-[320px] text-md">Water</p>
             </li>
           </ul>
         </Includes>
@@ -299,10 +318,10 @@ const brings = [
     </div>
 
     <Widget
-      title="What to bring for rock Hiking"
+      title="What to bring for Hiking"
       description="Weather is important to consider while packing for your outdoor activity. Your packing list is based on your comfort and sensitivity. Layering your clothes is the best way to travel and be outdoors. It is highly recommended as the best way to stay warm and cool, as the weather is bound to change in the mountains."
       img="/hiking-and-trekking/trekking-alpujarras/bring.webp"
-      text="Any questions about the recommendations of the material do not hesitate to contact us. "
+      text="Any questions about the material's recommendations, contact us or check our blog, “What to Bring for Hiking.” "
       brings={brings}
     />
 

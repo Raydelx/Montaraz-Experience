@@ -56,7 +56,7 @@ const DAYS = [
     tecnicalInfo: true,
     title: "Trail 2 Válor – Mecina Bombarón",
     description:
-      "After breakfast, we drive over the mountain pass “Puerto La Ragua” to the trekking starting point in the Laroles village. The trail starts at the upper part of the village, at 1000 meters above sea level, from where you can see the flat roofs of the town's houses. One of the defining elements of the territory that reaches its maximum significance in the Alpujarra region is the architecture with values from other cultures and civilizations. The orography and relief of the terrain influence the profile of the towns. These villages are distributed and oriented towards the south so that the sun offers them its luminosity and keeps them warm for as long as possible in the cold winters. Most of these towns are located in the middle of the slopes that descend from the top of the Sierra Nevada in a stepped composition that gives them a charm.",
+      "We leave the village of Válor which was the homeland of the Alpujarra hero Aben Humeya, a descendant of the Umayyad caliphs, who was proclaimed King of the Alpujarra after the Moorish uprising against the Christians in the reign of Philip II, back in 1568. The second hike will take us to Yegen, a peaceful village where the romantic traveler Gerald Brenan lived known as the author of “Al Sur de Granada”, one of the best-known books about the Alpujarra. After crossing the Mecina River and a steep climb we reach the village of Mecina Bombarón. After we take the car that brings us to our next hotel nearby in the village of Cádiar located between the Sierra Nevada and the Contraviesa mountain range.",
     description2: "Dinner: The tour leader will organize a dinner.",
     totalDistance: "13 KM",
     totalAscent: "700 M",
@@ -73,7 +73,7 @@ const DAYS = [
       "Today's stage will be more demanding. It will take us from the southernmost point of the Alpujarra trail (800 meters) to the highest trekking point, about 1.500 meters above sea level, in the village of Trevélez. Besides being the highest village in the Sierra Nevada, Trevélez is renowned for its naturally cured hams, benefiting from the healthy air of Sierra Nevada. In the 19th century, the ham of Trevélez gained recognition when Queen Isabel II granted it the distinction of being a supplier to the Royal House. It currently holds the Denomination of Origin and has attained worldwide recognition.",
     description2: "Dinner: The tour leader will organize a dinner.",
     totalDistance: "20 KM",
-    totalAscent: "1.320 M",
+    totalAscent: "1.300 M",
     totalDescent: "900 M",
     duration: "8 hours",
     physical_difficulty: "C",
@@ -103,8 +103,8 @@ const DAYS = [
     totalDistance: "9 KM",
     totalAscent: "815 M",
     totalDescent: "410 M",
-    duration: "6 hours",
-    physical_difficulty: "B",
+    duration: "5 hours",
+    physical_difficulty: "C",
     technical_difficulty: "B",
   },
   {
@@ -129,10 +129,6 @@ const DAYS = [
 ];
 
 const brings = [
-  {
-    title:
-      "Technical clothing appropriate for the time of year and sporting activity (fleece, windbreaker, waterproof and breathable jacket, gloves, etc.). A windbreaker or thin fleece is always useful, even in summer.",
-  },
   {
     title: "Water bottle",
   },
@@ -365,7 +361,7 @@ const brings = [
           </div>
         </Includes>
         <!-- Complementaries -->
-        <Includes title="Complementaries">
+        <Includes title="Extra">
           <div slot="description" class="flex flex-col gap-2 mt-4">
             <li class="flex gap-2">
               <div>
@@ -380,10 +376,6 @@ const brings = [
               <div>
                 <Icon icon="complement-logo" size="1.6rem" color="#0E46A3" />
               </div>
-              <p class="max-w-[320px] text-md">
-                The Alpujarreña House is a charming traditional house of this
-                region converted into an ethnographic museum.
-              </p>
             </li>
           </div>
         </Includes>
@@ -501,10 +493,10 @@ const brings = [
     </div>
 
     <Widget
-      title="What to bring for rock Hiking"
+      title="What to bring for Hiking"
       description="Weather is important to consider while packing for your outdoor activity. Your packing list is based on your comfort and sensitivity. Layering your clothes is the best way to travel and be outdoors. It is highly recommended as the best way to stay warm and cool, as the weather is bound to change in the mountains."
       img="/hiking-and-trekking/trekking-alpujarras/bring.webp"
-      text="Any questions about the recommendations of the material do not hesitate to contact us. "
+      text="Any questions about the material's recommendations, contact us or check our blog, “What to Bring for Hiking.” "
       brings={brings}
     />
 
@@ -575,9 +567,41 @@ const brings = [
     </section>
 
     <!--  TimeLine per days  -->
-    <h2 class="text-4xl md:text-5xl xl:text-6xl md:p-8 mt-16 font-bold mb-4">
+    <h2 class="text-4xl md:text-5xl xl:text-6xl md:px-8 mt-8 font-bold mb-4">
       What to expect
     </h2>
+
+    <h2 class="text-2xl md:text-3xl xl:text-4xl md:p-8 mt-16 font-bold mb-4">
+      Hiking in the rich Andalusian culture and history with the natural beauty
+      of picturesque landscapes, charming villages, and iconic landmarks.
+    </h2>
+    <p class="text-md text-gray-500 md:p-8">
+      Your main luggage is taken between the villages along the route. This
+      leaves you free to hike with a light bag with the essentials you need
+      during the day. Hiking with a light backpack is much more pleasant than
+      dragging a heavy rucksack, allowing you to enjoy the landscape without a
+      heavy load. The trekking takes you through the picturesque Alpujarra
+      region on the southern slopes of the Sierra Nevada, Spain's highest
+      mountain range. It seems like a journey back in time, as the area has its
+      unique culture from ancient times to the present day, shown in its food
+      culture, architecture, and traditions. The main feature of the outstanding
+      landscape is the villages situated mainly above 1.000 m. They are made up
+      of white, square-shaped houses with flat roofs spreading out across the
+      valleys. The adventure sets out from the village of Laroles located near
+      the pass of La Ragua, the only connection between the north and south of
+      the Sierra Nevada, and heading toward the west.
+    </p>
+    <p class="text-md text-gray-500 mb-8 md:px-8">
+      During the journey, you will discover the many villages and their terraced
+      fields climbing the slopes presenting beautiful views and dramatic
+      landscapes of the mountain range. The blossoms of spring and the colors of
+      autumn are the ideal time to join the trekking making it a unique
+      experience.
+    </p>
+    <p class="text-md text-gray-500 mb-8 md:px-8">
+      Join us and uncover the hidden beauty of the Alpujarra region a treasure
+      to discover!
+    </p>
     {
       DAYS.map((tour) => (
         <ol class="mb-10">

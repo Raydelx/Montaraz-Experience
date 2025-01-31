@@ -18,6 +18,10 @@ interface Props {
   totalDistance?: string;
   totalAscent?: string;
   totalDescent?: string;
+  totalDistance2?: string;
+  totalAscent2?: string;
+  totalDescent2?: string;
+  duration2?: string;
   routeType?: string;
   duration?: string;
   optional1?: string;
@@ -47,8 +51,12 @@ const {
   totalDistance,
   totalAscent,
   totalDescent,
+  totalDistance2,
+  totalAscent2,
+  totalDescent2,
   routeType,
   duration,
+  duration2,
   optional1,
   optional2,
   tecnicalInfo,
@@ -114,6 +122,15 @@ const {
         )}
       </div>
       <div class="md:col-span-3 grid gap-4 place-content-end">
+        {techical_optional && (
+          <div class="grid grid-cols-6 gap-14 md:gap-2">
+            <div class="grid col-span-5">
+              <p class="text-pretty text-black-900 text-xl font-bold">
+                {techical_optional}
+              </p>
+            </div>
+          </div>
+        )}
         {totalDistance && (
           <div class="grid grid-cols-6 gap-14 md:gap-2">
             <div class="col-span-1">
@@ -192,15 +209,7 @@ const {
             </div>
           </div>
         )}
-        {techical_optional && (
-          <div class="grid grid-cols-6 gap-14 md:gap-2">
-            <div class="grid col-span-5">
-              <p class="text-pretty text-black-900 text-xl font-bold">
-                {techical_optional}
-              </p>
-            </div>
-          </div>
-        )}
+
         {physical_difficulty && (
           <div class="grid grid-cols-6 gap-14 md:gap-2">
             <div class="col-span-1">
@@ -240,6 +249,60 @@ const {
             </div>
           </div>
         )}
+        {totalDistance2 && (
+          <div class="grid grid-cols-6 gap-14 md:gap-2">
+            <div class="col-span-1">
+              <Icon icon="distance-logo" size="3rem" color="#0E46A3" />
+            </div>
+            <div class="grid col-span-5">
+              <h2 class="text-pretty text-neutral-900 text-xl font-bold">
+                Total Distance
+              </h2>
+              <p class="text-pretty text-gray-500 text-md">{totalDistance2}</p>
+            </div>
+          </div>
+        )}
+        {totalAscent2 && (
+          <div class="grid grid-cols-6 gap-14 md:gap-2">
+            <div class="col-span-1">
+              <Icon icon="up-logo" size="3rem" color="#0E46A3" />
+            </div>
+            <div class="grid col-span-5">
+              <h2 class="text-pretty text-neutral-900 text-xl font-bold">
+                Total Ascent
+              </h2>
+              <p class="text-pretty text-gray-500 text-md">{totalAscent2}</p>
+            </div>
+          </div>
+        )}
+        {totalDescent2 && (
+          <div class="grid grid-cols-6 gap-14 md:gap-2">
+            <div class="col-span-1">
+              <Icon icon="down-logo" size="3rem" color="#0E46A3" />
+            </div>
+            <div class="grid col-span-5">
+              <h2 class="text-pretty text-neutral-900 text-xl font-bold">
+                Total Descent
+              </h2>
+              <p class="text-pretty text-gray-500 text-md">{totalDescent2}</p>
+            </div>
+          </div>
+        )}
+
+        {duration2 && (
+          <div class="grid grid-cols-6 gap-14 md:gap-2">
+            <div class="col-span-1">
+              <Icon icon="timer-logo" size="3rem" color="#0E46A3" />
+            </div>
+            <div class="grid col-span-5">
+              <h2 class="text-pretty text-neutral-900 text-xl font-bold">
+                Duration Trial
+              </h2>
+              <p class="text-pretty text-gray-500 text-md">{duration2}</p>
+            </div>
+          </div>
+        )}
+
         {physical_difficulty2 && (
           <div class="grid grid-cols-6 gap-14 md:gap-2">
             <div class="col-span-1">
