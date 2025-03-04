@@ -10,6 +10,8 @@ import Wheel from "@/components/ui/icons/wheel.astro";
 import Route from "@/components/ui/icons/route.astro";
 import Link from "@/components/ui/link.astro";
 import Cancellation from "@/components/products-components/cancellation.astro";
+import Widget from "@/components/products-components/widget.astro";
+import Dots from "@/components/ui/dots.astro";
 
 // Duplica y cambia las rutas para añadir o modificar las fotos
 
@@ -29,9 +31,6 @@ const IMG = [
   {
     src: "/hiking-and-trekking/family-hike-gorge-of-sierra-nevada/fh-5.webp",
   },
-  {
-    src: "/hiking-and-trekking/family-hike-gorge-of-sierra-nevada/fh-6.jpg",
-  },
 ];
 const DAYS = [
   {
@@ -40,10 +39,42 @@ const DAYS = [
     description:
       "We drive to the village Monachil, located in a fertile valley of the Sierra Nevada Mountain Range at 800 meters above sea level, just outside Granada. The walking path, called Cahorros Trail, is a hiking path in the lower hills of Sierra Nevada National Park. The trail starts in the village following the river up toward the entrance of the narrow gorge. The way becomes a succession of stairs, crawling under overhanging rocks, and crossing hanging bridges along a cascading river through the canyon that creates rockpools and caves, making the walk an adventure for the whole family. At the end of the gorge, we return by a higher route, from which you get stunning views of the lush Monachil Valley. A great escape from the city and a perfect family day out in the mountains!",
 
-    totalDistance: "9 km",
+    totalDistance: "11 km",
     totalAscent: "400 m",
     totalDescent: "400 m",
-    duration: "3-4 hours",
+    duration: "5 hours",
+  },
+];
+const brings = [
+  {
+    title: "Water bottle minimum 1.5 L",
+  },
+  {
+    title: "Picnic / snack",
+  },
+  {
+    title: "Light backpack",
+  },
+  {
+    title: "Weather-appropriate and comfortable clothing",
+  },
+  {
+    title: "Hiking jacket",
+  },
+  {
+    title: "Hiking shoes",
+  },
+  {
+    title: "Sun protection",
+  },
+  {
+    title: "Gloves",
+  },
+  {
+    title: "Warm hat",
+  },
+  {
+    title: "Neck gaiter",
   },
 ];
 ---
@@ -75,7 +106,7 @@ const DAYS = [
 
       <div
         class="grid grid-cols-2 md:grid-cols-6 h-auto mt-3 gap-3 place-content-start md:px-6">
-        <InformationProducts title="Price" subtitle="Private Tour">
+        <InformationProducts title="Price" subtitle="70 € (4 Pax)">
           <div slot="icon">
             <Icon icon="price-logo" size="1.6rem" color="#0E46A3" />
           </div>
@@ -90,7 +121,7 @@ const DAYS = [
             <Icon icon="group-logo" size="1.6rem" color="#0E46A3" />
           </div>
         </InformationProducts>
-        <InformationProducts title="Duration" subtitle="4-5 Hours">
+        <InformationProducts title="Duration" subtitle="6 Hours">
           <div slot="icon">
             <Icon icon="timer-logo" size="1.6rem" color="#0E46A3" />
           </div>
@@ -112,7 +143,7 @@ const DAYS = [
       <div class="">
         <div
           class="grid grid-cols-2 justify-between md:grid-cols-6 h-auto mt-3 gap-3 md:px-6">
-          <InformationProducts title="Total distance" subtitle="9 km">
+          <InformationProducts title="Total distance" subtitle="11 km">
             <div slot="icon">
               <Icon icon="distance-logo" size="1.6rem" color="#0E46A3" />
             </div>
@@ -138,6 +169,8 @@ const DAYS = [
               <Icon icon="boot-logo" size="1.6rem" color="#0E46A3" />
             </div>
           </InformationProducts>
+          <InformationProducts title="Physical Difficulty" subtitle="B" />
+          <InformationProducts title="Technical Difficulty" subtitle="B" />
         </div>
       </div>
 
@@ -149,7 +182,7 @@ const DAYS = [
           <ul slot="description" class="mt-4 flex flex-col gap-2">
             <li class="flex flex-wrap gap-2">
               <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
-              <p class="max-w-[320px] text-md">Professional guide</p>
+              <p class="max-w-[320px] text-md">Qualified Mountain Leader</p>
             </li>
             <li class="flex flex-wrap gap-2">
               <Icon icon="check-logo" size="1.6rem" color="#0E46A3" />
@@ -177,7 +210,7 @@ const DAYS = [
           </div>
         </Includes>
         <!-- Complementaries -->
-        <Includes title="Complementaries">
+        <Includes title="Extra">
           <div slot="description" class="flex flex-col gap-2 mt-4"></div>
         </Includes>
       </div>
@@ -250,8 +283,26 @@ const DAYS = [
             <span class="text-xl">🔹</span> Excellent views
           </p>
         </div>
+        <div class="flex flex-col gap-2 md:p-4">
+          <div>
+            <h3 class="text-4xl md:text-5xl xl:text-6xl font-bold">Price:</h3>
+            <Dots class="mb-4" />
+          </div>
+          <p class="text-gray-700">2-4 people: 70 € p.p.</p>
+          <p class="text-gray-700">5 people – 50 € p.p</p>
+          <p class="text-gray-700">6 people – 45 € p.p</p>
+          <p class="text-gray-700">7 people – 40 € p.p</p>
+        </div>
       </div>
     </div>
+
+    <Widget
+      title="What to bring for Hiking"
+      description="Weather is important to consider while packing for your outdoor activity. Your packing list is based on your comfort and sensitivity. Layering your clothes is the best way to travel and be outdoors. It is highly recommended as the best way to stay warm and cool, as the weather is bound to change in the mountains."
+      img="/hiking-and-trekking/trekking-alpujarras/bring.webp"
+      text="Any questions about the recommendations of the material do not hesitate to contact us."
+      brings={brings}
+    />
 
     <!-- Button to download PDF -->
     <section class="grid md:grid-cols-2 gap-10">
@@ -261,32 +312,20 @@ const DAYS = [
           Requirements
         </h2>
         <p class="text-lg text-gray-900 mb-1">
-          <span class="text-xl strong">🔹</span> Good physical health
+          <span class="text-xl strong">🔹</span> Physical fitness: normal, with the
+          habit of walking.
         </p>
         <p class="text-lg text-gray-900">
-          <span class="text-xl">🔹</span> Minimum age: 8 years
+          <span class="text-xl">🔹</span> Basic hiking gear is required. Good hiking
+          boots
         </p>
         <p class="text-lg text-gray-900">
-          <span class="text-xl">🔹</span> Closed shoes, no open shoes!
+          <span class="text-xl">🔹</span> Minimum age: 8 years old with the habit
+          of walking
         </p>
       </div>
       <Cancellation />
     </section>
-    <div
-      class="grid bg-[#0E46A3] place-items-center md:mb-20 border-spacing-3 backdrop-blur-sm w-fit m-auto md:px-28 p-10 md:mt-40 mt-12 rounded-xl shadow-[0px_0px_23px_14px_#00000024]">
-      <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-200">
-        More information about our tour
-      </h2>
-      <Link
-        style="muted"
-        href="/hiking-and-trekking/family-hike-gorge-of-sierra-nevada/TRIP NOTES FAMILY HIKE THE GORGE OF SIERRA NEVADA.pdf"
-        download="Family Hike The Gorge of Sierra Nevada"
-        class="flex gap-1 items-center justify-center mt-8 font-semibold"
-        rel="noopener">
-        View trip notes
-      </Link>
-    </div>
-
     <!-- Slider Photos -->
     <section class="m-auto md:w-full rounded-xl md:px-8 md:py-20">
       <ol class="relative mt-16">
