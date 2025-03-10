@@ -10,6 +10,7 @@ import Wheel from "@/components/ui/icons/wheel.astro";
 import Route from "@/components/ui/icons/route.astro";
 import Link from "@/components/ui/link.astro";
 import Cancellation from "@/components/products-components/cancellation.astro";
+import Widget from "@/components/products-components/widget.astro";
 
 // Duplica y cambia las rutas para añadir o modificar las fotos
 
@@ -39,7 +40,19 @@ const DAYS = [
     totalDistance: "50 km",
     totalAscent: "600 m",
     totalDescent: "600 m",
-    duration: "3.5 hours",
+    duration: "4 hours",
+  },
+];
+
+const brings = [
+  {
+    title: "Comfortable clothing and shoes.",
+  },
+  {
+    title: "Sunglasses",
+  },
+  {
+    title: "Sun protection ",
   },
 ];
 ---
@@ -62,7 +75,7 @@ const DAYS = [
 
           <h1
             class="text-3xl font-extrabold tracking-tight leading-none text-white md:text-4xl lg:text-5xl [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
-            E-Bike Sightseeing Tour Granada
+            Sightseeing Granada E-bike Tour
           </h1>
         </div>
       </div>
@@ -71,7 +84,7 @@ const DAYS = [
 
       <div
         class="grid grid-cols-2 md:grid-cols-6 h-auto mt-3 gap-3 place-content-start md:px-6">
-        <InformationProducts title="Price" subtitle="Private Tour">
+        <InformationProducts title="Price" subtitle="80 (2 pax.) ">
           <div slot="icon">
             <Icon icon="price-logo" size="1.6rem" color="#0E46A3" />
           </div>
@@ -124,15 +137,13 @@ const DAYS = [
               <Icon icon="down-logo" size="1.6rem" color="#0E46A3" />
             </div>
           </InformationProducts>
-          <InformationProducts title="Route type" subtitle="Point to point">
+          <InformationProducts title="Route type" subtitle="Loop">
             <div slot="icon">
               <Route />
             </div>
           </InformationProducts>
-          <InformationProducts title="Difficulty">
-            <div class="flex gap-1" slot="icon">
-              <Wheel />
-            </div>
+          <InformationProducts title="Difficulty" subtitle="Easy">
+            <div class="flex gap-1" slot="icon"></div>
           </InformationProducts>
           <InformationProducts title="E-Bike" subtitle="Yes">
             <div slot="icon">
@@ -155,7 +166,7 @@ const DAYS = [
 
       <!--  Include, exclude, complementaries  -->
       <div
-        class="grid md:grid-cols-2 lg:grid-cols-3 mt-20 md:mt-26 md:mb-36 gap-16 md:gap-4">
+        class="grid md:grid-cols-2 lg:grid-cols-2 mt-20 md:mt-26 md:mb-36 gap-16 md:gap-4">
         <!-- Include -->
         <Includes title="Included">
           <ul slot="description" class="mt-4 flex flex-col gap-2">
@@ -197,9 +208,6 @@ const DAYS = [
           </div>
         </Includes>
         <!-- Complementaries -->
-        <Includes title="Complementaries">
-          <div slot="description" class="flex flex-col gap-2 mt-4"></div>
-        </Includes>
       </div>
     </main>
 
@@ -265,6 +273,14 @@ const DAYS = [
         </div>
       </div>
     </div>
+
+    <Widget
+      title="What to bring for Hiking"
+      description="Weather is important to consider while packing for your outdoor activity. Your packing list is based on your comfort and sensitivity. Layering your clothes is the best way to travel and be outdoors. It is highly recommended as the best way to stay warm and cool, as the weather is bound to change in the mountains."
+      img="/hiking-and-trekking/trekking-alpujarras/bring.webp"
+      text="Any questions about the recommendations of the material do not hesitate to contact us."
+      brings={brings}
+    />
 
     <!-- Button to download PDF -->
     <section class="grid md:grid-cols-2 gap-10">

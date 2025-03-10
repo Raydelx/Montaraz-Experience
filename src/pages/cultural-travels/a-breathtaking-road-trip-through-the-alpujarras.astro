@@ -8,6 +8,7 @@ import Days from "@/components/products-components/days.astro";
 import Includes from "@/components/products-components/includes.astro";
 import Link from "@/components/ui/link.astro";
 import Cancellation from "@/components/products-components/cancellation.astro";
+import Dots from "@/components/ui/dots.astro";
 
 // Duplica y cambia las rutas para añadir o modificar las fotos
 
@@ -75,7 +76,7 @@ const DAYS = [
 
       <div
         class="grid grid-cols-2 md:grid-cols-6 h-auto mt-3 gap-3 place-content-start md:px-6">
-        <InformationProducts title="Price" subtitle="Private Tour">
+        <InformationProducts title="Price" subtitle="125 (4pax.)">
           <div slot="icon">
             <Icon icon="price-logo" size="1.6rem" color="#0E46A3" />
           </div>
@@ -149,7 +150,7 @@ const DAYS = [
           </div>
         </Includes>
         <!-- Complementaries -->
-        <Includes title="Complementaries">
+        <Includes title="Extras">
           <div slot="description" class="flex flex-col gap-2 mt-4">
             <li class="flex gap-2">
               <Icon icon="complement-logo" size="1.6rem" color="#0E46A3" />
@@ -240,12 +241,16 @@ const DAYS = [
       <!-- Button to download PDF -->
       <section class="grid md:grid-cols-2 gap-6">
         <Cancellation />
-        <div class="">
-          <h2
-            class="max-w-2xl mb-4 md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
-            Requirements
-          </h2>
-          <p class="text-lg text-gray-900 mb-1"></p>
+        <div class="flex flex-col gap-2 md:p-4">
+          <div>
+            <h3 class="text-4xl md:text-5xl xl:text-6xl font-bold">Price:</h3>
+            <Dots class="mb-4" />
+          </div>
+          <p class="text-gray-700">2 - 3 people: 150 € p.p.</p>
+          <p class="text-gray-700">4 - 5 people: 125 € p.p.</p>
+          <p class="text-gray-700">6 people: 120 € p.p.</p>
+          <p class="text-gray-700">7 people: 110 € p.p.</p>
+          <p class="text-gray-700">For families, there is a discount.</p>
         </div>
       </section>
       <div

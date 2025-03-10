@@ -10,6 +10,7 @@ import Wheel from "@/components/ui/icons/wheel.astro";
 import Route from "@/components/ui/icons/route.astro";
 import Link from "@/components/ui/link.astro";
 import Cancellation from "@/components/products-components/cancellation.astro";
+import Widget from "@/components/products-components/widget.astro";
 
 // Duplica y cambia las rutas para añadir o modificar las fotos
 
@@ -35,11 +36,31 @@ const DAYS = [
     day: "1",
     tecnicalInfo: true,
     description:
-      "Imagine starting your bicycle tour in the Sierra Nevada at an elevation of 2.000 meters. As you set off, the crisp mountain air fills your lungs, and the breathtaking views of the peaks surround you. The route takes you closer to nature, with every turn revealing vistas of beautiful landscapes. Each pedal stroke brings you closer to Granada where the Alhambra Palace comes into view. Cycling through the city's small streets, you feel a sense of accomplishment and connection with the beauty of Sierra Nevada.",
+      "Imagine starting your bicycle tour in the Sierra Nevada National Park at an elevation of 2.000 meters with a panoramic view of the highest peaks of the mountain range.",
+    description2:
+      "A 45-minute journey will take us up to the starting point, where we begin to cycle down along a path without technical or physical difficulties. The trail takes you closer to the stunning landscapes, with every turn revealing vistas of beautiful views along winding roads that meander between old farms scattered along the mountainsides",
+    description3:
+      "Halfway through the tour, we provide a great snack with a fresh coffee at a beautiful lookout.",
+    description4:
+      "The last part brings Alhambra Palace into view, where we will cycle through the city’s small streets of Sacromonte and Albayzín before we finish at the plaza, the meeting point of the tour.",
+    description5:
+      "We provide helmets, gloves, and extra clothes. The backup vehicle will accompany us during the entire tour to ensure safety. ",
     totalDistance: "58 km",
     totalAscent: "500 m",
     totalDescent: "1700 m",
     duration: "5 hours",
+  },
+];
+
+const brings = [
+  {
+    title: "Comfortable clothing and shoes.",
+  },
+  {
+    title: "Sunglasses",
+  },
+  {
+    title: "Sun protection ",
   },
 ];
 ---
@@ -81,7 +102,7 @@ const DAYS = [
             <Icon icon="price-logo" size="1.6rem" color="#0E46A3" />
           </div>
         </InformationProducts>
-        <InformationProducts title="Minimum of persons" subtitle="4">
+        <InformationProducts title="Minimum of persons" subtitle="1">
           <div slot="icon">
             <Icon icon="group-logo" size="1.6rem" color="#0E46A3" />
           </div>
@@ -129,10 +150,8 @@ const DAYS = [
               <Route />
             </div>
           </InformationProducts>
-          <InformationProducts title="Difficulty">
-            <div slot="icon">
-              <Wheel />
-            </div>
+          <InformationProducts title="Difficulty" subtitle="S0 Easy">
+            <div slot="icon"></div>
           </InformationProducts>
           <InformationProducts title="E-Bike" subtitle="Yes">
             <div slot="icon">
@@ -155,7 +174,7 @@ const DAYS = [
 
       <!--  Include, exclude, complementaries  -->
       <div
-        class="grid md:grid-cols-2 lg:grid-cols-3 mt-20 md:mt-26 md:mb-36 gap-16 md:gap-4">
+        class="grid md:grid-cols-2 lg:grid-cols-2 mt-20 md:mt-26 md:mb-36 gap-16 md:gap-4">
         <!-- Include -->
         <Includes title="Included">
           <ul slot="description" class="mt-4 flex flex-col gap-2">
@@ -196,9 +215,6 @@ const DAYS = [
           <div slot="description" class="flex flex-col gap-2 mt-4"></div>
         </Includes>
         <!-- Complementaries -->
-        <Includes title="Complementaries">
-          <div slot="description" class="flex flex-col gap-2 mt-4"></div>
-        </Includes>
       </div>
     </main>
 
@@ -262,22 +278,42 @@ const DAYS = [
 
     <!-- Button to download PDF -->
     <section class="grid md:grid-cols-2">
-      <Cancellation />
-      <div
-        class="grid bg-[#0E46A3] place-items-center md:mb-20 border-spacing-3 backdrop-blur-sm w-fit m-auto md:px-28 p-10 mt-12 rounded-xl shadow-[0px_0px_23px_14px_#00000024]">
-        <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-200">
-          More information about our tour
+      <div class="">
+        <h2
+          class="max-w-2xl mb-4 md:px-0 font-bold text-4xl md:text-5xl xl:text-6xl">
+          Requirements
         </h2>
-        <Link
-          style="muted"
-          href="/anxo.png"
-          download="Anxo"
-          class="flex gap-1 items-center justify-center mt-8 font-semibold"
-          rel="noopener">
-          View trip notes
-        </Link>
+        <p class="text-lg text-gray-900 mb-1">
+          <span class="text-xl strong">🔹</span> Good physical health
+        </p>
+        <p class="text-lg text-gray-900 mb-1">
+          <span class="text-xl strong">🔹</span> You are capable of controlling bicycle
+          speed and direction
+        </p>
+        <p class="text-lg text-gray-900 mb-1">
+          <span class="text-xl strong">🔹</span> You can brake and use gears with
+          confidence.
+        </p>
+        <p class="text-lg text-gray-900 mb-1">
+          <span class="text-xl strong">🔹</span> Age minimum 11 years
+        </p>
+        <p class="text-lg text-gray-900 mb-1">
+          <span class="text-xl strong">🔹</span> Height min. 1.50 meters
+        </p>
+        <p class="text-lg text-gray-900 mb-1">
+          <span class="text-xl strong">🔹</span> Closed shoes, no sandals!
+        </p>
       </div>
+      <Cancellation />
     </section>
+
+    <Widget
+      title="What to bring for Hiking"
+      description="Weather is important to consider while packing for your outdoor activity. Your packing list is based on your comfort and sensitivity. Layering your clothes is the best way to travel and be outdoors. It is highly recommended as the best way to stay warm and cool, as the weather is bound to change in the mountains."
+      img="/hiking-and-trekking/trekking-alpujarras/bring.webp"
+      text="Any questions about the recommendations of the material do not hesitate to contact us."
+      brings={brings}
+    />
 
     <!-- Slider Photos -->
     <section class="m-auto md:w-full rounded-xl md:px-8 md:py-20">

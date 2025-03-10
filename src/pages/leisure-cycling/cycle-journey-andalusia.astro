@@ -81,6 +81,7 @@ const DAYS = [
       "We leave our hotel along meandering country roads, passing through the Ronda Mountain Range and the National Park Sierra de las Nieves, a 100 % stunning landscape. After a picnic lunch at a panoramic viewpoint, we continue toward our hotel nestled in the heart of the Natural Park.",
     strong: "Free afternoon",
     description3: "Swimming pool and breathtaking views",
+    description4: "Optional walk “Caminito del Rey”",
     totalDistance: "57 km",
     totalAscent: "730 m",
     totalDescent: "1.240 m",
@@ -93,14 +94,10 @@ const DAYS = [
     tecnicalInfo: true,
     title: "Track 2 Andalusia’s Countryside",
     description:
-      "In the morning there is the optional walk “Caminito del Rey” for those who have pre-reserved the activity. The rest of the group has a relaxed morning or can be taken to the lake to swim. ",
+      "After breakfast, we drive the first kilometers with our backup vehicle to skip the steep part and to bring us back higher up where we start our second track.",
     description2:
-      "At midday, we drive the first kilometers with our backup vehicle to skip the steep part and to bring us back higher up where we start our second track. Today we cycle through Andalusia’s countryside, a mountainous and colorful landscape where Mediterranean crops alternate with pastureland.",
-    description3:
-      "After the picnic lunch, we continue towards the village of Antequera with its historic rich center that claims to have the most churches per inhabitant in Spain. From Monasteries, palaces, and the Moorish fortress to prehistorical dolmens are some of the many places to see.",
-    strong2: "Dinner",
-    description4:
-      "The tour leader will organize a dinner in the center of Antequera.",
+      "Today, we will cycle through Andalusia’s countryside, a mountainous and colorful landscape where Mediterranean crops alternate with pastureland. After the picnic lunch, we continue towards the village of Antequera with its rich historic center that claims to have the most churches per inhabitant in Spain. From Monasteries, palaces, and the Moorish fortress to prehistoric dolmens are some of the many places to see.",
+
     totalDistance: "45 km",
     totalAscent: "1.260 m",
     totalDescent: "920 m",
@@ -164,7 +161,7 @@ const DAYS = [
     totalAscent: "550 m",
     totalDescent: "1.060 m",
     duration: "6 hours",
-    difficulty: "Level 2",
+    difficulty: "Level 3",
   },
   {
     day: "7",
@@ -206,7 +203,7 @@ const DAYS = [
           <div>
             <h1
               class="text-3xl font-extrabold tracking-tight leading-none text-white md:text-4xl lg:text-5xl [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
-              Cycle Journey Andalusia
+              Cycle Ronda - Córdoba E-bike Tour
             </h1>
             <p
               class="text-xl font-normal text-white lg:text-2xl flex flex-col h-full [text-shadow:_0_2px_4px_rgb(0_0_0_/_0.8)]">
@@ -279,12 +276,8 @@ const DAYS = [
               <Route />
             </div>
           </InformationProducts>
-          <InformationProducts title="Difficulty">
-            <div class="flex gap-1" slot="icon">
-              <Wheel />
-              <Wheel />
-              <Wheel />
-            </div>
+          <InformationProducts title="Difficulty" subtitle="3-4">
+            <div class="flex gap-1" slot="icon"></div>
           </InformationProducts>
           <InformationProducts title="E-Bike" subtitle="Yes">
             <div slot="icon">
@@ -411,7 +404,7 @@ const DAYS = [
           </div>
         </Includes>
         <!-- Complementaries -->
-        <Includes title="Complementaries">
+        <Includes title="Extra">
           <div slot="description" class="flex flex-col gap-2 mt-4">
             <h1 class="font-bold">Need to be booked in Advance</h1>
             <li class="flex flex-wrap gap-2">
@@ -495,15 +488,9 @@ const DAYS = [
               </li>
             </ul>
             <div class="grid">
-              <h2 class="font-bold mb-1">Year - 2025</h2>
-              <li>05-04 / 12-04</li>
-              <li>19-04 / 26-04</li>
-              <li>03-05 / 10-05</li>
-              <li>31-05 / 07-06</li>
-              <li>07-06 / 14-06</li>
-              <li>13-09 / 20-09</li>
-              <li>27-09 / 04-10</li>
-              <li>18-10 / 25-10</li>
+              <li>18/10/2025 - 25/10/2025</li>
+              <li>09/05/2026 - 16/05/2026</li>
+              <li>03/10/2026 - 10/10/2026</li>
             </div>
           </div>
         </div>
@@ -580,8 +567,8 @@ const DAYS = [
       </h2>
       <Link
         style="muted"
-        href="/cycle-tour/leisure-cycling/cycle-journey-andalusia/CYCLE JOURNEY RONDA TO CÓRDOBA.pdf"
-        download="Trips Notes Cycle Journey Ronda to Córdoba"
+        href="/cycle-tour/leisure-cycling/cycle-journey-andalusia/TRIP NOTES CYCLE RONDA - CÓRDOBA.pdf"
+        download="Trips Notes Cycle Ronda - Córdoba"
         class="flex gap-1 items-center justify-center mt-8 font-semibold"
         rel="noopener">
         View trip notes
